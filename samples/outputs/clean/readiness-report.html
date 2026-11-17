@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Readiness report: SYNTHETIC Case Management System (CMS-DEMO)</title>
+<style>
+:root { --fg:#1b1f24; --muted:#59636e; --line:#d1d9e0; --bg:#ffffff; --soft:#f6f8fa;
+  --crit:#a40e26; --high:#bc4c00; --med:#9a6700; --low:#0969da; --info:#59636e; --ok:#1a7f37; }
+* { box-sizing: border-box; }
+body { font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg);
+  background: var(--bg); max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
+h1 { font-size: 26px; margin: 0 0 4px; }
+h2 { font-size: 19px; margin: 32px 0 10px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+h3 { font-size: 16px; margin: 20px 0 8px; }
+.meta { color: var(--muted); margin: 0 0 16px; }
+.note { background: var(--soft); border-left: 4px solid var(--muted); padding: 10px 14px; margin: 16px 0; }
+.banner { display: flex; gap: 24px; align-items: center; border: 1px solid var(--line);
+  border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+.level { font-size: 22px; font-weight: 700; }
+.level.NOT-READY { color: var(--crit); } .level.NEEDS-WORK { color: var(--high); }
+.level.READY-FOR-REVIEW { color: var(--ok); }
+.score { font-size: 32px; font-weight: 700; } .score small { font-size: 14px; color: var(--muted); }
+table { border-collapse: collapse; width: 100%; margin: 8px 0 16px; font-size: 14px; }
+th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: var(--soft); } td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.sev { font-weight: 600; text-transform: capitalize; }
+.sev.critical { color: var(--crit); } .sev.high { color: var(--high); } .sev.medium { color: var(--med); }
+.sev.low { color: var(--low); } .sev.info { color: var(--info); }
+.PASS { color: var(--ok); font-weight: 600; } .FAIL { color: var(--crit); font-weight: 600; }
+.skipped { color: var(--muted); }
+code { background: var(--soft); padding: 1px 4px; border-radius: 4px; font-size: 13px; }
+ul.issues { padding-left: 20px; } ul.issues li { margin: 3px 0; }
+@media print { body { padding: 0; } h2 { break-after: avoid; } }
+</style>
+</head>
+<body>
+<h1>Authorization Package Readiness Report</h1>
+<p class="meta">SYNTHETIC Case Management System (CMS-DEMO) &middot; as of 2026-11-17 &middot; generated 2026-11-17T12:00:00+00:00 by ato-readiness-checker 0.1.0</p>
+<div class="note">The readiness score and level are this tool&#x27;s own measures of package completeness and consistency. They are not an official FedRAMP, DoD or NIST metric. Only the Authorizing Official makes the authorization decision.</div>
+<div class="banner"><div><div class="level READY-FOR-REVIEW">READY FOR REVIEW</div><div>No critical or high issues. The package can go to the AO for a decision.</div></div><div class="score">100.0<small> / 100 readiness score</small></div></div>
+<table><tr><th class="num">Critical</th><th class="num">High</th><th class="num">Medium</th><th class="num">Low</th><th class="num">Info</th></tr><tr>
+<td class="num"><span class="sev critical">0</span></td><td class="num"><span class="sev high">0</span></td><td class="num"><span class="sev medium">0</span></td><td class="num"><span class="sev low">0</span></td><td class="num"><span class="sev info">0</span></td>
+</tr></table>
+<p>30 checks: 27 passed, 2 failed, 1 skipped.</p>
+<h2>Package</h2><table><tr><th>Document</th><th>File</th><th>Title</th><th>OSCAL</th></tr>
+<tr><td>ssp</td><td>ssp.json</td><td>System Security Plan: SYNTHETIC Case Management System (CMS-DEMO)</td><td>1.1.2</td></tr>
+<tr><td>assessment-results</td><td>assessment-results.json</td><td>Security Assessment Results: SYNTHETIC Case Management System (CMS-DEMO)</td><td>1.1.2</td></tr>
+<tr><td>poam</td><td>poam.json</td><td>POA&amp;M: SYNTHETIC Case Management System (CMS-DEMO)</td><td>1.1.2</td></tr>
+</table>
+<p>Baseline: 22 controls from <code>samples/clean/baseline-profile.json</code>.</p>
+<h2>Key numbers</h2><ul>
+<li>SSP: 22 controls (implemented 15, not-applicable 1, partial 5, planned 1).</li>
+<li>Assessment: 21 findings in 1 result(s): 15 satisfied, 6 not satisfied. Latest assessment: 2026-10-09.</li>
+<li>POA&amp;M: 7 items: 5 open, 1 risk accepted, 1 closed. 0 open item(s) overdue.</li><li>Open by severity: Critical 0, High/CAT I 2, Moderate/CAT II 2, Low/CAT III 1, unknown 0.</li></ul>
+<h2>Checks</h2><table><tr><th>ID</th><th>Check</th><th>Severity</th><th>Result</th><th class="num">Evaluated</th><th class="num">Failed</th></tr>
+<tr><td>PKG-001</td><td>Package has an SSP, Assessment Results and a POA&amp;M</td><td><span class="sev critical">critical</span></td><td class="PASS">PASS</td><td class="num">3</td><td class="num">0</td></tr>
+<tr><td>SSP-001</td><td>Required SSP sections are present</td><td><span class="sev high">high</span></td><td class="PASS">PASS</td><td class="num">15</td><td class="num">0</td></tr>
+<tr><td>SSP-002</td><td>Security categorization is consistent (FIPS 199 high-water mark)</td><td><span class="sev high">high</span></td><td class="PASS">PASS</td><td class="num">6</td><td class="num">0</td></tr>
+<tr><td>SSP-003</td><td>Key roles are assigned to people</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">3</td><td class="num">0</td></tr>
+<tr><td>SSP-004</td><td>No draft or placeholder language</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">29</td><td class="num">0</td></tr>
+<tr><td>CTRL-001</td><td>Every baseline control has an implementation statement</td><td><span class="sev high">high</span></td><td class="PASS">PASS</td><td class="num">22</td><td class="num">0</td></tr>
+<tr><td>CTRL-002</td><td>Implemented requirements describe how the control is met</td><td><span class="sev high">high</span></td><td class="PASS">PASS</td><td class="num">21</td><td class="num">0</td></tr>
+<tr><td>CTRL-003</td><td>Implementation status is present, valid and consistent</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">22</td><td class="num">0</td></tr>
+<tr><td>CTRL-004</td><td>SSP status agrees with the assessment</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">21</td><td class="num">0</td></tr>
+<tr><td>CTRL-005</td><td>Planned and partial controls are tracked on the POA&amp;M</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">6</td><td class="num">0</td></tr>
+<tr><td>CTRL-006</td><td>Not-applicable controls are justified</td><td><span class="sev low">low</span></td><td class="PASS">PASS</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td>AR-001</td><td>Assessment Results contain results and findings</td><td><span class="sev critical">critical</span></td><td class="PASS">PASS</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td>AR-002</td><td>Every in-scope control was assessed</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">22</td><td class="num">0</td></tr>
+<tr><td>AR-003</td><td>Assessment is current</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td>TRC-001</td><td>Every not-satisfied finding has a POA&amp;M item</td><td><span class="sev high">high</span></td><td class="PASS">PASS</td><td class="num">6</td><td class="num">0</td></tr>
+<tr><td>TRC-002</td><td>Every POA&amp;M item traces to an assessment finding</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">6</td><td class="num">0</td></tr>
+<tr><td>POAM-001</td><td>POA&amp;M items have a scheduled completion date</td><td><span class="sev high">high</span></td><td class="PASS">PASS</td><td class="num">6</td><td class="num">0</td></tr>
+<tr><td>POAM-002</td><td>Open POA&amp;M items have dated milestones</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">5</td><td class="num">0</td></tr>
+<tr><td>POAM-003</td><td>POA&amp;M items have a point of contact</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">6</td><td class="num">0</td></tr>
+<tr><td>POAM-004</td><td>No overdue POA&amp;M items</td><td><span class="sev high">high</span></td><td class="PASS">PASS</td><td class="num">5</td><td class="num">0</td></tr>
+<tr><td>POAM-005</td><td>POA&amp;M items record a severity</td><td><span class="sev low">low</span></td><td class="PASS">PASS</td><td class="num">6</td><td class="num">0</td></tr>
+<tr><td>POAM-006</td><td>Milestones fall on or before the item&#x27;s due date</td><td><span class="sev low">low</span></td><td class="PASS">PASS</td><td class="num">5</td><td class="num">0</td></tr>
+<tr><td>REF-001</td><td>All UUID references resolve</td><td><span class="sev high">high</span></td><td class="PASS">PASS</td><td class="num">72</td><td class="num">0</td></tr>
+<tr><td>REF-002</td><td>Assessed subjects are described in the SSP</td><td><span class="sev low">low</span></td><td class="PASS">PASS</td><td class="num">5</td><td class="num">0</td></tr>
+<tr><td>REF-003</td><td>POA&amp;M identifies the same system as the SSP</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td>REF-004</td><td>UUIDs are unique within each document</td><td><span class="sev medium">medium</span></td><td class="PASS">PASS</td><td class="num">147</td><td class="num">0</td></tr>
+<tr><td>REF-005</td><td>OSCAL versions are declared and consistent</td><td><span class="sev low">low</span></td><td class="PASS">PASS</td><td class="num">3</td><td class="num">0</td></tr>
+<tr><td>REF-006</td><td>Documents are valid against the NIST OSCAL schemas<br><span class="skipped">Schema validation not requested (use --schema-dir).</span></td><td><span class="sev high">high</span></td><td class="skipped">skipped</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td>RISK-001</td><td>Open Critical, High or CAT I weaknesses</td><td><span class="sev high">high</span></td><td class="FAIL">FAIL</td><td class="num">5</td><td class="num">2</td></tr>
+<tr><td>RISK-002</td><td>Accepted risks are listed for the AO</td><td><span class="sev info">info</span></td><td class="FAIL">FAIL</td><td class="num">6</td><td class="num">1</td></tr>
+</table>
+<h2>Package issues</h2>
+<p>No package issues found.</p>
+<h2>Risk items for the AO</h2>
+<p>Open Critical/High/CAT I weaknesses and accepted risks. These describe the system's risk, not the package's quality, so they do not change the readiness score or level. <code>--fail-on</code> still sees them.</p>
+<h3><span class="sev high">high</span> (2)</h3><ul class="issues">
+<li><strong>RISK-001</strong> <code>High-severity patches past due [d4b0da7c]</code>: Open High / CAT I weakness (SI-2).</li>
+<li><strong>RISK-001</strong> <code>Stale privileged accounts [a1ba1b3a]</code>: Open High / CAT I weakness (AC-2).</li>
+</ul>
+<h3><span class="sev info">info</span> (1)</h3><ul class="issues">
+<li><strong>RISK-002</strong> <code>Weekly (not daily) audit review: risk accepted [02be1f1e]</code>: Risk accepted (Low / CAT III, AU-6).</li>
+</ul>
+<h2>Traceability: not-satisfied findings to POA&amp;M items</h2>
+<p>Match = how the link was found: <code>uuid</code> (OSCAL reference), <code>control</code> (same control ID), or <code>none</code>.</p><table><tr><th>Finding</th><th>Control</th><th>Match</th><th>POA&amp;M item(s)</th></tr>
+<tr><td>AC-2 Account Management</td><td>AC-2</td><td>uuid</td><td>Stale privileged accounts [a1ba1b3a]</td></tr>
+<tr><td>AU-6 Audit Record Review, Analysis, and Reporting</td><td>AU-6</td><td>uuid</td><td>Weekly (not daily) audit review: risk accepted [02be1f1e]</td></tr>
+<tr><td>CM-6 Configuration Settings</td><td>CM-6</td><td>control</td><td>Container settings deviate from hardening baseline [d3d0a820]</td></tr>
+<tr><td>CM-8 System Component Inventory</td><td>CM-8</td><td>uuid</td><td>Automated component inventory not yet in place [cbf6f6a5]</td></tr>
+<tr><td>RA-5 Vulnerability Monitoring and Scanning</td><td>RA-5</td><td>uuid</td><td>Database tier scanned without credentials [e51103f1]</td></tr>
+<tr><td>SI-2 Flaw Remediation</td><td>SI-2</td><td>uuid</td><td>High-severity patches past due [d4b0da7c]</td></tr>
+</table>
+</body>
+</html>

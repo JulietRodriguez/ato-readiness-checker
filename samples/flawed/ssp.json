@@ -1,0 +1,681 @@
+{
+  "system-security-plan": {
+    "uuid": "8a4c7bb8-2e13-5bd1-b302-82cd3c8c22a9",
+    "metadata": {
+      "title": "System Security Plan: SYNTHETIC Case Management System (CMS-DEMO)",
+      "last-modified": "2026-11-01T00:00:00+00:00",
+      "version": "2.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "system-owner",
+          "title": "System Owner"
+        },
+        {
+          "id": "authorizing-official",
+          "title": "Authorizing Official"
+        },
+        {
+          "id": "isso",
+          "title": "Information System Security Officer"
+        },
+        {
+          "id": "system-administrator",
+          "title": "System Administrator"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "57ee86f4-617f-53c9-9ff6-ca09be3b6c1a",
+          "type": "person",
+          "name": "System Owner, CMS-DEMO (synthetic)"
+        },
+        {
+          "uuid": "e219d2d4-fa81-5a33-b785-475db97b9719",
+          "type": "person",
+          "name": "Authorizing Official, Example Agency (synthetic)"
+        },
+        {
+          "uuid": "b2cddde1-e8fb-5518-8cea-649983224f9c",
+          "type": "person",
+          "name": "ISSO, CMS-DEMO (synthetic)"
+        },
+        {
+          "uuid": "26047b47-de07-51dd-b948-48a4be818848",
+          "type": "person",
+          "name": "Lead Systems Administrator, CMS-DEMO (synthetic)"
+        },
+        {
+          "uuid": "ade5fdaa-eef1-53cb-9f4e-dcedc048d9d1",
+          "type": "person",
+          "name": "Database Administrator, CMS-DEMO (synthetic)"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "system-owner",
+          "party-uuids": [
+            "57ee86f4-617f-53c9-9ff6-ca09be3b6c1a"
+          ]
+        },
+        {
+          "role-id": "isso",
+          "party-uuids": [
+            "b2cddde1-e8fb-5518-8cea-649983224f9c"
+          ]
+        }
+      ],
+      "remarks": "SYNTHETIC sample for ato-readiness-checker. Not a real system."
+    },
+    "import-profile": {
+      "href": "baseline-profile.json"
+    },
+    "system-characteristics": {
+      "system-ids": [
+        {
+          "identifier-type": "https://ietf.org/rfc/rfc4122",
+          "id": "0bdbc105-58de-5c9b-964f-785c735c8ebe"
+        }
+      ],
+      "system-name": "SYNTHETIC Case Management System (CMS-DEMO)",
+      "system-name-short": "CMS-DEMO",
+      "description": "A synthetic case management system used to demonstrate package review.",
+      "security-sensitivity-level": "fips-199-moderate",
+      "system-information": {
+        "information-types": [
+          {
+            "uuid": "d4b63c1d-2ae5-5e8a-bb8f-d2631dc2912d",
+            "title": "Case records (synthetic information type)",
+            "description": "Case files and status history managed by the system.",
+            "confidentiality-impact": {
+              "base": "fips-199-moderate"
+            },
+            "integrity-impact": {
+              "base": "fips-199-moderate"
+            },
+            "availability-impact": {
+              "base": "fips-199-low"
+            }
+          },
+          {
+            "uuid": "866b3794-178d-5148-8bb8-69621464229c",
+            "title": "System and network monitoring (synthetic information type)",
+            "description": "Security logs and monitoring data about the system.",
+            "confidentiality-impact": {
+              "base": "fips-199-low"
+            },
+            "integrity-impact": {
+              "base": "fips-199-moderate"
+            },
+            "availability-impact": {
+              "base": "fips-199-low"
+            }
+          }
+        ]
+      },
+      "security-impact-level": {
+        "security-objective-confidentiality": "fips-199-low",
+        "security-objective-integrity": "fips-199-moderate",
+        "security-objective-availability": "fips-199-low"
+      },
+      "status": {
+        "state": "operational"
+      },
+      "authorization-boundary": {
+        "description": "TBD: boundary diagram to be inserted."
+      },
+      "network-architecture": {
+        "description": "Users reach the web tier through a web application firewall; the web tier reaches the database on a private subnet only."
+      }
+    },
+    "system-implementation": {
+      "users": [
+        {
+          "uuid": "b19bcf5e-1176-583e-81c0-16d5c4ed1371",
+          "title": "Caseworker",
+          "role-ids": [
+            "system-administrator"
+          ]
+        }
+      ],
+      "components": [
+        {
+          "uuid": "6d387157-87ad-5622-91ff-a394e70f29e2",
+          "type": "this-system",
+          "title": "CMS-DEMO",
+          "description": "The case management system as a whole.",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+          "type": "software",
+          "title": "Case management web application",
+          "description": "Containerized web application tier.",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "9d7f01cd-1f9f-53d1-9c8b-b5c8ce970020",
+          "type": "software",
+          "title": "Case database",
+          "description": "Managed PostgreSQL database holding case records.",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0",
+          "type": "service",
+          "title": "Identity provider",
+          "description": "Agency single sign-on with MFA.",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "2d290f75-7035-58fa-9ada-3ef55dfb4b96",
+          "type": "service",
+          "title": "Central logging",
+          "description": "Log aggregation and alerting service.",
+          "status": {
+            "state": "operational"
+          }
+        }
+      ],
+      "inventory-items": [
+        {
+          "uuid": "1007d1db-5a7d-5b99-aa0f-cb36df04101a",
+          "description": "Case management web application (synthetic asset)",
+          "props": [
+            {
+              "name": "asset-type",
+              "value": "software"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d"
+            }
+          ]
+        },
+        {
+          "uuid": "42567512-4f63-5fb5-97a4-4e8126c386a6",
+          "description": "Case database (synthetic asset)",
+          "props": [
+            {
+              "name": "asset-type",
+              "value": "software"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "9d7f01cd-1f9f-53d1-9c8b-b5c8ce970020"
+            }
+          ]
+        },
+        {
+          "uuid": "d44dc57f-c1eb-554f-a9cd-ed0d72cae6ea",
+          "description": "Identity provider (synthetic asset)",
+          "props": [
+            {
+              "name": "asset-type",
+              "value": "service"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0"
+            }
+          ]
+        },
+        {
+          "uuid": "feec714f-00ab-5edb-84a0-7020c6fb0a75",
+          "description": "Central logging (synthetic asset)",
+          "props": [
+            {
+              "name": "asset-type",
+              "value": "service"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "2d290f75-7035-58fa-9ada-3ef55dfb4b96"
+            }
+          ]
+        }
+      ]
+    },
+    "control-implementation": {
+      "description": "How CMS-DEMO implements each control in its baseline.",
+      "implemented-requirements": [
+        {
+          "uuid": "57001618-3168-5707-90c7-5bfe4d03267e",
+          "control-id": "ac-2",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "partial"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0",
+              "uuid": "9b810576-2ab3-5c32-86e8-bbae8d03d16d",
+              "description": "Accounts are provisioned through the identity provider; quarterly privileged account reviews are being automated (see POA&M).",
+              "implementation-status": {
+                "state": "partial"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "64c2243f-b790-5b29-91b9-8b545911453d",
+          "control-id": "ac-3",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+              "uuid": "2e134774-f44b-5a56-88c3-8b3c32116f7b",
+              "description": "Role-based access checks in the application enforce approved authorizations.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "4fc57746-448b-53cd-aee7-f1d6a80188a3",
+          "control-id": "ac-6",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+              "uuid": "87f32c69-10a0-57ad-8b6d-687c0f639851",
+              "description": "Application and database roles grant least privilege by job function.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            },
+            {
+              "component-uuid": "9d7f01cd-1f9f-53d1-9c8b-b5c8ce970020",
+              "uuid": "40bfecb9-8b16-5f50-bde2-76be479f4f3b",
+              "description": "Application and database roles grant least privilege by job function.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "ce5572f1-0122-59c9-9ac5-de5e7c511cd1",
+          "control-id": "ac-17",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0",
+              "uuid": "e2d4f063-5c4a-5483-bc2a-f024fcd8dc4b",
+              "description": "Remote access is only through the SSO portal over TLS with MFA.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "0e5e6c18-3f93-571b-a8ed-605183d31699",
+          "control-id": "ac-18",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "not-applicable"
+            }
+          ]
+        },
+        {
+          "uuid": "35f61c05-1b6a-5b1f-b866-0d2141373447",
+          "control-id": "au-2",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "2d290f75-7035-58fa-9ada-3ef55dfb4b96",
+              "uuid": "a67c4dfd-5566-55ac-8064-835dc1ac6f49",
+              "description": "Security-relevant events from all tiers are sent to central logging.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "c9717bb9-3506-5c64-a6ca-114e4e257e64",
+          "control-id": "au-6",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "partial"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "2d290f75-7035-58fa-9ada-3ef55dfb4b96",
+              "uuid": "f0137acc-48be-5fcb-bd8e-57f583fb3622",
+              "description": "Audit records are reviewed weekly; daily review is a documented risk acceptance.",
+              "implementation-status": {
+                "state": "partial"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "268f777b-d5c8-5e3d-8d2b-d6fc070426db",
+          "control-id": "au-9",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ]
+        },
+        {
+          "uuid": "d75f2495-3c2f-565b-a3e4-9e64fc7440d2",
+          "control-id": "ca-7",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "6d387157-87ad-5622-91ff-a394e70f29e2",
+              "uuid": "fa9a6aa9-a7f4-597a-b57e-43895abc3482",
+              "description": "Monthly continuous monitoring reports go to the AO.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "cd8c5d92-b8a5-5514-b20b-5bdc42157b6d",
+          "control-id": "cm-2",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+              "uuid": "754047b6-065d-5fcd-bdb1-f8af7d22617b",
+              "description": "Infrastructure-as-code defines the approved baseline configuration.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            },
+            {
+              "component-uuid": "9d7f01cd-1f9f-53d1-9c8b-b5c8ce970020",
+              "uuid": "ae191328-6f49-51d9-82c6-b59a20ff7a35",
+              "description": "Infrastructure-as-code defines the approved baseline configuration.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "f27d78cc-792a-5eec-afae-567f087f2941",
+          "control-id": "cm-6",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "partial"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+              "uuid": "d5adfb80-79f7-55e7-b6e1-1238a32db20c",
+              "description": "Hardened settings are applied; three container settings deviate (see POA&M).",
+              "implementation-status": {
+                "state": "partial"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "0cb5a1ae-47e0-5448-9ff0-0b98fac0ebd3",
+          "control-id": "cm-8",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "planned"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "6d387157-87ad-5622-91ff-a394e70f29e2",
+              "uuid": "a0f89dce-e479-538c-a629-94bac65b92d9",
+              "description": "An automated component inventory feed is planned (see POA&M).",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "1ca63783-bddc-58ef-82b2-8bb20ecc05f2",
+          "control-id": "cp-9",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "9d7f01cd-1f9f-53d1-9c8b-b5c8ce970020",
+              "uuid": "022d1d0e-942a-5ccf-ba92-1dc10d47c46e",
+              "description": "Daily encrypted database backups are retained for 35 days.",
+              "implementation-status": {
+                "state": "partial"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "4e170d39-5d15-57ea-affb-83f1daf3251f",
+          "control-id": "ia-2",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0",
+              "uuid": "088a8b62-8e3b-5ae0-97ce-49da1bf3a6aa",
+              "description": "All organizational users authenticate through the agency identity provider.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "0111ea3f-6a46-5d6e-95f8-72ed4466cd1b",
+          "control-id": "ia-5",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0",
+              "uuid": "645e8d95-5f62-59b8-a89f-6e8cc48de88f",
+              "description": "Authenticator lifetime and strength are enforced by identity provider policy.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "ff3672ed-773c-5aa2-a165-4adfbb0eb8f8",
+          "control-id": "ra-5",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "partial"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "6d387157-87ad-5622-91ff-a394e70f29e2",
+              "uuid": "95e32b77-65fa-5d44-b811-113480281be3",
+              "description": "Weekly scans cover the web tier; authenticated database scans are being added (see POA&M).",
+              "implementation-status": {
+                "state": "partial"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "b23fad34-d9cf-5e73-b703-0b7ca56739bb",
+          "control-id": "sc-7",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+              "uuid": "0d0e3556-9b1f-528e-9f29-ab23565a8365",
+              "description": "A web application firewall and security groups restrict traffic at the boundary.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "c9c93a45-31ec-5b55-8dc8-4fbeb193513a",
+          "control-id": "sc-8",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+              "uuid": "63556f99-33ab-5787-a209-996c5af2b692",
+              "description": "TLS 1.2 or higher protects all data in transit.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "7fc811fd-6519-5e33-947a-c6076fd86bfd",
+          "control-id": "sc-28",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "9d7f01cd-1f9f-53d1-9c8b-b5c8ce970020",
+              "uuid": "ff26b7c0-7300-56ca-8ee1-e2252e0b6f92",
+              "description": "Case data at rest is encrypted with agency-managed keys.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "b4ce4b62-3786-5981-b37f-d308de50d6bb",
+          "control-id": "si-2",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+              "uuid": "624b3f37-e344-5c44-ab56-f2ddcbcb5d46",
+              "description": "Monthly patching is in place; two High findings are being remediated.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            },
+            {
+              "component-uuid": "9d7f01cd-1f9f-53d1-9c8b-b5c8ce970020",
+              "uuid": "bcb17a3c-e69e-5c8b-a2f8-f03b68305ca9",
+              "description": "Monthly patching is in place; two High findings are being remediated.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "ee3a658a-533c-5ec6-959b-db057669ce54",
+          "control-id": "si-4",
+          "props": [
+            {
+              "name": "implementation-status",
+              "value": "implemented"
+            }
+          ],
+          "by-components": [
+            {
+              "component-uuid": "2d290f75-7035-58fa-9ada-3ef55dfb4b96",
+              "uuid": "dfdf961f-335a-5679-8c4a-4c4a665c0e97",
+              "description": "Alerting rules in central logging monitor for indicators of attack.",
+              "implementation-status": {
+                "state": "implemented"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

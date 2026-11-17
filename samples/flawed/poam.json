@@ -1,0 +1,581 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "65f0cef0-80e0-57ef-b24c-4df01692ec03",
+    "metadata": {
+      "title": "POA&M: SYNTHETIC Case Management System (CMS-DEMO)",
+      "last-modified": "2026-11-01T00:00:00+00:00",
+      "version": "2026.11",
+      "oscal-version": "1.1.1",
+      "roles": [
+        {
+          "id": "system-owner",
+          "title": "System Owner"
+        },
+        {
+          "id": "authorizing-official",
+          "title": "Authorizing Official"
+        },
+        {
+          "id": "isso",
+          "title": "Information System Security Officer"
+        },
+        {
+          "id": "system-administrator",
+          "title": "System Administrator"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "b2cddde1-e8fb-5518-8cea-649983224f9c",
+          "type": "person",
+          "name": "ISSO, CMS-DEMO (synthetic)"
+        },
+        {
+          "uuid": "26047b47-de07-51dd-b948-48a4be818848",
+          "type": "person",
+          "name": "Lead Systems Administrator, CMS-DEMO (synthetic)"
+        },
+        {
+          "uuid": "ade5fdaa-eef1-53cb-9f4e-dcedc048d9d1",
+          "type": "person",
+          "name": "Database Administrator, CMS-DEMO (synthetic)"
+        }
+      ],
+      "remarks": "SYNTHETIC sample for ato-readiness-checker. Not a real POA&M."
+    },
+    "import-ssp": {
+      "href": "ssp.json"
+    },
+    "system-id": {
+      "identifier-type": "https://ietf.org/rfc/rfc4122",
+      "id": "42294d76-2b8a-52d3-98af-8bdaf0a8c01e"
+    },
+    "risks": [
+      {
+        "uuid": "f1f7fdc5-410e-5d8f-82e3-c784f75afac9",
+        "title": "Stale privileged accounts",
+        "description": "Stale privileged accounts (AC-2).",
+        "statement": "Weakness in AC-2 Account Management.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "High"
+          }
+        ],
+        "status": "remediating",
+        "deadline": "2026-10-01T23:59:59+00:00",
+        "remediations": [
+          {
+            "uuid": "38ae57fa-55b7-5d4c-9746-c728c541565e",
+            "lifecycle": "planned",
+            "title": "Remediation plan",
+            "description": "Plan to resolve: Stale privileged accounts.",
+            "tasks": [
+              {
+                "uuid": "819f9e21-46a1-58bc-8eea-e5beaaf34b79",
+                "type": "milestone",
+                "title": "Disable the seven stale accounts",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-09-01T00:00:00+00:00"
+                  }
+                }
+              },
+              {
+                "uuid": "498b7153-eefe-55a5-9bf8-62bfea76e557",
+                "type": "milestone",
+                "title": "Automate quarterly privileged account review",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-10-01T00:00:00+00:00"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "557cd919-2863-589a-9ddd-964c48ce83cf",
+        "title": "High-severity patches past due",
+        "description": "High-severity patches past due (SI-2).",
+        "statement": "Weakness in SI-2 Flaw Remediation.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "High"
+          }
+        ],
+        "status": "open",
+        "deadline": "2026-12-17T23:59:59+00:00",
+        "remediations": [
+          {
+            "uuid": "0a23414f-9b3c-5d13-943d-a257b5fb466d",
+            "lifecycle": "planned",
+            "title": "Remediation plan",
+            "description": "Plan to resolve: High-severity patches past due.",
+            "tasks": [
+              {
+                "uuid": "fa0c903a-ed7a-526e-9811-9c6550fba75f",
+                "type": "milestone",
+                "title": "Apply patches in staging",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-12-03T00:00:00+00:00"
+                  }
+                }
+              },
+              {
+                "uuid": "f9101123-b89f-551d-81fc-6fa1d88fcb70",
+                "type": "milestone",
+                "title": "Apply patches in production",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-12-17T00:00:00+00:00"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "89dbb373-6d58-5f88-aced-789130a217f1",
+        "title": "Database tier scanned without credentials",
+        "description": "Database tier scanned without credentials (RA-5).",
+        "statement": "Weakness in RA-5 Vulnerability Monitoring and Scanning.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "Moderate"
+          }
+        ],
+        "status": "remediating",
+        "remediations": [
+          {
+            "uuid": "e44aa059-4f26-5259-844c-f18001efe47c",
+            "lifecycle": "planned",
+            "title": "Remediation plan",
+            "description": "Plan to resolve: Database tier scanned without credentials.",
+            "tasks": [
+              {
+                "uuid": "f773d780-ea81-5039-9639-b426660594b2",
+                "type": "milestone",
+                "title": "Create scan service account",
+                "timing": {
+                  "on-date": {
+                    "date": "2027-01-29T00:00:00+00:00"
+                  }
+                }
+              },
+              {
+                "uuid": "93293e5b-8fb6-5f88-9903-fd5c3f53af27",
+                "type": "milestone",
+                "title": "Run first authenticated scan",
+                "timing": {
+                  "on-date": {
+                    "date": "2027-02-26T00:00:00+00:00"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "df8b5ae4-ed24-5290-9cc4-7fb2368b64fa",
+        "title": "Container settings deviate from hardening baseline",
+        "description": "Container settings deviate from hardening baseline (CM-6).",
+        "statement": "Weakness in CM-6 Configuration Settings.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "Moderate"
+          }
+        ],
+        "status": "open",
+        "deadline": "2027-03-31T23:59:59+00:00",
+        "remediations": [
+          {
+            "uuid": "041cec4c-8dbb-5a27-940e-8f3dc3bc4b3c",
+            "lifecycle": "planned",
+            "title": "Remediation plan",
+            "description": "Plan to resolve: Container settings deviate from hardening baseline."
+          }
+        ]
+      },
+      {
+        "uuid": "22c4c8b1-b4e1-526e-b8aa-aabe02349589",
+        "title": "Weekly (not daily) audit review: risk accepted",
+        "description": "Weekly (not daily) audit review: risk accepted (AU-6).",
+        "statement": "Weakness in AU-6 Audit Record Review, Analysis, and Reporting.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "Low"
+          }
+        ],
+        "status": "deviation-approved",
+        "deadline": "2027-10-31T23:59:59+00:00",
+        "remediations": [
+          {
+            "uuid": "58037587-21e0-53c3-a980-948869eee41b",
+            "lifecycle": "planned",
+            "title": "Remediation plan",
+            "description": "Plan to resolve: Weekly (not daily) audit review: risk accepted.",
+            "tasks": [
+              {
+                "uuid": "ec12f7fe-6acf-5766-9f7a-fb7e99057f39",
+                "type": "milestone",
+                "title": "Re-evaluate risk acceptance",
+                "timing": {
+                  "on-date": {
+                    "date": "2027-10-31T00:00:00+00:00"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "246fc4c1-0ce8-5bd3-8dd1-0d83790230c1",
+        "title": "TLS 1.0 enabled on legacy endpoint (closed)",
+        "description": "TLS 1.0 enabled on legacy endpoint (closed) (SC-8).",
+        "statement": "Weakness in SC-8 Transmission Confidentiality and Integrity.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "Moderate"
+          }
+        ],
+        "status": "closed",
+        "deadline": "2026-08-31T23:59:59+00:00",
+        "remediations": [
+          {
+            "uuid": "4ce387f9-3b93-5261-acd3-d25906ebd20d",
+            "lifecycle": "completed",
+            "title": "Remediation plan",
+            "description": "Plan to resolve: TLS 1.0 enabled on legacy endpoint (closed).",
+            "tasks": [
+              {
+                "uuid": "48a7e19f-6a93-5dbb-9abc-c594816b9dc0",
+                "type": "milestone",
+                "title": "Disable TLS 1.0",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-08-31T00:00:00+00:00"
+                  }
+                }
+              },
+              {
+                "uuid": "48a7e19f-6a93-5dbb-9abc-c594816b9dc0",
+                "type": "milestone",
+                "title": "Verify TLS 1.0 is off",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-08-31T00:00:00+00:00"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "35c8213d-be1b-57f0-b14a-519b261b9378",
+        "title": "Legacy finding carried from a prior audit",
+        "description": "Carried forward from the 2024 audit; no matching assessment finding.",
+        "statement": "Weakness in PL-2 System Security and Privacy Plans.",
+        "status": "open",
+        "deadline": "2027-01-31T23:59:59+00:00",
+        "remediations": [
+          {
+            "uuid": "b596d114-d546-5d61-917b-b49adedce67d",
+            "lifecycle": "planned",
+            "title": "Remediation plan",
+            "description": "Update the plan.",
+            "tasks": [
+              {
+                "uuid": "7f42791f-62ae-573f-aebb-77ee0ee836f7",
+                "type": "milestone",
+                "title": "Update SSP narrative",
+                "timing": {
+                  "on-date": {
+                    "date": "2027-03-15T00:00:00+00:00"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "fafadd41-7f72-5540-ba80-06e17f62ce82",
+        "title": "CM-6 weakness",
+        "description": "Container settings deviate from hardening baseline",
+        "target": {
+          "type": "statement-id",
+          "target-id": "cm-6_smt",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-risks": [
+          {
+            "risk-uuid": "df8b5ae4-ed24-5290-9cc4-7fb2368b64fa"
+          }
+        ]
+      },
+      {
+        "uuid": "40aadb68-6441-5488-bf15-82043385a88c",
+        "title": "SC-8 weakness",
+        "description": "TLS 1.0 enabled on legacy endpoint (closed)",
+        "target": {
+          "type": "statement-id",
+          "target-id": "sc-8_smt",
+          "status": {
+            "state": "satisfied"
+          }
+        },
+        "related-risks": [
+          {
+            "risk-uuid": "246fc4c1-0ce8-5bd3-8dd1-0d83790230c1"
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "a1ba1b3a-7839-5e02-8b24-9202434bbe06",
+        "title": "Stale privileged accounts",
+        "description": "Stale privileged accounts (AC-2).",
+        "props": [
+          {
+            "name": "control",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "AC-2"
+          },
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "High"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "f1f7fdc5-410e-5d8f-82e3-c784f75afac9"
+          }
+        ],
+        "origins": [
+          {
+            "actors": [
+              {
+                "type": "party",
+                "actor-uuid": "b2cddde1-e8fb-5518-8cea-649983224f9c"
+              }
+            ]
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "f865948d-187c-52ff-b6a0-e6d4bc25cc60"
+          }
+        ]
+      },
+      {
+        "uuid": "d4b0da7c-efae-5999-8d45-227a9d22afb5",
+        "title": "High-severity patches past due",
+        "description": "High-severity patches past due (SI-2).",
+        "props": [
+          {
+            "name": "control",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "SI-2"
+          },
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "High"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "557cd919-2863-589a-9ddd-964c48ce83cf"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "d046752c-f2e2-5b3d-bbee-1d771e552f4a"
+          }
+        ]
+      },
+      {
+        "uuid": "e51103f1-066d-50be-a5a3-26aa9432b208",
+        "title": "Database tier scanned without credentials",
+        "description": "Database tier scanned without credentials (RA-5).",
+        "props": [
+          {
+            "name": "control",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "RA-5"
+          },
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "Moderate"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "89dbb373-6d58-5f88-aced-789130a217f1"
+          }
+        ],
+        "origins": [
+          {
+            "actors": [
+              {
+                "type": "party",
+                "actor-uuid": "ade5fdaa-eef1-53cb-9f4e-dcedc048d9d1"
+              }
+            ]
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "78eaa526-af16-5ce6-98a7-b4d0c6d722f0"
+          }
+        ]
+      },
+      {
+        "uuid": "d3d0a820-a134-59fa-af0c-5ebcae4fd6fe",
+        "title": "Container settings deviate from hardening baseline",
+        "description": "Container settings deviate from hardening baseline (CM-6).",
+        "props": [
+          {
+            "name": "control",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "CM-6"
+          },
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "Moderate"
+          },
+          {
+            "name": "point-of-contact",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "Lead Systems Administrator, CMS-DEMO (synthetic)"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "df8b5ae4-ed24-5290-9cc4-7fb2368b64fa"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "fafadd41-7f72-5540-ba80-06e17f62ce82"
+          }
+        ]
+      },
+      {
+        "uuid": "02be1f1e-b960-5171-b88b-51ec1f42c770",
+        "title": "Weekly (not daily) audit review: risk accepted",
+        "description": "Weekly (not daily) audit review: risk accepted (AU-6).",
+        "props": [
+          {
+            "name": "control",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "AU-6"
+          },
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "Low"
+          },
+          {
+            "name": "point-of-contact",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "ISSO, CMS-DEMO (synthetic)"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "22c4c8b1-b4e1-526e-b8aa-aabe02349589"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "8a65eec1-5afe-5913-94bf-c653def5f7ee"
+          }
+        ]
+      },
+      {
+        "uuid": "92a9be28-b068-5e49-bde8-73ca4365c131",
+        "title": "TLS 1.0 enabled on legacy endpoint (closed)",
+        "description": "TLS 1.0 enabled on legacy endpoint (closed) (SC-8).",
+        "props": [
+          {
+            "name": "control",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "SC-8"
+          },
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "Moderate"
+          },
+          {
+            "name": "point-of-contact",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "Lead Systems Administrator, CMS-DEMO (synthetic)"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "246fc4c1-0ce8-5bd3-8dd1-0d83790230c1"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "40aadb68-6441-5488-bf15-82043385a88c"
+          }
+        ]
+      },
+      {
+        "uuid": "4928980d-4876-5aa1-b807-5783d1a90b8a",
+        "title": "Legacy finding carried from a prior audit",
+        "description": "No severity recorded; milestone falls after the due date.",
+        "props": [
+          {
+            "name": "control",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "PL-2"
+          },
+          {
+            "name": "point-of-contact",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "ISSO, CMS-DEMO (synthetic)"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "35c8213d-be1b-57f0-b14a-519b261b9378"
+          },
+          {
+            "risk-uuid": "69cbc939-287d-50fc-a74c-c2dcf236d5b9"
+          }
+        ]
+      }
+    ]
+  }
+}

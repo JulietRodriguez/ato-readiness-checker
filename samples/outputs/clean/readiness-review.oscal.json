@@ -1,0 +1,208 @@
+{
+  "assessment-results": {
+    "uuid": "3b00a01c-986d-5fcc-8f8f-8c06f9d900eb",
+    "metadata": {
+      "title": "Authorization package readiness review: SYNTHETIC Case Management System (CMS-DEMO)",
+      "last-modified": "2026-11-17T12:00:00+00:00",
+      "version": "0.1.0",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "generator",
+          "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+          "value": "ato-readiness-checker 0.1.0"
+        }
+      ],
+      "remarks": "The readiness score and level are this tool's own measures of package completeness and consistency. They are not an official FedRAMP, DoD or NIST metric. Only the Authorizing Official makes the authorization decision."
+    },
+    "import-ap": {
+      "href": "#d5320ef2-7e04-5969-a4ad-61d0d726b13b",
+      "remarks": "No assessment plan applies; this points at the readiness check catalog."
+    },
+    "results": [
+      {
+        "uuid": "9e68bccc-e168-5e5d-86ea-f8d5a0e32ffc",
+        "title": "Authorization package readiness review",
+        "description": "Automated completeness and consistency review of the authorization package for SYNTHETIC Case Management System (CMS-DEMO). This is a review of the package documents, not a security control assessment.",
+        "start": "2026-11-17T12:00:00+00:00",
+        "end": "2026-11-17T12:00:00+00:00",
+        "props": [
+          {
+            "name": "readiness-score",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "100.0"
+          },
+          {
+            "name": "readiness-level",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "ready-for-review"
+          },
+          {
+            "name": "as-of",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "2026-11-17"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "Package-level review; no individual control was tested.",
+              "include-all": {}
+            }
+          ]
+        },
+        "remarks": "The readiness score and level are this tool's own measures of package completeness and consistency. They are not an official FedRAMP, DoD or NIST metric. Only the Authorizing Official makes the authorization decision.",
+        "observations": [
+          {
+            "uuid": "834c3ea9-2ff3-57a9-9a4f-acc85544fbe0",
+            "title": "RISK-001: Open Critical, High or CAT I weaknesses",
+            "description": "Open Critical, High or CAT I weaknesses. Lists each open Critical, High or CAT I item for the AO. This is risk, not a package defect, so it does not affect the readiness score or level; open Critical items are critical issues and High/CAT I items are high issues for the --fail-on gate.\n\n- [high] Stale privileged accounts [a1ba1b3a]: Open High / CAT I weakness (AC-2).\n- [high] High-severity patches past due [d4b0da7c]: Open High / CAT I weakness (SI-2).",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "RISK-001"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "5"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "2"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "140cb00d-bc05-5151-bb75-08d5bf130f50",
+            "title": "RISK-002: Accepted risks are listed for the AO",
+            "description": "Accepted risks are listed for the AO. Items with an approved deviation (risk acceptance) are listed so the AO sees every risk that is being carried rather than fixed. Informational; does not affect the score or level.\n\n- [info] Weekly (not daily) audit review: risk accepted [02be1f1e]: Risk accepted (Low / CAT III, AU-6).",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "RISK-002"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "info"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "6"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+          "title": "System Security Plan: SYNTHETIC Case Management System (CMS-DEMO)",
+          "description": "Input ssp reviewed for authorization readiness.",
+          "props": [
+            {
+              "name": "document-kind",
+              "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+              "value": "ssp"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "ssp.json",
+              "media-type": "application/oscal+json"
+            }
+          ]
+        },
+        {
+          "uuid": "11d623e0-4052-58bc-b70b-6c2a24771c45",
+          "title": "Security Assessment Results: SYNTHETIC Case Management System (CMS-DEMO)",
+          "description": "Input assessment-results reviewed for authorization readiness.",
+          "props": [
+            {
+              "name": "document-kind",
+              "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+              "value": "assessment-results"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "assessment-results.json",
+              "media-type": "application/oscal+json"
+            }
+          ]
+        },
+        {
+          "uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+          "title": "POA&M: SYNTHETIC Case Management System (CMS-DEMO)",
+          "description": "Input poam reviewed for authorization readiness.",
+          "props": [
+            {
+              "name": "document-kind",
+              "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+              "value": "poam"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "poam.json",
+              "media-type": "application/oscal+json"
+            }
+          ]
+        },
+        {
+          "uuid": "d5320ef2-7e04-5969-a4ad-61d0d726b13b",
+          "title": "ato-readiness-checker 0.1.0 check catalog",
+          "description": "The readiness checks applied in this review. This is not an assessment plan.",
+          "rlinks": [
+            {
+              "href": "https://github.com/JulietRodriguez/ato-readiness-checker/blob/main/docs/checks.md"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

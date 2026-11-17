@@ -1,0 +1,781 @@
+{
+  "tool": {
+    "name": "ato-readiness-checker",
+    "version": "0.1.0"
+  },
+  "generated_at": "2026-11-17T12:00:00+00:00",
+  "as_of": "2026-11-17",
+  "disclaimer": "The readiness score and level are this tool's own measures of package completeness and consistency. They are not an official FedRAMP, DoD or NIST metric. Only the Authorizing Official makes the authorization decision.",
+  "system_name": "SYNTHETIC Case Management System (CMS-DEMO)",
+  "documents": [
+    {
+      "kind": "ssp",
+      "file": "ssp.json",
+      "title": "System Security Plan: SYNTHETIC Case Management System (CMS-DEMO)",
+      "oscal_version": "1.1.2"
+    },
+    {
+      "kind": "assessment-results",
+      "file": "assessment-results.json",
+      "title": "Security Assessment Results: SYNTHETIC Case Management System (CMS-DEMO)",
+      "oscal_version": "1.1.2"
+    },
+    {
+      "kind": "poam",
+      "file": "poam.json",
+      "title": "POA&M: SYNTHETIC Case Management System (CMS-DEMO)",
+      "oscal_version": "1.1.1"
+    }
+  ],
+  "baseline": {
+    "source": "samples/flawed/baseline-profile.json",
+    "controls": 22
+  },
+  "readiness": {
+    "score": 84.7,
+    "level": "NOT READY",
+    "level_meaning": "At least one critical issue must be resolved before the package goes to the AO."
+  },
+  "checks_summary": {
+    "total": 30,
+    "passed": 2,
+    "failed": 27,
+    "skipped": 1
+  },
+  "issue_counts": {
+    "critical": 1,
+    "high": 7,
+    "medium": 14,
+    "low": 5,
+    "info": 0
+  },
+  "risk_issue_counts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0,
+    "info": 1
+  },
+  "stats": {
+    "ssp": {
+      "controls": 21,
+      "implementation_status": {
+        "implemented": 15,
+        "not-applicable": 1,
+        "partial": 4,
+        "planned": 1
+      }
+    },
+    "assessment": {
+      "results": 1,
+      "findings": 20,
+      "satisfied": 13,
+      "not_satisfied": 7,
+      "latest_assessment": "2025-08-29"
+    },
+    "poam": {
+      "items": 7,
+      "open": 5,
+      "risk_accepted": 1,
+      "closed": 1,
+      "open_by_severity": {
+        "critical": 0,
+        "high": 2,
+        "moderate": 2,
+        "low": 0,
+        "unknown": 1
+      },
+      "overdue": 1
+    }
+  },
+  "traceability": [
+    {
+      "finding": "AC-2",
+      "finding_title": "AC-2 Account Management",
+      "finding_uuid": "f865948d-187c-52ff-b6a0-e6d4bc25cc60",
+      "match": "uuid",
+      "poam_items": [
+        "Stale privileged accounts [a1ba1b3a]"
+      ]
+    },
+    {
+      "finding": "AU-6",
+      "finding_title": "AU-6 Audit Record Review, Analysis, and Reporting",
+      "finding_uuid": "8a65eec1-5afe-5913-94bf-c653def5f7ee",
+      "match": "uuid",
+      "poam_items": [
+        "Weekly (not daily) audit review: risk accepted [02be1f1e]"
+      ]
+    },
+    {
+      "finding": "CM-6",
+      "finding_title": "CM-6 Configuration Settings",
+      "finding_uuid": "72aa79f7-3c68-55ae-851a-6b0d27f2c3ca",
+      "match": "control",
+      "poam_items": [
+        "Container settings deviate from hardening baseline [d3d0a820]"
+      ]
+    },
+    {
+      "finding": "CM-8",
+      "finding_title": "CM-8 System Component Inventory",
+      "finding_uuid": "24b6e3a7-41e9-5370-ba42-075d6287eb9e",
+      "match": "none",
+      "poam_items": []
+    },
+    {
+      "finding": "IA-5",
+      "finding_title": "IA-5 Authenticator Management",
+      "finding_uuid": "403dfdc4-9430-52a3-ab7d-bcdb72f63652",
+      "match": "none",
+      "poam_items": []
+    },
+    {
+      "finding": "RA-5",
+      "finding_title": "RA-5 Vulnerability Monitoring and Scanning",
+      "finding_uuid": "78eaa526-af16-5ce6-98a7-b4d0c6d722f0",
+      "match": "uuid",
+      "poam_items": [
+        "Database tier scanned without credentials [e51103f1]"
+      ]
+    },
+    {
+      "finding": "SI-2",
+      "finding_title": "SI-2 Flaw Remediation",
+      "finding_uuid": "21d51c0b-4380-5381-b537-5394b29ba349",
+      "match": "uuid",
+      "poam_items": [
+        "High-severity patches past due [d4b0da7c]"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "PKG-001",
+      "title": "Package has an SSP, Assessment Results and a POA&M",
+      "category": "package",
+      "counts_toward_readiness": true,
+      "severity": "critical",
+      "description": "An authorization package needs all three core documents for the AO to weigh risk.",
+      "status": "pass",
+      "evaluated": 3,
+      "failed": 0,
+      "skipped_reason": null,
+      "issues": []
+    },
+    {
+      "check_id": "SSP-001",
+      "title": "Required SSP sections are present",
+      "category": "ssp",
+      "counts_toward_readiness": true,
+      "severity": "high",
+      "description": "System characteristics, categorization, boundary, architecture, data flow, components, inventory, users and control implementation must all be filled in.",
+      "status": "fail",
+      "evaluated": 15,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "SSP-001",
+          "severity": "medium",
+          "message": "Missing or empty: Data flow (system-characteristics/data-flow/description).",
+          "ref": "Data flow",
+          "document": "ssp"
+        }
+      ]
+    },
+    {
+      "check_id": "SSP-002",
+      "title": "Security categorization is consistent (FIPS 199 high-water mark)",
+      "category": "ssp",
+      "counts_toward_readiness": true,
+      "severity": "high",
+      "description": "Each C/I/A impact must be at least the highest impact of the system's information types, and the overall sensitivity level must equal the highest of C, I and A.",
+      "status": "fail",
+      "evaluated": 6,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "SSP-002",
+          "severity": "high",
+          "message": "Confidentiality is categorized low but an information type is moderate; FIPS 199 requires the high-water mark.",
+          "ref": "confidentiality",
+          "document": "ssp"
+        }
+      ]
+    },
+    {
+      "check_id": "SSP-003",
+      "title": "Key roles are assigned to people",
+      "category": "ssp",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "System Owner, Authorizing Official and ISSO each need a named party in metadata responsible-parties.",
+      "status": "fail",
+      "evaluated": 3,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "SSP-003",
+          "severity": "medium",
+          "message": "No party is assigned the Authorizing Official role.",
+          "ref": "Authorizing Official",
+          "document": "ssp"
+        }
+      ]
+    },
+    {
+      "check_id": "SSP-004",
+      "title": "No draft or placeholder language",
+      "category": "ssp",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "Text such as TBD, TODO, '[insert ...]' or 'review and refine' means the SSP is still a draft.",
+      "status": "fail",
+      "evaluated": 25,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "SSP-004",
+          "severity": "medium",
+          "message": "Contains draft language: 'TBD'.",
+          "ref": "Authorization boundary",
+          "document": "ssp"
+        }
+      ]
+    },
+    {
+      "check_id": "CTRL-001",
+      "title": "Every baseline control has an implementation statement",
+      "category": "controls",
+      "counts_toward_readiness": true,
+      "severity": "high",
+      "description": "Each control in the selected baseline must appear in the SSP's implemented-requirements.",
+      "status": "fail",
+      "evaluated": 22,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "CTRL-001",
+          "severity": "high",
+          "message": "Baseline control is not addressed in the SSP.",
+          "ref": "IA-2(1)",
+          "document": "ssp"
+        }
+      ]
+    },
+    {
+      "check_id": "CTRL-002",
+      "title": "Implemented requirements describe how the control is met",
+      "category": "controls",
+      "counts_toward_readiness": true,
+      "severity": "high",
+      "description": "Each implemented-requirement needs narrative text (by-components description, statement narrative or remarks) explaining the implementation. Not-applicable controls are covered by CTRL-006 instead.",
+      "status": "fail",
+      "evaluated": 20,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "CTRL-002",
+          "severity": "high",
+          "message": "No implementation narrative.",
+          "ref": "AU-9",
+          "document": "ssp"
+        }
+      ]
+    },
+    {
+      "check_id": "CTRL-003",
+      "title": "Implementation status is present, valid and consistent",
+      "category": "controls",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "Each control needs an implementation status (implemented, partial, planned, alternative, not-applicable), and the control-level and component-level statuses must agree.",
+      "status": "fail",
+      "evaluated": 21,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "CTRL-003",
+          "severity": "medium",
+          "message": "Inconsistent status: marked implemented but a component is partial.",
+          "ref": "CP-9",
+          "document": "ssp"
+        }
+      ]
+    },
+    {
+      "check_id": "CTRL-004",
+      "title": "SSP status agrees with the assessment",
+      "category": "controls",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "A control the SSP calls 'implemented' should not have a not-satisfied finding, and a control assessed as satisfied should not still be 'planned' in the SSP.",
+      "status": "fail",
+      "evaluated": 19,
+      "failed": 2,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "CTRL-004",
+          "severity": "medium",
+          "message": "SSP says implemented, but the assessment found it not satisfied ('IA-5 Authenticator Management').",
+          "ref": "IA-5",
+          "document": "ssp"
+        },
+        {
+          "check_id": "CTRL-004",
+          "severity": "medium",
+          "message": "SSP says implemented, but the assessment found it not satisfied ('SI-2 Flaw Remediation').",
+          "ref": "SI-2",
+          "document": "ssp"
+        }
+      ]
+    },
+    {
+      "check_id": "CTRL-005",
+      "title": "Planned and partial controls are tracked on the POA&M",
+      "category": "controls",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "A control the SSP says is only planned or partially implemented is a known gap, so it should have a POA&M item.",
+      "status": "fail",
+      "evaluated": 5,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "CTRL-005",
+          "severity": "medium",
+          "message": "SSP status is planned but no open POA&M item covers it.",
+          "ref": "CM-8",
+          "document": "ssp"
+        }
+      ]
+    },
+    {
+      "check_id": "CTRL-006",
+      "title": "Not-applicable controls are justified",
+      "category": "controls",
+      "counts_toward_readiness": true,
+      "severity": "low",
+      "description": "A control marked not-applicable needs text explaining why.",
+      "status": "fail",
+      "evaluated": 1,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "CTRL-006",
+          "severity": "low",
+          "message": "Marked not-applicable with no justification.",
+          "ref": "AC-18",
+          "document": "ssp"
+        }
+      ]
+    },
+    {
+      "check_id": "AR-001",
+      "title": "Assessment Results contain results and findings",
+      "category": "assessment",
+      "counts_toward_readiness": true,
+      "severity": "critical",
+      "description": "Each Assessment Results document needs at least one result with findings.",
+      "status": "pass",
+      "evaluated": 1,
+      "failed": 0,
+      "skipped_reason": null,
+      "issues": []
+    },
+    {
+      "check_id": "AR-002",
+      "title": "Every in-scope control was assessed",
+      "category": "assessment",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "Each baseline control (or each SSP control when no baseline is given) should have a finding or be listed in the assessment's reviewed controls.",
+      "status": "fail",
+      "evaluated": 22,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "AR-002",
+          "severity": "medium",
+          "message": "No assessment finding for this baseline control.",
+          "ref": "SC-28",
+          "document": "assessment-results"
+        }
+      ]
+    },
+    {
+      "check_id": "AR-003",
+      "title": "Assessment is current",
+      "category": "assessment",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "The most recent assessment result should fall within the allowed age (default 365 days).",
+      "status": "fail",
+      "evaluated": 1,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "AR-003",
+          "severity": "medium",
+          "message": "Latest assessment ended 2025-08-29, 445 days before 2026-11-17 (limit 365).",
+          "ref": "results",
+          "document": "assessment-results"
+        }
+      ]
+    },
+    {
+      "check_id": "TRC-001",
+      "title": "Every not-satisfied finding has a POA&M item",
+      "category": "traceability",
+      "counts_toward_readiness": true,
+      "severity": "high",
+      "description": "Each weakness the assessment found must be tracked on the POA&M (or the AO must be told why not).",
+      "status": "fail",
+      "evaluated": 7,
+      "failed": 2,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "TRC-001",
+          "severity": "high",
+          "message": "Not-satisfied finding 'CM-8 System Component Inventory' has no POA&M item.",
+          "ref": "CM-8",
+          "document": "assessment-results"
+        },
+        {
+          "check_id": "TRC-001",
+          "severity": "high",
+          "message": "Not-satisfied finding 'IA-5 Authenticator Management' has no POA&M item.",
+          "ref": "IA-5",
+          "document": "assessment-results"
+        }
+      ]
+    },
+    {
+      "check_id": "TRC-002",
+      "title": "Every POA&M item traces to an assessment finding",
+      "category": "traceability",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "Each open POA&M item should link (by UUID or control) to a not-satisfied finding in the Assessment Results, so the AO can see where the weakness came from.",
+      "status": "fail",
+      "evaluated": 6,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "TRC-002",
+          "severity": "medium",
+          "message": "No not-satisfied finding in the Assessment Results for PL-2.",
+          "ref": "Legacy finding carried from a prior audit [4928980d]",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "POAM-001",
+      "title": "POA&M items have a scheduled completion date",
+      "category": "poam",
+      "counts_toward_readiness": true,
+      "severity": "high",
+      "description": "Every item that is not closed needs a due date (risk deadline or scheduled-completion-date).",
+      "status": "fail",
+      "evaluated": 6,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "POAM-001",
+          "severity": "high",
+          "message": "No scheduled completion date.",
+          "ref": "Database tier scanned without credentials [e51103f1]",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "POAM-002",
+      "title": "Open POA&M items have dated milestones",
+      "category": "poam",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "Each open item needs at least one milestone, and each milestone needs a date.",
+      "status": "fail",
+      "evaluated": 5,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "POAM-002",
+          "severity": "medium",
+          "message": "No milestones.",
+          "ref": "Container settings deviate from hardening baseline [d3d0a820]",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "POAM-003",
+      "title": "POA&M items have a point of contact",
+      "category": "poam",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "Someone must own each item: a point-of-contact prop, an origin party, or a task responsible party.",
+      "status": "fail",
+      "evaluated": 6,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "POAM-003",
+          "severity": "medium",
+          "message": "No point of contact.",
+          "ref": "High-severity patches past due [d4b0da7c]",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "POAM-004",
+      "title": "No overdue POA&M items",
+      "category": "poam",
+      "counts_toward_readiness": true,
+      "severity": "high",
+      "description": "An open item past its due date needs a new date with a documented reason, or closure. This is a package problem (the POA&M is not being maintained). Overdue Critical/High items are raised to critical.",
+      "status": "fail",
+      "evaluated": 5,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "POAM-004",
+          "severity": "critical",
+          "message": "Due 2026-10-01, 47 days overdue as of 2026-11-17.",
+          "ref": "Stale privileged accounts [a1ba1b3a]",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "POAM-005",
+      "title": "POA&M items record a severity",
+      "category": "poam",
+      "counts_toward_readiness": true,
+      "severity": "low",
+      "description": "Without a severity (Critical/High/Moderate/Low or CAT I/II/III) the item can't be prioritized.",
+      "status": "fail",
+      "evaluated": 6,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "POAM-005",
+          "severity": "low",
+          "message": "No recognizable severity.",
+          "ref": "Legacy finding carried from a prior audit [4928980d]",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "POAM-006",
+      "title": "Milestones fall on or before the item's due date",
+      "category": "poam",
+      "counts_toward_readiness": true,
+      "severity": "low",
+      "description": "A milestone scheduled after the completion date means the plan and the due date disagree.",
+      "status": "fail",
+      "evaluated": 3,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "POAM-006",
+          "severity": "low",
+          "message": "1 milestone(s) after the due date 2027-01-31.",
+          "ref": "Legacy finding carried from a prior audit [4928980d]",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "REF-001",
+      "title": "All UUID references resolve",
+      "category": "references",
+      "counts_toward_readiness": true,
+      "severity": "high",
+      "description": "Every finding-uuid, risk-uuid, observation-uuid, component-uuid, party-uuid and '#uuid' link must point at an object in the same document or another document in the package.",
+      "status": "fail",
+      "evaluated": 67,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "REF-001",
+          "severity": "high",
+          "message": "risk-uuid does not resolve to any object in the package (at poam-items/related-risks/risk-uuid).",
+          "ref": "poam.json:69cbc939-287d-50fc-a74c-c2dcf236d5b9",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "REF-002",
+      "title": "Assessed subjects are described in the SSP",
+      "category": "references",
+      "counts_toward_readiness": true,
+      "severity": "low",
+      "description": "Observation subjects (components, inventory items) in the Assessment Results should match objects in the SSP. A miss can mean the assessment covered something outside the documented boundary, or that the two tools use different IDs.",
+      "status": "fail",
+      "evaluated": 6,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "REF-002",
+          "severity": "low",
+          "message": "Subject 'fee3bfb0-cd1f-53a6-aa19-9f59da269576' (component) is not in the SSP.",
+          "ref": "fee3bfb0-cd1f-53a6-aa19-9f59da269576",
+          "document": "assessment-results"
+        }
+      ]
+    },
+    {
+      "check_id": "REF-003",
+      "title": "POA&M identifies the same system as the SSP",
+      "category": "references",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "The POA&M system-id should match one of the SSP's system-ids.",
+      "status": "fail",
+      "evaluated": 1,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "REF-003",
+          "severity": "medium",
+          "message": "POA&M system-id 42294d76-2b8a-52d3-98af-8bdaf0a8c01e is not one of the SSP's system-ids.",
+          "ref": "poam.json",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "REF-004",
+      "title": "UUIDs are unique within each document",
+      "category": "references",
+      "counts_toward_readiness": true,
+      "severity": "medium",
+      "description": "OSCAL requires each object's UUID to be unique in its document; duplicates make references ambiguous.",
+      "status": "fail",
+      "evaluated": 141,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "REF-004",
+          "severity": "medium",
+          "message": "UUID used 2 times.",
+          "ref": "poam.json:48a7e19f-6a93-5dbb-9abc-c594816b9dc0",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "REF-005",
+      "title": "OSCAL versions are declared and consistent",
+      "category": "references",
+      "counts_toward_readiness": true,
+      "severity": "low",
+      "description": "Each document should declare metadata/oscal-version, and the package should use one OSCAL version.",
+      "status": "fail",
+      "evaluated": 3,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "REF-005",
+          "severity": "low",
+          "message": "Mixed OSCAL versions: assessment-results.json=1.1.2, poam.json=1.1.1, ssp.json=1.1.2.",
+          "ref": "package",
+          "document": "package"
+        }
+      ]
+    },
+    {
+      "check_id": "REF-006",
+      "title": "Documents are valid against the NIST OSCAL schemas",
+      "category": "references",
+      "counts_toward_readiness": true,
+      "severity": "high",
+      "description": "Each document must validate against NIST's OSCAL JSON Schema for its model, or tools that import the package (eMASS, FedRAMP automation, GRC platforms) may reject it.",
+      "status": "skipped",
+      "evaluated": 0,
+      "failed": 0,
+      "skipped_reason": "Schema validation not requested (use --schema-dir).",
+      "issues": []
+    },
+    {
+      "check_id": "RISK-001",
+      "title": "Open Critical, High or CAT I weaknesses",
+      "category": "risk",
+      "counts_toward_readiness": false,
+      "severity": "high",
+      "description": "Lists each open Critical, High or CAT I item for the AO. This is risk, not a package defect, so it does not affect the readiness score or level; open Critical items are critical issues and High/CAT I items are high issues for the --fail-on gate.",
+      "status": "fail",
+      "evaluated": 5,
+      "failed": 2,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "RISK-001",
+          "severity": "high",
+          "message": "Open High / CAT I weakness (AC-2).",
+          "ref": "Stale privileged accounts [a1ba1b3a]",
+          "document": "poam"
+        },
+        {
+          "check_id": "RISK-001",
+          "severity": "high",
+          "message": "Open High / CAT I weakness (SI-2).",
+          "ref": "High-severity patches past due [d4b0da7c]",
+          "document": "poam"
+        }
+      ]
+    },
+    {
+      "check_id": "RISK-002",
+      "title": "Accepted risks are listed for the AO",
+      "category": "risk",
+      "counts_toward_readiness": false,
+      "severity": "info",
+      "description": "Items with an approved deviation (risk acceptance) are listed so the AO sees every risk that is being carried rather than fixed. Informational; does not affect the score or level.",
+      "status": "fail",
+      "evaluated": 6,
+      "failed": 1,
+      "skipped_reason": null,
+      "issues": [
+        {
+          "check_id": "RISK-002",
+          "severity": "info",
+          "message": "Risk accepted (Low / CAT III, AU-6).",
+          "ref": "Weekly (not daily) audit review: risk accepted [02be1f1e]",
+          "document": "poam"
+        }
+      ]
+    }
+  ]
+}

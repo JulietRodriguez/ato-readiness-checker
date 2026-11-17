@@ -1,0 +1,902 @@
+{
+  "assessment-results": {
+    "uuid": "d7862beb-5953-5dae-aac9-ac8b4756546f",
+    "metadata": {
+      "title": "Security Assessment Results: SYNTHETIC Case Management System (CMS-DEMO)",
+      "last-modified": "2026-11-01T00:00:00+00:00",
+      "version": "1.0",
+      "oscal-version": "1.1.2",
+      "remarks": "SYNTHETIC sample for ato-readiness-checker. Not a real assessment."
+    },
+    "import-ap": {
+      "href": "#920fbb75-86a7-55be-91f7-2a1210a7a9f3"
+    },
+    "results": [
+      {
+        "uuid": "5ae1abea-7800-533b-8cbd-dc8532ecad21",
+        "title": "Annual assessment 2026",
+        "description": "Assessment of the CMS-DEMO baseline controls.",
+        "start": "2026-09-14T13:00:00+00:00",
+        "end": "2026-10-09T21:00:00+00:00",
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ac-2"
+                },
+                {
+                  "control-id": "ac-3"
+                },
+                {
+                  "control-id": "ac-6"
+                },
+                {
+                  "control-id": "ac-17"
+                },
+                {
+                  "control-id": "ac-18"
+                },
+                {
+                  "control-id": "au-2"
+                },
+                {
+                  "control-id": "au-6"
+                },
+                {
+                  "control-id": "au-9"
+                },
+                {
+                  "control-id": "ca-7"
+                },
+                {
+                  "control-id": "cm-2"
+                },
+                {
+                  "control-id": "cm-6"
+                },
+                {
+                  "control-id": "cm-8"
+                },
+                {
+                  "control-id": "cp-9"
+                },
+                {
+                  "control-id": "ia-2"
+                },
+                {
+                  "control-id": "ia-2.1"
+                },
+                {
+                  "control-id": "ia-5"
+                },
+                {
+                  "control-id": "ra-5"
+                },
+                {
+                  "control-id": "sc-7"
+                },
+                {
+                  "control-id": "sc-8"
+                },
+                {
+                  "control-id": "sc-28"
+                },
+                {
+                  "control-id": "si-2"
+                },
+                {
+                  "control-id": "si-4"
+                }
+              ]
+            }
+          ]
+        },
+        "observations": [
+          {
+            "uuid": "196c32b1-5b9c-5792-8df1-6fb23d171064",
+            "title": "AC-2 test",
+            "description": "Seven privileged accounts belong to staff who left more than 90 days ago.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "37f4f398-d4d1-5c23-b3e1-008ffb8d956b",
+            "title": "AC-3 test",
+            "description": "AC-3 (Access Enforcement) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "a28ba918-1b1b-57cc-98ea-b750fb4d0728",
+            "title": "AC-6 test",
+            "description": "AC-6 (Least Privilege) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "7656a60b-1ba1-54b8-b3ec-41553795cb5d",
+            "title": "AC-17 test",
+            "description": "AC-17 (Remote Access) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "cc1683c5-f977-53d1-a979-f571a5ef0092",
+            "title": "AU-2 test",
+            "description": "AU-2 (Event Logging) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "2d290f75-7035-58fa-9ada-3ef55dfb4b96",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "abd45435-d6ad-5e64-ab37-01320a33125a",
+            "title": "AU-6 test",
+            "description": "Audit records are reviewed weekly rather than daily.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "2d290f75-7035-58fa-9ada-3ef55dfb4b96",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "f1a8662b-9cb2-58bd-a1cc-eb2f8f7f775a",
+            "title": "AU-9 test",
+            "description": "AU-9 (Protection of Audit Information) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "2d290f75-7035-58fa-9ada-3ef55dfb4b96",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "944fdd1c-dca2-5c60-9576-f509bf98a59c",
+            "title": "CA-7 test",
+            "description": "CA-7 (Continuous Monitoring) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6d387157-87ad-5622-91ff-a394e70f29e2",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "404d9870-e839-5ce2-af8c-dc66dd7b529a",
+            "title": "CM-2 test",
+            "description": "CM-2 (Baseline Configuration) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "e7d33995-cf2b-5f51-be5d-77e5ce4195b1",
+            "title": "CM-6 test",
+            "description": "Three container settings deviate from the hardening baseline.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "533dbe3a-6a97-5251-bfa3-5cfbfb0b047d",
+            "title": "CM-8 test",
+            "description": "The component inventory is maintained by hand.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6d387157-87ad-5622-91ff-a394e70f29e2",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "fcdb38ec-b55d-51d3-bf10-4db55e917184",
+            "title": "CP-9 test",
+            "description": "CP-9 (System Backup) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "9d7f01cd-1f9f-53d1-9c8b-b5c8ce970020",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "70120fd8-c081-5556-82a1-b82e7f4f2736",
+            "title": "IA-2 test",
+            "description": "IA-2 (Identification and Authentication (Organizational Users)) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "b7ac3f97-2e9e-50be-a87a-681f1499bdaf",
+            "title": "IA-2(1) test",
+            "description": "IA-2(1) (Multi-factor Authentication to Privileged Accounts) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "4af902c8-cab7-5ae4-ab3e-07b15f4c13f4",
+            "title": "IA-5 test",
+            "description": "IA-5 (Authenticator Management) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "4b0f6660-e600-5f75-816f-25e63a12e7e0",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "a2d86061-d319-55eb-8642-6feef374c101",
+            "title": "RA-5 test",
+            "description": "The database tier is scanned without credentials.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "9d7f01cd-1f9f-53d1-9c8b-b5c8ce970020",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "e5789947-a736-5f29-bb03-9902b4b5b37f",
+            "title": "SC-7 test",
+            "description": "SC-7 (Boundary Protection) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "926125c2-95bc-5ba8-a3e8-83b01854eabc",
+            "title": "SC-8 test",
+            "description": "SC-8 (Transmission Confidentiality and Integrity) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "7d412e87-8a54-562e-961a-5163bd3c2049",
+            "title": "SC-28 test",
+            "description": "SC-28 (Protection of Information at Rest) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "9d7f01cd-1f9f-53d1-9c8b-b5c8ce970020",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "d046752c-f2e2-5b3d-bbee-1d771e552f4a",
+            "title": "SI-2 test",
+            "description": "Two High-severity patches are more than 30 days past release.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "d5bcf0d6-90bf-5537-9a78-d04c1d3a765d",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          },
+          {
+            "uuid": "f37849bd-0571-593f-87dc-338c4971b747",
+            "title": "SI-4 test",
+            "description": "SI-4 (System Monitoring) was tested and operates as described in the SSP.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "2d290f75-7035-58fa-9ada-3ef55dfb4b96",
+                "type": "component"
+              }
+            ],
+            "collected": "2026-10-09T21:00:00+00:00"
+          }
+        ],
+        "findings": [
+          {
+            "uuid": "f865948d-187c-52ff-b6a0-e6d4bc25cc60",
+            "title": "AC-2 Account Management",
+            "description": "Seven privileged accounts belong to staff who left more than 90 days ago.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-2_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "196c32b1-5b9c-5792-8df1-6fb23d171064"
+              }
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              }
+            ]
+          },
+          {
+            "uuid": "fb17f278-1b83-5e25-8ee6-7926b044deca",
+            "title": "AC-3 Access Enforcement",
+            "description": "AC-3 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "37f4f398-d4d1-5c23-b3e1-008ffb8d956b"
+              }
+            ]
+          },
+          {
+            "uuid": "7303732a-7733-52c9-87a3-32981f376f01",
+            "title": "AC-6 Least Privilege",
+            "description": "AC-6 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a28ba918-1b1b-57cc-98ea-b750fb4d0728"
+              }
+            ]
+          },
+          {
+            "uuid": "20559053-f735-580b-8642-9563542bd391",
+            "title": "AC-17 Remote Access",
+            "description": "AC-17 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-17_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7656a60b-1ba1-54b8-b3ec-41553795cb5d"
+              }
+            ]
+          },
+          {
+            "uuid": "1a43a5f9-191a-5c5b-a42c-3d40b6aacacc",
+            "title": "AU-2 Event Logging",
+            "description": "AU-2 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "cc1683c5-f977-53d1-a979-f571a5ef0092"
+              }
+            ]
+          },
+          {
+            "uuid": "8a65eec1-5afe-5913-94bf-c653def5f7ee",
+            "title": "AU-6 Audit Record Review, Analysis, and Reporting",
+            "description": "Audit records are reviewed weekly rather than daily.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-6_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "abd45435-d6ad-5e64-ab37-01320a33125a"
+              }
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "low"
+              }
+            ]
+          },
+          {
+            "uuid": "0110e10a-d516-591b-bf87-56a5c630f4cd",
+            "title": "AU-9 Protection of Audit Information",
+            "description": "AU-9 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-9_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f1a8662b-9cb2-58bd-a1cc-eb2f8f7f775a"
+              }
+            ]
+          },
+          {
+            "uuid": "ecca52c5-b832-5088-b566-5bedf4272a73",
+            "title": "CA-7 Continuous Monitoring",
+            "description": "CA-7 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ca-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "944fdd1c-dca2-5c60-9576-f509bf98a59c"
+              }
+            ]
+          },
+          {
+            "uuid": "28914bd4-f2a8-5ac0-99ce-cbf99c3c894a",
+            "title": "CM-2 Baseline Configuration",
+            "description": "CM-2 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "404d9870-e839-5ce2-af8c-dc66dd7b529a"
+              }
+            ]
+          },
+          {
+            "uuid": "72aa79f7-3c68-55ae-851a-6b0d27f2c3ca",
+            "title": "CM-6 Configuration Settings",
+            "description": "Three container settings deviate from the hardening baseline.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-6_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e7d33995-cf2b-5f51-be5d-77e5ce4195b1"
+              }
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "moderate"
+              }
+            ]
+          },
+          {
+            "uuid": "24b6e3a7-41e9-5370-ba42-075d6287eb9e",
+            "title": "CM-8 System Component Inventory",
+            "description": "The component inventory is maintained by hand.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-8_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "533dbe3a-6a97-5251-bfa3-5cfbfb0b047d"
+              }
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "low"
+              }
+            ]
+          },
+          {
+            "uuid": "3bc8d84f-ee63-58df-a5d4-9856ac2ae9be",
+            "title": "CP-9 System Backup",
+            "description": "CP-9 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cp-9_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fcdb38ec-b55d-51d3-bf10-4db55e917184"
+              }
+            ]
+          },
+          {
+            "uuid": "ed6ec98a-e54c-50f8-a58f-94ba22b7abad",
+            "title": "IA-2 Identification and Authentication (Organizational Users)",
+            "description": "IA-2 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "70120fd8-c081-5556-82a1-b82e7f4f2736"
+              }
+            ]
+          },
+          {
+            "uuid": "62fb6e65-5f55-5471-9b2b-e8ce9f779a58",
+            "title": "IA-2(1) Multi-factor Authentication to Privileged Accounts",
+            "description": "IA-2(1) is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-2.1_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b7ac3f97-2e9e-50be-a87a-681f1499bdaf"
+              }
+            ]
+          },
+          {
+            "uuid": "403dfdc4-9430-52a3-ab7d-bcdb72f63652",
+            "title": "IA-5 Authenticator Management",
+            "description": "IA-5 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4af902c8-cab7-5ae4-ab3e-07b15f4c13f4"
+              }
+            ]
+          },
+          {
+            "uuid": "78eaa526-af16-5ce6-98a7-b4d0c6d722f0",
+            "title": "RA-5 Vulnerability Monitoring and Scanning",
+            "description": "The database tier is scanned without credentials.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ra-5_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a2d86061-d319-55eb-8642-6feef374c101"
+              }
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "moderate"
+              }
+            ]
+          },
+          {
+            "uuid": "2f81130c-314d-52c1-bb78-75e212cd8007",
+            "title": "SC-7 Boundary Protection",
+            "description": "SC-7 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e5789947-a736-5f29-bb03-9902b4b5b37f"
+              }
+            ]
+          },
+          {
+            "uuid": "f909c85b-efeb-530b-b0da-d16f516c5e6d",
+            "title": "SC-8 Transmission Confidentiality and Integrity",
+            "description": "SC-8 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-8_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "926125c2-95bc-5ba8-a3e8-83b01854eabc"
+              }
+            ]
+          },
+          {
+            "uuid": "bd8aa1ef-4abf-52f6-a2ca-3c48f2316502",
+            "title": "SC-28 Protection of Information at Rest",
+            "description": "SC-28 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7d412e87-8a54-562e-961a-5163bd3c2049"
+              }
+            ]
+          },
+          {
+            "uuid": "21d51c0b-4380-5381-b537-5394b29ba349",
+            "title": "SI-2 Flaw Remediation",
+            "description": "Two High-severity patches are more than 30 days past release.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-2_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d046752c-f2e2-5b3d-bbee-1d771e552f4a"
+              }
+            ],
+            "props": [
+              {
+                "name": "severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              }
+            ]
+          },
+          {
+            "uuid": "ac2617c0-6d68-5d72-8583-e31c8096eee5",
+            "title": "SI-4 System Monitoring",
+            "description": "SI-4 is satisfied.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f37849bd-0571-593f-87dc-338c4971b747"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "920fbb75-86a7-55be-91f7-2a1210a7a9f3",
+          "title": "Security Assessment Plan, CMS-DEMO (synthetic, not included)"
+        }
+      ]
+    }
+  }
+}

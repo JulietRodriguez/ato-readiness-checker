@@ -1,0 +1,44 @@
+{
+  "profile": {
+    "uuid": "a1b8c94a-717b-5baa-a929-aa552acdca17",
+    "metadata": {
+      "title": "SYNTHETIC sample baseline (22-control subset for demonstration; not an official baseline)",
+      "last-modified": "2026-11-01T00:00:00+00:00",
+      "version": "1.0",
+      "oscal-version": "1.1.2"
+    },
+    "imports": [
+      {
+        "href": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "ac-2",
+              "ac-3",
+              "ac-6",
+              "ac-17",
+              "ac-18",
+              "au-2",
+              "au-6",
+              "au-9",
+              "ca-7",
+              "cm-2",
+              "cm-6",
+              "cm-8",
+              "cp-9",
+              "ia-2",
+              "ia-2.1",
+              "ia-5",
+              "ra-5",
+              "sc-7",
+              "sc-8",
+              "sc-28",
+              "si-2",
+              "si-4"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

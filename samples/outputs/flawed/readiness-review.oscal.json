@@ -1,0 +1,1216 @@
+{
+  "assessment-results": {
+    "uuid": "3b00a01c-986d-5fcc-8f8f-8c06f9d900eb",
+    "metadata": {
+      "title": "Authorization package readiness review: SYNTHETIC Case Management System (CMS-DEMO)",
+      "last-modified": "2026-11-17T12:00:00+00:00",
+      "version": "0.1.0",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "generator",
+          "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+          "value": "ato-readiness-checker 0.1.0"
+        }
+      ],
+      "remarks": "The readiness score and level are this tool's own measures of package completeness and consistency. They are not an official FedRAMP, DoD or NIST metric. Only the Authorizing Official makes the authorization decision."
+    },
+    "import-ap": {
+      "href": "#d5320ef2-7e04-5969-a4ad-61d0d726b13b",
+      "remarks": "No assessment plan applies; this points at the readiness check catalog."
+    },
+    "results": [
+      {
+        "uuid": "9e68bccc-e168-5e5d-86ea-f8d5a0e32ffc",
+        "title": "Authorization package readiness review",
+        "description": "Automated completeness and consistency review of the authorization package for SYNTHETIC Case Management System (CMS-DEMO). This is a review of the package documents, not a security control assessment.",
+        "start": "2026-11-17T12:00:00+00:00",
+        "end": "2026-11-17T12:00:00+00:00",
+        "props": [
+          {
+            "name": "readiness-score",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "84.7"
+          },
+          {
+            "name": "readiness-level",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "not-ready"
+          },
+          {
+            "name": "as-of",
+            "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+            "value": "2026-11-17"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "Package-level review; no individual control was tested.",
+              "include-all": {}
+            }
+          ]
+        },
+        "remarks": "The readiness score and level are this tool's own measures of package completeness and consistency. They are not an official FedRAMP, DoD or NIST metric. Only the Authorizing Official makes the authorization decision.",
+        "observations": [
+          {
+            "uuid": "0157e4cd-135a-57e9-98e1-786beeadcd1c",
+            "title": "SSP-001: Required SSP sections are present",
+            "description": "Required SSP sections are present. System characteristics, categorization, boundary, architecture, data flow, components, inventory, users and control implementation must all be filled in.\n\n- [medium] Data flow: Missing or empty: Data flow (system-characteristics/data-flow/description).",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "SSP-001"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "15"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "db7bc070-865c-55d4-9880-6d56108d171d",
+            "title": "SSP-002: Security categorization is consistent (FIPS 199 high-water mark)",
+            "description": "Security categorization is consistent (FIPS 199 high-water mark). Each C/I/A impact must be at least the highest impact of the system's information types, and the overall sensitivity level must equal the highest of C, I and A.\n\n- [high] confidentiality: Confidentiality is categorized low but an information type is moderate; FIPS 199 requires the high-water mark.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "SSP-002"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "6"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "a865e861-d6eb-5669-9ad1-ea408bebd935",
+            "title": "SSP-003: Key roles are assigned to people",
+            "description": "Key roles are assigned to people. System Owner, Authorizing Official and ISSO each need a named party in metadata responsible-parties.\n\n- [medium] Authorizing Official: No party is assigned the Authorizing Official role.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "SSP-003"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "3"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "021c8fc8-cf2f-57d8-8fbc-72067b591dbf",
+            "title": "SSP-004: No draft or placeholder language",
+            "description": "No draft or placeholder language. Text such as TBD, TODO, '[insert ...]' or 'review and refine' means the SSP is still a draft.\n\n- [medium] Authorization boundary: Contains draft language: 'TBD'.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "SSP-004"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "25"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "133a36ea-568b-599e-8ac7-6e3896c87719",
+            "title": "CTRL-001: Every baseline control has an implementation statement",
+            "description": "Every baseline control has an implementation statement. Each control in the selected baseline must appear in the SSP's implemented-requirements.\n\n- [high] IA-2(1): Baseline control is not addressed in the SSP.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "CTRL-001"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "22"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "0f5f7894-0945-5453-8eb8-bdf65c4d37fa",
+            "title": "CTRL-002: Implemented requirements describe how the control is met",
+            "description": "Implemented requirements describe how the control is met. Each implemented-requirement needs narrative text (by-components description, statement narrative or remarks) explaining the implementation. Not-applicable controls are covered by CTRL-006 instead.\n\n- [high] AU-9: No implementation narrative.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "CTRL-002"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "20"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "45cdefc4-cd19-5679-a740-289ce1317aff",
+            "title": "CTRL-003: Implementation status is present, valid and consistent",
+            "description": "Implementation status is present, valid and consistent. Each control needs an implementation status (implemented, partial, planned, alternative, not-applicable), and the control-level and component-level statuses must agree.\n\n- [medium] CP-9: Inconsistent status: marked implemented but a component is partial.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "CTRL-003"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "21"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "ac0f13ab-d53a-5b54-a7d3-ba2410aaec6d",
+            "title": "CTRL-004: SSP status agrees with the assessment",
+            "description": "SSP status agrees with the assessment. A control the SSP calls 'implemented' should not have a not-satisfied finding, and a control assessed as satisfied should not still be 'planned' in the SSP.\n\n- [medium] IA-5: SSP says implemented, but the assessment found it not satisfied ('IA-5 Authenticator Management').\n- [medium] SI-2: SSP says implemented, but the assessment found it not satisfied ('SI-2 Flaw Remediation').",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "CTRL-004"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "19"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "2"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "a63c08ba-e4ab-5d16-a91a-4e37d70d5aff",
+            "title": "CTRL-005: Planned and partial controls are tracked on the POA&M",
+            "description": "Planned and partial controls are tracked on the POA&M. A control the SSP says is only planned or partially implemented is a known gap, so it should have a POA&M item.\n\n- [medium] CM-8: SSP status is planned but no open POA&M item covers it.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "CTRL-005"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "5"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "b6d0e5d0-d47c-526f-ad1a-3fe38ac98ade",
+            "title": "CTRL-006: Not-applicable controls are justified",
+            "description": "Not-applicable controls are justified. A control marked not-applicable needs text explaining why.\n\n- [low] AC-18: Marked not-applicable with no justification.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "CTRL-006"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "low"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "63ec9a9d-1886-5a0b-ba2f-08d1b9edf516",
+            "title": "AR-002: Every in-scope control was assessed",
+            "description": "Every in-scope control was assessed. Each baseline control (or each SSP control when no baseline is given) should have a finding or be listed in the assessment's reviewed controls.\n\n- [medium] SC-28: No assessment finding for this baseline control.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "AR-002"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "22"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "11d623e0-4052-58bc-b70b-6c2a24771c45",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "5956cf59-8692-5d7d-9dd2-54a0c540655d",
+            "title": "AR-003: Assessment is current",
+            "description": "Assessment is current. The most recent assessment result should fall within the allowed age (default 365 days).\n\n- [medium] results: Latest assessment ended 2025-08-29, 445 days before 2026-11-17 (limit 365).",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "AR-003"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "11d623e0-4052-58bc-b70b-6c2a24771c45",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "27c746c7-f130-56a3-be3f-8536b07c1f42",
+            "title": "TRC-001: Every not-satisfied finding has a POA&M item",
+            "description": "Every not-satisfied finding has a POA&M item. Each weakness the assessment found must be tracked on the POA&M (or the AO must be told why not).\n\n- [high] CM-8: Not-satisfied finding 'CM-8 System Component Inventory' has no POA&M item.\n- [high] IA-5: Not-satisfied finding 'IA-5 Authenticator Management' has no POA&M item.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "TRC-001"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "7"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "2"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "11d623e0-4052-58bc-b70b-6c2a24771c45",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "92b30aef-e2e0-52f3-8994-db8a38d64f10",
+            "title": "TRC-002: Every POA&M item traces to an assessment finding",
+            "description": "Every POA&M item traces to an assessment finding. Each open POA&M item should link (by UUID or control) to a not-satisfied finding in the Assessment Results, so the AO can see where the weakness came from.\n\n- [medium] Legacy finding carried from a prior audit [4928980d]: No not-satisfied finding in the Assessment Results for PL-2.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "TRC-002"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "6"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "06cf2c37-2a56-5619-ad7d-277f9aaac447",
+            "title": "POAM-001: POA&M items have a scheduled completion date",
+            "description": "POA&M items have a scheduled completion date. Every item that is not closed needs a due date (risk deadline or scheduled-completion-date).\n\n- [high] Database tier scanned without credentials [e51103f1]: No scheduled completion date.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "POAM-001"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "6"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "12844b54-8a96-501d-a936-78172246e49e",
+            "title": "POAM-002: Open POA&M items have dated milestones",
+            "description": "Open POA&M items have dated milestones. Each open item needs at least one milestone, and each milestone needs a date.\n\n- [medium] Container settings deviate from hardening baseline [d3d0a820]: No milestones.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "POAM-002"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "5"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "732c5970-447e-529a-bdb7-aefde03703e6",
+            "title": "POAM-003: POA&M items have a point of contact",
+            "description": "POA&M items have a point of contact. Someone must own each item: a point-of-contact prop, an origin party, or a task responsible party.\n\n- [medium] High-severity patches past due [d4b0da7c]: No point of contact.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "POAM-003"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "6"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "919c22de-07db-56a7-a3a6-cc9a2e06686a",
+            "title": "POAM-004: No overdue POA&M items",
+            "description": "No overdue POA&M items. An open item past its due date needs a new date with a documented reason, or closure. This is a package problem (the POA&M is not being maintained). Overdue Critical/High items are raised to critical.\n\n- [critical] Stale privileged accounts [a1ba1b3a]: Due 2026-10-01, 47 days overdue as of 2026-11-17.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "POAM-004"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "5"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "cc7b438e-51dd-514a-a78a-45dd6d939200",
+            "title": "POAM-005: POA&M items record a severity",
+            "description": "POA&M items record a severity. Without a severity (Critical/High/Moderate/Low or CAT I/II/III) the item can't be prioritized.\n\n- [low] Legacy finding carried from a prior audit [4928980d]: No recognizable severity.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "POAM-005"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "low"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "6"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "db6a59d5-1c1e-5c02-87aa-5358f8b70e8e",
+            "title": "POAM-006: Milestones fall on or before the item's due date",
+            "description": "Milestones fall on or before the item's due date. A milestone scheduled after the completion date means the plan and the due date disagree.\n\n- [low] Legacy finding carried from a prior audit [4928980d]: 1 milestone(s) after the due date 2027-01-31.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "POAM-006"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "low"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "3"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "f94d593d-b49b-558d-8394-07d7194bb66c",
+            "title": "REF-001: All UUID references resolve",
+            "description": "All UUID references resolve. Every finding-uuid, risk-uuid, observation-uuid, component-uuid, party-uuid and '#uuid' link must point at an object in the same document or another document in the package.\n\n- [high] poam.json:69cbc939-287d-50fc-a74c-c2dcf236d5b9: risk-uuid does not resolve to any object in the package (at poam-items/related-risks/risk-uuid).",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "REF-001"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "67"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "188d0850-18f3-5d9d-a086-28f7788eee57",
+            "title": "REF-002: Assessed subjects are described in the SSP",
+            "description": "Assessed subjects are described in the SSP. Observation subjects (components, inventory items) in the Assessment Results should match objects in the SSP. A miss can mean the assessment covered something outside the documented boundary, or that the two tools use different IDs.\n\n- [low] fee3bfb0-cd1f-53a6-aa19-9f59da269576: Subject 'fee3bfb0-cd1f-53a6-aa19-9f59da269576' (component) is not in the SSP.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "REF-002"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "low"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "6"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "11d623e0-4052-58bc-b70b-6c2a24771c45",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "2fd9fdb2-a90d-58c3-897d-75dedb6c8ec4",
+            "title": "REF-003: POA&M identifies the same system as the SSP",
+            "description": "POA&M identifies the same system as the SSP. The POA&M system-id should match one of the SSP's system-ids.\n\n- [medium] poam.json: POA&M system-id 42294d76-2b8a-52d3-98af-8bdaf0a8c01e is not one of the SSP's system-ids.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "REF-003"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "dc1283e3-ec5b-5cad-bb9b-df45db511dd9",
+            "title": "REF-004: UUIDs are unique within each document",
+            "description": "UUIDs are unique within each document. OSCAL requires each object's UUID to be unique in its document; duplicates make references ambiguous.\n\n- [medium] poam.json:48a7e19f-6a93-5dbb-9abc-c594816b9dc0: UUID used 2 times.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "REF-004"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "medium"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "141"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "748f05f6-501f-57a6-8d6f-8e718575269e",
+            "title": "REF-005: OSCAL versions are declared and consistent",
+            "description": "OSCAL versions are declared and consistent. Each document should declare metadata/oscal-version, and the package should use one OSCAL version.\n\n- [low] package: Mixed OSCAL versions: assessment-results.json=1.1.2, poam.json=1.1.1, ssp.json=1.1.2.",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "REF-005"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "low"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "3"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+                "type": "resource"
+              },
+              {
+                "subject-uuid": "11d623e0-4052-58bc-b70b-6c2a24771c45",
+                "type": "resource"
+              },
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "834c3ea9-2ff3-57a9-9a4f-acc85544fbe0",
+            "title": "RISK-001: Open Critical, High or CAT I weaknesses",
+            "description": "Open Critical, High or CAT I weaknesses. Lists each open Critical, High or CAT I item for the AO. This is risk, not a package defect, so it does not affect the readiness score or level; open Critical items are critical issues and High/CAT I items are high issues for the --fail-on gate.\n\n- [high] Stale privileged accounts [a1ba1b3a]: Open High / CAT I weakness (AC-2).\n- [high] High-severity patches past due [d4b0da7c]: Open High / CAT I weakness (SI-2).",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "RISK-001"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "high"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "5"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "2"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          },
+          {
+            "uuid": "140cb00d-bc05-5151-bb75-08d5bf130f50",
+            "title": "RISK-002: Accepted risks are listed for the AO",
+            "description": "Accepted risks are listed for the AO. Items with an approved deviation (risk acceptance) are listed so the AO sees every risk that is being carried rather than fixed. Informational; does not affect the score or level.\n\n- [info] Weekly (not daily) audit review: risk accepted [02be1f1e]: Risk accepted (Low / CAT III, AU-6).",
+            "props": [
+              {
+                "name": "check-id",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "RISK-002"
+              },
+              {
+                "name": "check-severity",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "info"
+              },
+              {
+                "name": "evaluated",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "6"
+              },
+              {
+                "name": "failed",
+                "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+                "value": "1"
+              }
+            ],
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+                "type": "resource"
+              }
+            ],
+            "collected": "2026-11-17T12:00:00+00:00"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "6dde5678-c640-5edd-8154-a71deb4da054",
+          "title": "System Security Plan: SYNTHETIC Case Management System (CMS-DEMO)",
+          "description": "Input ssp reviewed for authorization readiness.",
+          "props": [
+            {
+              "name": "document-kind",
+              "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+              "value": "ssp"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "ssp.json",
+              "media-type": "application/oscal+json"
+            }
+          ]
+        },
+        {
+          "uuid": "11d623e0-4052-58bc-b70b-6c2a24771c45",
+          "title": "Security Assessment Results: SYNTHETIC Case Management System (CMS-DEMO)",
+          "description": "Input assessment-results reviewed for authorization readiness.",
+          "props": [
+            {
+              "name": "document-kind",
+              "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+              "value": "assessment-results"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "assessment-results.json",
+              "media-type": "application/oscal+json"
+            }
+          ]
+        },
+        {
+          "uuid": "f24ee232-95a7-5682-a554-a13f22e7e313",
+          "title": "POA&M: SYNTHETIC Case Management System (CMS-DEMO)",
+          "description": "Input poam reviewed for authorization readiness.",
+          "props": [
+            {
+              "name": "document-kind",
+              "ns": "https://github.com/JulietRodriguez/ato-readiness-checker/ns/oscal",
+              "value": "poam"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "poam.json",
+              "media-type": "application/oscal+json"
+            }
+          ]
+        },
+        {
+          "uuid": "d5320ef2-7e04-5969-a4ad-61d0d726b13b",
+          "title": "ato-readiness-checker 0.1.0 check catalog",
+          "description": "The readiness checks applied in this review. This is not an assessment plan.",
+          "rlinks": [
+            {
+              "href": "https://github.com/JulietRodriguez/ato-readiness-checker/blob/main/docs/checks.md"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
