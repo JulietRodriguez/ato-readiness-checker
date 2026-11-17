@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ato-readiness-checker"
+version = "0.1.0"
+description = "Review an OSCAL authorization package (SSP, Assessment Results, POA&M) for completeness and consistency before it goes to the Authorizing Official."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Juliet Rodriguez" }]
+keywords = ["oscal", "rmf", "ato", "fedramp", "poam", "grc", "compliance", "nist-800-53", "nist-800-37"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Security",
+]
+# No runtime dependencies: the checks and all report formats use the standard library only.
+dependencies = []
+
+[project.optional-dependencies]
+schema = ["jsonschema>=4.17"]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff==0.16.9", "jsonschema>=4.17"]
+
+[project.scripts]
+ato-readiness-checker = "ato_readiness_checker.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/JulietRodriguez/ato-readiness-checker"
+Issues = "https://github.com/JulietRodriguez/ato-readiness-checker/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-ra"
+
+[tool.coverage.run]
+source = ["ato_readiness_checker"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+src = ["src", "tests", "tools"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF", "C4", "PIE"]
+ignore = ["RUF001", "RUF002", "RUF003"]
