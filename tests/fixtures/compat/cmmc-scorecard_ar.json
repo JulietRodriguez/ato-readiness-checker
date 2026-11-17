@@ -1,0 +1,2827 @@
+{
+  "assessment-results": {
+    "uuid": "82bc5799-b8c0-4602-9f66-4d50f8c81850",
+    "metadata": {
+      "title": "CMMC 2.0 Level 2 Assessment Results",
+      "last-modified": "2026-11-17T21:00:55+00:00",
+      "version": "1.0.0",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "framework",
+          "value": "CMMC 2.0 Level 2",
+          "ns": "https://cmmc-scorecard.local/ns"
+        }
+      ],
+      "roles": [
+        {
+          "id": "assessor",
+          "title": "Assessor"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "9bc934dc-baa0-4364-bfc9-cb5b006d2c1b",
+          "type": "organization",
+          "name": "cmmc-scorecard"
+        }
+      ]
+    },
+    "import-ap": {
+      "href": "#cmmc-l2-assessment-plan"
+    },
+    "results": [
+      {
+        "uuid": "249ed9ec-f743-4ee8-8607-04734e84e3dc",
+        "title": "CMMC Level 2 Scorecard Result",
+        "description": "Overall coverage score 8.0/100 (FAIL). 8/110 practices satisfied.",
+        "start": "2026-11-17T21:00:55+00:00",
+        "end": "2026-11-17T21:00:55+00:00",
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "AC.L2-3.1.5"
+                },
+                {
+                  "control-id": "AC.L2-3.1.7"
+                },
+                {
+                  "control-id": "AC.L2-3.1.14"
+                },
+                {
+                  "control-id": "AU.L2-3.3.1"
+                },
+                {
+                  "control-id": "AU.L2-3.3.2"
+                },
+                {
+                  "control-id": "AU.L2-3.3.5"
+                },
+                {
+                  "control-id": "AU.L2-3.3.8"
+                },
+                {
+                  "control-id": "CM.L2-3.4.1"
+                },
+                {
+                  "control-id": "CM.L2-3.4.3"
+                },
+                {
+                  "control-id": "CM.L2-3.4.7"
+                },
+                {
+                  "control-id": "IA.L2-3.5.3"
+                },
+                {
+                  "control-id": "IA.L2-3.5.6"
+                },
+                {
+                  "control-id": "RA.L2-3.11.2"
+                },
+                {
+                  "control-id": "RA.L2-3.11.3"
+                },
+                {
+                  "control-id": "SC.L2-3.13.1"
+                },
+                {
+                  "control-id": "SC.L2-3.13.8"
+                },
+                {
+                  "control-id": "SC.L2-3.13.11"
+                },
+                {
+                  "control-id": "SC.L2-3.13.16"
+                },
+                {
+                  "control-id": "SI.L2-3.14.1"
+                },
+                {
+                  "control-id": "SI.L2-3.14.6"
+                }
+              ]
+            }
+          ]
+        },
+        "observations": [
+          {
+            "uuid": "bffd31dc-ddcd-4bba-9baf-c2041e08ee2e",
+            "title": "Observation for AC.L2-3.1.1",
+            "description": "Limit system access to authorized users, processes, and devices. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "319cb54a-25c2-4ef6-8df8-9d5efc0dec46",
+            "title": "Observation for AC.L2-3.1.2",
+            "description": "Limit system access to the transactions and functions authorized users may execute. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "6d892f0d-948f-4236-a105-67c3475cd82a",
+            "title": "Observation for AC.L2-3.1.3",
+            "description": "Control the flow of CUI in accordance with approved authorizations. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "f0781ab4-a55c-4aa1-8fcd-ece67c341393",
+            "title": "Observation for AC.L2-3.1.4",
+            "description": "Separate the duties of individuals to reduce risk of malevolent activity. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "39223bb0-39a6-42ef-9f6e-89f0b3f15ec4",
+            "title": "Observation for AC.L2-3.1.5",
+            "description": "Employ the principle of least privilege, including for privileged accounts. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure no IAM policies allow full administrative privileges (FAIL) on arn:aws:iam::123456789012:policy/AdminAccess"
+              }
+            ]
+          },
+          {
+            "uuid": "61093a88-d407-400d-971d-39b1c8f145e3",
+            "title": "Observation for AC.L2-3.1.6",
+            "description": "Use non-privileged accounts or roles when accessing nonsecurity functions. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "5ee83160-9525-497c-b603-d9334595c70b",
+            "title": "Observation for AC.L2-3.1.7",
+            "description": "Prevent non-privileged users from executing privileged functions; audit such execution. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure no IAM policies allow full administrative privileges (FAIL) on arn:aws:iam::123456789012:policy/AdminAccess"
+              }
+            ]
+          },
+          {
+            "uuid": "6cb4767a-6c28-410f-8b4b-473db85928d9",
+            "title": "Observation for AC.L2-3.1.8",
+            "description": "Limit unsuccessful logon attempts. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "8917b2ef-2885-4026-989e-78ca648d3d15",
+            "title": "Observation for AC.L2-3.1.9",
+            "description": "Provide privacy and security notices consistent with CUI rules. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "c6fd4182-0f55-4e5b-9fd0-a9bd4e76dd41",
+            "title": "Observation for AC.L2-3.1.10",
+            "description": "Use session lock with pattern-hiding displays after inactivity. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "626d197f-2f7a-4339-acd5-8ce834f190a9",
+            "title": "Observation for AC.L2-3.1.11",
+            "description": "Terminate a user session automatically after a defined condition. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "6b7cc563-35bf-4583-bd03-7c71b6bd9eff",
+            "title": "Observation for AC.L2-3.1.12",
+            "description": "Monitor and control remote access sessions. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "bb81cda3-7aa3-47da-b13e-37fe0d7faf9b",
+            "title": "Observation for AC.L2-3.1.13",
+            "description": "Employ cryptographic mechanisms to protect remote access sessions. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "1c573c8a-3920-4416-9c7d-72fccd4b354e",
+            "title": "Observation for AC.L2-3.1.14",
+            "description": "Route remote access via managed access control points. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure no security groups allow ingress from 0.0.0.0/0 to all ports (FAIL) on sg-0a1b2c3d4e5f"
+              }
+            ]
+          },
+          {
+            "uuid": "2ccfb1ca-eeea-4ed7-ac6b-0884e72ab8e8",
+            "title": "Observation for AC.L2-3.1.15",
+            "description": "Authorize remote execution of privileged commands and access to security-relevant info. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "2e856d99-e030-4186-92b6-3676cdc3bb2c",
+            "title": "Observation for AC.L2-3.1.16",
+            "description": "Authorize wireless access prior to allowing such connections. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "4a2374bd-ff59-4543-a0a4-32cae283d474",
+            "title": "Observation for AC.L2-3.1.17",
+            "description": "Protect wireless access using authentication and encryption. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "15179dd9-ddf6-490d-a001-801008b1a840",
+            "title": "Observation for AC.L2-3.1.18",
+            "description": "Control connection of mobile devices. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "1c2b919c-fbec-4203-8341-19831a007e03",
+            "title": "Observation for AC.L2-3.1.19",
+            "description": "Encrypt CUI on mobile devices and mobile computing platforms. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "6e49c57b-11f6-4848-a2a6-866ca1170914",
+            "title": "Observation for AC.L2-3.1.20",
+            "description": "Verify and control/limit connections to and use of external systems. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "7847c738-9a5e-4537-83b6-f9a88d21e46f",
+            "title": "Observation for AC.L2-3.1.21",
+            "description": "Limit use of portable storage devices on external systems. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "61ab8c2c-f105-4a7b-bd50-3607d25a3a0e",
+            "title": "Observation for AC.L2-3.1.22",
+            "description": "Control CUI posted or processed on publicly accessible systems. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "4995b6ac-8c75-4187-a10a-fb67c0794694",
+            "title": "Observation for AU.L2-3.3.3",
+            "description": "Review and update logged events. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "b591bf00-c2d5-47bc-9cca-3d3d11f0eefb",
+            "title": "Observation for AU.L2-3.3.4",
+            "description": "Alert in the event of an audit logging process failure. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "0d98852f-6bcf-4a5f-961e-57dd026fa554",
+            "title": "Observation for AU.L2-3.3.6",
+            "description": "Provide audit record reduction and report generation. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "6624ef80-3fd0-42f6-b608-6b056aaa8810",
+            "title": "Observation for AU.L2-3.3.7",
+            "description": "Synchronize internal system clocks with an authoritative time source. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "e3a3b2bc-d5a2-4cfa-9a29-e9dbbd062cf0",
+            "title": "Observation for AU.L2-3.3.8",
+            "description": "Protect audit information and tools from unauthorized access/modification/deletion. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure CloudTrail log file validation is enabled (FAIL) on arn:aws:cloudtrail:us-east-1:123456789012:trail/org-trail"
+              }
+            ]
+          },
+          {
+            "uuid": "22a2743e-0718-4d05-a646-af7f362ca996",
+            "title": "Observation for AU.L2-3.3.9",
+            "description": "Limit management of audit logging functionality to a subset of privileged users. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "14420c76-f2f6-4895-8749-ad59cb92df9e",
+            "title": "Observation for CM.L2-3.4.2",
+            "description": "Establish and enforce security configuration settings for IT products. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "8a2fd1cb-9e3f-4c60-be09-64ed6fa6a1f0",
+            "title": "Observation for CM.L2-3.4.4",
+            "description": "Analyze the security impact of changes prior to implementation. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "ffd0d8e6-642d-46a7-a16b-73a114ada8f3",
+            "title": "Observation for CM.L2-3.4.5",
+            "description": "Define, document, and enforce access restrictions for changes. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "21c81961-ccf5-4157-be77-c05b53ae79d7",
+            "title": "Observation for CM.L2-3.4.6",
+            "description": "Employ least functionality by providing only essential capabilities. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "672929b5-891b-41dd-b292-77e6c39b8ad4",
+            "title": "Observation for CM.L2-3.4.7",
+            "description": "Restrict or disable nonessential programs, ports, protocols, and services. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure no security groups allow ingress from 0.0.0.0/0 to all ports (FAIL) on sg-0a1b2c3d4e5f"
+              }
+            ]
+          },
+          {
+            "uuid": "60a80cff-f01b-4174-bf0f-fc7f1595d09b",
+            "title": "Observation for CM.L2-3.4.8",
+            "description": "Apply deny-by-exception or allow-by-exception software execution policy. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "80c4841e-6066-4980-b16e-1d8e20e0c406",
+            "title": "Observation for CM.L2-3.4.9",
+            "description": "Control and monitor user-installed software. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "045a7427-5bef-43ca-8522-9fe269b38e41",
+            "title": "Observation for IA.L2-3.5.1",
+            "description": "Identify system users, processes, and devices. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "cde7b207-8a9e-48f4-b10d-a901a759438b",
+            "title": "Observation for IA.L2-3.5.2",
+            "description": "Authenticate identities of users, processes, or devices before granting access. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "cacfc0fb-b36c-4966-b79b-6b4a33a091c3",
+            "title": "Observation for IA.L2-3.5.4",
+            "description": "Employ replay-resistant authentication mechanisms for network access. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "94ac9200-3455-4865-a3b5-ea44ced4b152",
+            "title": "Observation for IA.L2-3.5.5",
+            "description": "Prevent reuse of identifiers for a defined period. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "7838d345-84dd-4226-8d28-5850b10d09f6",
+            "title": "Observation for IA.L2-3.5.6",
+            "description": "Disable identifiers after a defined period of inactivity. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure unused IAM credentials are disabled (FAIL) on arn:aws:iam::123456789012:user/legacy-svc"
+              }
+            ]
+          },
+          {
+            "uuid": "25015588-1976-4ff3-af12-d3099bf4edeb",
+            "title": "Observation for IA.L2-3.5.7",
+            "description": "Enforce minimum password complexity and change of characters. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "bc6b797d-c498-4148-94ee-0922723dbc35",
+            "title": "Observation for IA.L2-3.5.8",
+            "description": "Prohibit password reuse for a specified number of generations. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "d9d9773c-d4cd-4af0-8229-56db7aa01e8f",
+            "title": "Observation for IA.L2-3.5.9",
+            "description": "Allow temporary password use with immediate change to a permanent password. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "35867db4-b646-45b8-b5fc-5e1ed93d8e2e",
+            "title": "Observation for IA.L2-3.5.10",
+            "description": "Store and transmit only cryptographically-protected passwords. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "ac2dede0-e2c5-4833-9396-c2f8177ace07",
+            "title": "Observation for IA.L2-3.5.11",
+            "description": "Obscure feedback of authentication information. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "bbae66db-a37f-42ff-aebe-9c491789b535",
+            "title": "Observation for IR.L2-3.6.1",
+            "description": "Establish an operational incident-handling capability. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "06804e15-6f4d-497c-9c45-3943b16cfa24",
+            "title": "Observation for IR.L2-3.6.2",
+            "description": "Track, document, and report incidents to designated officials. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "8ec81b69-2ffb-4be6-8c51-d2373477a184",
+            "title": "Observation for IR.L2-3.6.3",
+            "description": "Test the organizational incident response capability. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "0e5f63ad-5457-4263-ae5f-61d602112176",
+            "title": "Observation for MA.L2-3.7.1",
+            "description": "Perform maintenance on organizational systems. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "1e20081e-ec4b-4194-83ba-b6ff51aeaa1b",
+            "title": "Observation for MA.L2-3.7.2",
+            "description": "Provide controls on tools, techniques, and personnel used for maintenance. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "b8e51b1a-2630-4654-a468-a100b47c634e",
+            "title": "Observation for MA.L2-3.7.3",
+            "description": "Sanitize equipment removed for off-site maintenance of any CUI. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "2223df78-123b-40b3-b234-c8fcccccca6d",
+            "title": "Observation for MA.L2-3.7.4",
+            "description": "Check media with diagnostic/test programs for malicious code before use. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "eb167f1e-2150-49d2-8624-4bfbac22bb85",
+            "title": "Observation for MA.L2-3.7.5",
+            "description": "Require MFA to establish nonlocal maintenance sessions. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "5edf892e-150c-45d0-b790-97ae7a808d59",
+            "title": "Observation for MA.L2-3.7.6",
+            "description": "Supervise maintenance activities of personnel without access authorization. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "c28edbd7-44c1-4a15-972e-9c47bdb4f395",
+            "title": "Observation for MP.L2-3.8.1",
+            "description": "Protect (physically control and securely store) system media with CUI. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "f847663b-9375-4382-b099-761263776c79",
+            "title": "Observation for MP.L2-3.8.2",
+            "description": "Limit access to CUI on system media to authorized users. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "5f3c6b75-4602-4a81-ac10-103a8b42982c",
+            "title": "Observation for MP.L2-3.8.3",
+            "description": "Sanitize or destroy system media before disposal or reuse. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "2f69b130-f4f5-4b06-bd86-49524eaa5266",
+            "title": "Observation for MP.L2-3.8.4",
+            "description": "Mark media with necessary CUI markings and distribution limitations. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "f979e21e-ae8d-4645-88e4-7a34a2de9672",
+            "title": "Observation for MP.L2-3.8.5",
+            "description": "Control access to and maintain accountability for media during transport. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "6aadcba1-fc65-45db-97d3-c00c5e08db0e",
+            "title": "Observation for MP.L2-3.8.6",
+            "description": "Implement cryptographic mechanisms to protect CUI on digital media in transport. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "b6d1a8f5-2016-4bbe-b4c8-dfc098dba98d",
+            "title": "Observation for MP.L2-3.8.7",
+            "description": "Control the use of removable media on system components. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "15a52915-9c47-4f59-b834-b9c7c3250d48",
+            "title": "Observation for MP.L2-3.8.8",
+            "description": "Prohibit use of portable storage devices with no identifiable owner. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "2f80688d-edc7-4dba-9044-d16e4079d830",
+            "title": "Observation for MP.L2-3.8.9",
+            "description": "Protect the confidentiality of backup CUI at storage locations. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "a557d346-b0e4-4534-9630-026b15f88544",
+            "title": "Observation for PE.L2-3.10.1",
+            "description": "Limit physical access to systems, equipment, and operating environments. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "ce02eae8-1732-4f74-8314-de51068b8143",
+            "title": "Observation for PE.L2-3.10.2",
+            "description": "Protect and monitor the physical facility and support infrastructure. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "012ffb2d-7393-4e8a-bb96-3d2d9895c40c",
+            "title": "Observation for PE.L2-3.10.3",
+            "description": "Escort visitors and monitor visitor activity. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "a906de9e-5856-4b31-bf39-361333790ef2",
+            "title": "Observation for PE.L2-3.10.4",
+            "description": "Maintain audit logs of physical access. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "803eddac-86ff-47e6-a1c6-2ec079cd1d55",
+            "title": "Observation for PE.L2-3.10.5",
+            "description": "Control and manage physical access devices. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "5cdf1af5-307e-4a2b-b44e-18ac2dd11197",
+            "title": "Observation for PE.L2-3.10.6",
+            "description": "Enforce safeguarding measures for CUI at alternate work sites. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "d28e25f3-1ae5-4216-a04e-e29b54c520eb",
+            "title": "Observation for PS.L2-3.9.1",
+            "description": "Screen individuals prior to authorizing access to systems with CUI. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "4eece4dd-d7fb-41b6-bf43-a01b54147ff8",
+            "title": "Observation for PS.L2-3.9.2",
+            "description": "Protect systems containing CUI during and after personnel actions. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "97a37c4d-e6e0-4636-b863-78dbfe4e6771",
+            "title": "Observation for RA.L2-3.11.1",
+            "description": "Periodically assess risk to operations, assets, and individuals. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "daead158-7afa-4552-bb23-7dd45b5f7dbf",
+            "title": "Observation for RA.L2-3.11.3",
+            "description": "Remediate vulnerabilities in accordance with risk assessments. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure instances are managed by Systems Manager and patched (FAIL) on i-0web1prod"
+              }
+            ]
+          },
+          {
+            "uuid": "bb25b3b5-20a1-456c-ae4c-47ce740c351e",
+            "title": "Observation for CA.L2-3.12.1",
+            "description": "Periodically assess security controls for effectiveness. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "9611c273-8f30-4591-b822-23befc119d4c",
+            "title": "Observation for CA.L2-3.12.2",
+            "description": "Develop and implement plans of action to correct deficiencies. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "0587c9a1-64d5-4ae6-ae32-967a16aaf53e",
+            "title": "Observation for CA.L2-3.12.3",
+            "description": "Monitor security controls on an ongoing basis. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "0709fa7d-7002-4926-92a6-cb415c11d87b",
+            "title": "Observation for CA.L2-3.12.4",
+            "description": "Develop and periodically update system security plans. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "cababae6-b3f2-4a1a-afcf-0c28b9c2d24c",
+            "title": "Observation for SC.L2-3.13.1",
+            "description": "Monitor, control, and protect communications at boundaries. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure no security groups allow ingress from 0.0.0.0/0 to all ports (FAIL) on sg-0a1b2c3d4e5f"
+              }
+            ]
+          },
+          {
+            "uuid": "80d5f18a-98c8-447e-9666-017c9b715909",
+            "title": "Observation for SC.L2-3.13.2",
+            "description": "Employ secure architectural designs and engineering principles. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "9a0da8c1-b238-470c-bcc7-0cfc5df263be",
+            "title": "Observation for SC.L2-3.13.3",
+            "description": "Separate user functionality from system management functionality. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "ba836fbf-8f4e-4386-b4c1-0a1ad4b2dc91",
+            "title": "Observation for SC.L2-3.13.4",
+            "description": "Prevent unauthorized information transfer via shared system resources. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "fbebe01d-08d3-45c6-9793-ed9d11752bd7",
+            "title": "Observation for SC.L2-3.13.5",
+            "description": "Implement subnetworks for publicly accessible system components. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "7ebca982-0879-443d-b72f-d5e9167bbc02",
+            "title": "Observation for SC.L2-3.13.6",
+            "description": "Deny network traffic by default and allow by exception. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "53735d77-6401-4857-ba9a-810681909975",
+            "title": "Observation for SC.L2-3.13.7",
+            "description": "Prevent split tunneling for remote devices. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "3391a391-3777-4380-9457-6251438e61a6",
+            "title": "Observation for SC.L2-3.13.8",
+            "description": "Implement cryptographic mechanisms to protect CUI in transmission. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure load balancers use strong TLS policies (FAIL) on arn:aws:elasticloadbalancing:us-east-1:123456789012:listener/app/prod"
+              }
+            ]
+          },
+          {
+            "uuid": "ae18c0ac-9a9b-4033-9d58-f62040d498cf",
+            "title": "Observation for SC.L2-3.13.9",
+            "description": "Terminate network connections at end of session or after inactivity. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "e27d0226-052b-45b4-ba7d-3d7c66e1a332",
+            "title": "Observation for SC.L2-3.13.10",
+            "description": "Establish and manage cryptographic keys. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "b06952b8-8260-4b6c-9c64-621e2feeee62",
+            "title": "Observation for SC.L2-3.13.11",
+            "description": "Employ FIPS-validated cryptography to protect CUI confidentiality. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure load balancers use strong TLS policies (FAIL) on arn:aws:elasticloadbalancing:us-east-1:123456789012:listener/app/prod"
+              }
+            ]
+          },
+          {
+            "uuid": "80706a22-582f-4825-a0d0-dce3d8ed74b1",
+            "title": "Observation for SC.L2-3.13.12",
+            "description": "Prohibit remote activation of collaborative computing devices. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "3ef1e790-a18a-452e-92c6-cd0b313caf63",
+            "title": "Observation for SC.L2-3.13.13",
+            "description": "Control and monitor the use of mobile code. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "35813105-8585-41ca-a43b-dc5c0b5fa422",
+            "title": "Observation for SC.L2-3.13.14",
+            "description": "Control and monitor the use of VoIP technologies. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "5e28de0c-445c-4041-a058-4c23eeb8abcb",
+            "title": "Observation for SC.L2-3.13.15",
+            "description": "Protect the authenticity of communications sessions. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "3b4bc966-fd43-45d4-b36f-753c4cf95716",
+            "title": "Observation for SC.L2-3.13.16",
+            "description": "Protect the confidentiality of CUI at rest. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure S3 buckets enforce default encryption at rest (FAIL) on arn:aws:s3:::cui-archive"
+              }
+            ]
+          },
+          {
+            "uuid": "e4cf5fbd-ffb1-4e57-ade5-2ed13d35284d",
+            "title": "Observation for SI.L2-3.14.1",
+            "description": "Identify, report, and correct system flaws in a timely manner. Aggregated status: FAIL.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00",
+            "relevant-evidence": [
+              {
+                "description": "[prowler] Ensure instances are managed by Systems Manager and patched (FAIL) on i-0web1prod"
+              }
+            ]
+          },
+          {
+            "uuid": "5c38b10b-7446-40dc-997e-cd4545f02d52",
+            "title": "Observation for SI.L2-3.14.2",
+            "description": "Provide protection from malicious code at designated locations. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "09065afd-72f1-44b4-96b9-368108a97fe5",
+            "title": "Observation for SI.L2-3.14.3",
+            "description": "Monitor system security alerts and advisories and act in response. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "75952ac6-1260-4ed2-bd01-39b4c70afd15",
+            "title": "Observation for SI.L2-3.14.4",
+            "description": "Update malicious code protection mechanisms when new releases are available. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "0be5e7bf-9f02-4f36-8ee0-98cf0cd6d054",
+            "title": "Observation for SI.L2-3.14.5",
+            "description": "Perform periodic and real-time scans of files from external sources. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "86ebc773-fcb8-4fd7-9109-23d677212f00",
+            "title": "Observation for SI.L2-3.14.7",
+            "description": "Identify unauthorized use of organizational systems. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "608cd9af-4e1c-4a73-ba97-2cfb03461ed9",
+            "title": "Observation for AT.L2-3.2.1",
+            "description": "Ensure managers, administrators, and users are aware of security risks. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "3b711aa0-69da-4044-bea9-3ff758d61f52",
+            "title": "Observation for AT.L2-3.2.2",
+            "description": "Ensure personnel are trained to carry out assigned security duties. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          },
+          {
+            "uuid": "08f8adaa-5243-476d-b1ea-0bba5cf522a1",
+            "title": "Observation for AT.L2-3.2.3",
+            "description": "Provide security awareness training on insider threat indicators. Aggregated status: NOT_ASSESSED.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "collected": "2026-11-17T21:00:55+00:00"
+          }
+        ],
+        "findings": [
+          {
+            "uuid": "3fffaece-b8e2-4efe-8433-7a3b3036cc82",
+            "title": "AC.L2-3.1.1 \u2014 NOT_ASSESSED",
+            "description": "Limit system access to authorized users, processes, and devices.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bffd31dc-ddcd-4bba-9baf-c2041e08ee2e"
+              }
+            ]
+          },
+          {
+            "uuid": "5b1698f2-53ae-4294-8544-0f65347e5b0b",
+            "title": "AC.L2-3.1.2 \u2014 NOT_ASSESSED",
+            "description": "Limit system access to the transactions and functions authorized users may execute.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "319cb54a-25c2-4ef6-8df8-9d5efc0dec46"
+              }
+            ]
+          },
+          {
+            "uuid": "a8d65aec-2cd9-4055-8f58-eb98f5d51963",
+            "title": "AC.L2-3.1.3 \u2014 NOT_ASSESSED",
+            "description": "Control the flow of CUI in accordance with approved authorizations.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "6d892f0d-948f-4236-a105-67c3475cd82a"
+              }
+            ]
+          },
+          {
+            "uuid": "d6e23b6f-d9d6-4edc-ac72-a5d8b8da35a4",
+            "title": "AC.L2-3.1.4 \u2014 NOT_ASSESSED",
+            "description": "Separate the duties of individuals to reduce risk of malevolent activity.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f0781ab4-a55c-4aa1-8fcd-ece67c341393"
+              }
+            ]
+          },
+          {
+            "uuid": "2ad75ced-08ad-48d0-8529-ae800a5ba9f3",
+            "title": "AC.L2-3.1.5 \u2014 FAIL",
+            "description": "Employ the principle of least privilege, including for privileged accounts.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "39223bb0-39a6-42ef-9f6e-89f0b3f15ec4"
+              }
+            ]
+          },
+          {
+            "uuid": "10bb7804-4df2-4aa1-b355-ac01455b7f2a",
+            "title": "AC.L2-3.1.6 \u2014 NOT_ASSESSED",
+            "description": "Use non-privileged accounts or roles when accessing nonsecurity functions.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.6",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "61093a88-d407-400d-971d-39b1c8f145e3"
+              }
+            ]
+          },
+          {
+            "uuid": "abae760c-d969-49be-a7f4-ad2eed3ff6a1",
+            "title": "AC.L2-3.1.7 \u2014 FAIL",
+            "description": "Prevent non-privileged users from executing privileged functions; audit such execution.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.7",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5ee83160-9525-497c-b603-d9334595c70b"
+              }
+            ]
+          },
+          {
+            "uuid": "838201d3-6c79-4394-abae-c2241d45a62c",
+            "title": "AC.L2-3.1.8 \u2014 NOT_ASSESSED",
+            "description": "Limit unsuccessful logon attempts.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.8",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "6cb4767a-6c28-410f-8b4b-473db85928d9"
+              }
+            ]
+          },
+          {
+            "uuid": "5768080e-982d-433a-ab7a-1f43deec726e",
+            "title": "AC.L2-3.1.9 \u2014 NOT_ASSESSED",
+            "description": "Provide privacy and security notices consistent with CUI rules.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.9",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8917b2ef-2885-4026-989e-78ca648d3d15"
+              }
+            ]
+          },
+          {
+            "uuid": "0263d541-3e6c-4181-9e01-0566d6988fff",
+            "title": "AC.L2-3.1.10 \u2014 NOT_ASSESSED",
+            "description": "Use session lock with pattern-hiding displays after inactivity.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.10",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c6fd4182-0f55-4e5b-9fd0-a9bd4e76dd41"
+              }
+            ]
+          },
+          {
+            "uuid": "17cdcf1a-884d-4d08-9730-600de5f055d6",
+            "title": "AC.L2-3.1.11 \u2014 NOT_ASSESSED",
+            "description": "Terminate a user session automatically after a defined condition.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.11",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "626d197f-2f7a-4339-acd5-8ce834f190a9"
+              }
+            ]
+          },
+          {
+            "uuid": "d7fe6cce-6e75-40f1-936b-9b7d86b0f6f7",
+            "title": "AC.L2-3.1.12 \u2014 NOT_ASSESSED",
+            "description": "Monitor and control remote access sessions.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.12",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "6b7cc563-35bf-4583-bd03-7c71b6bd9eff"
+              }
+            ]
+          },
+          {
+            "uuid": "b00f369c-689d-413f-b565-dbe71452e537",
+            "title": "AC.L2-3.1.13 \u2014 NOT_ASSESSED",
+            "description": "Employ cryptographic mechanisms to protect remote access sessions.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.13",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bb81cda3-7aa3-47da-b13e-37fe0d7faf9b"
+              }
+            ]
+          },
+          {
+            "uuid": "733299da-a0c8-457a-858a-264a00f22b40",
+            "title": "AC.L2-3.1.14 \u2014 FAIL",
+            "description": "Route remote access via managed access control points.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.14",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1c573c8a-3920-4416-9c7d-72fccd4b354e"
+              }
+            ]
+          },
+          {
+            "uuid": "70b494e0-0268-46f2-a470-576a1c0bf459",
+            "title": "AC.L2-3.1.15 \u2014 NOT_ASSESSED",
+            "description": "Authorize remote execution of privileged commands and access to security-relevant info.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.15",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2ccfb1ca-eeea-4ed7-ac6b-0884e72ab8e8"
+              }
+            ]
+          },
+          {
+            "uuid": "6e7a6615-5d3a-441c-9f49-ee99bb4acdd3",
+            "title": "AC.L2-3.1.16 \u2014 NOT_ASSESSED",
+            "description": "Authorize wireless access prior to allowing such connections.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.16",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2e856d99-e030-4186-92b6-3676cdc3bb2c"
+              }
+            ]
+          },
+          {
+            "uuid": "6e17f6f3-0af3-45a2-98fa-7fc218967c18",
+            "title": "AC.L2-3.1.17 \u2014 NOT_ASSESSED",
+            "description": "Protect wireless access using authentication and encryption.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.17",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4a2374bd-ff59-4543-a0a4-32cae283d474"
+              }
+            ]
+          },
+          {
+            "uuid": "12a8dcbd-3c11-451a-b85f-5ed9235b96aa",
+            "title": "AC.L2-3.1.18 \u2014 NOT_ASSESSED",
+            "description": "Control connection of mobile devices.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.18",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "15179dd9-ddf6-490d-a001-801008b1a840"
+              }
+            ]
+          },
+          {
+            "uuid": "5a796734-78e8-40a6-8fc7-c0446da04cb2",
+            "title": "AC.L2-3.1.19 \u2014 NOT_ASSESSED",
+            "description": "Encrypt CUI on mobile devices and mobile computing platforms.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.19",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1c2b919c-fbec-4203-8341-19831a007e03"
+              }
+            ]
+          },
+          {
+            "uuid": "2a2bc49a-50c2-4904-b954-a2f3609ecc2c",
+            "title": "AC.L2-3.1.20 \u2014 NOT_ASSESSED",
+            "description": "Verify and control/limit connections to and use of external systems.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.20",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "6e49c57b-11f6-4848-a2a6-866ca1170914"
+              }
+            ]
+          },
+          {
+            "uuid": "7f12c93b-2bae-42a0-903d-b53167d2168f",
+            "title": "AC.L2-3.1.21 \u2014 NOT_ASSESSED",
+            "description": "Limit use of portable storage devices on external systems.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.21",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7847c738-9a5e-4537-83b6-f9a88d21e46f"
+              }
+            ]
+          },
+          {
+            "uuid": "8bfa1e06-4a28-4d53-b9ce-277a8d3267f4",
+            "title": "AC.L2-3.1.22 \u2014 NOT_ASSESSED",
+            "description": "Control CUI posted or processed on publicly accessible systems.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AC.L2-3.1.22",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "61ab8c2c-f105-4a7b-bd50-3607d25a3a0e"
+              }
+            ]
+          },
+          {
+            "uuid": "6d239ae0-ddae-47ab-8f2b-9859f663e072",
+            "title": "AU.L2-3.3.3 \u2014 NOT_ASSESSED",
+            "description": "Review and update logged events.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AU.L2-3.3.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4995b6ac-8c75-4187-a10a-fb67c0794694"
+              }
+            ]
+          },
+          {
+            "uuid": "1b5daecf-7adb-48ce-b8af-ec51834f0eab",
+            "title": "AU.L2-3.3.4 \u2014 NOT_ASSESSED",
+            "description": "Alert in the event of an audit logging process failure.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AU.L2-3.3.4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b591bf00-c2d5-47bc-9cca-3d3d11f0eefb"
+              }
+            ]
+          },
+          {
+            "uuid": "37b06a1b-9ef6-4755-8cbb-351058ef5e04",
+            "title": "AU.L2-3.3.6 \u2014 NOT_ASSESSED",
+            "description": "Provide audit record reduction and report generation.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AU.L2-3.3.6",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0d98852f-6bcf-4a5f-961e-57dd026fa554"
+              }
+            ]
+          },
+          {
+            "uuid": "21480774-de5b-4baa-b861-31364f3ba57e",
+            "title": "AU.L2-3.3.7 \u2014 NOT_ASSESSED",
+            "description": "Synchronize internal system clocks with an authoritative time source.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AU.L2-3.3.7",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "6624ef80-3fd0-42f6-b608-6b056aaa8810"
+              }
+            ]
+          },
+          {
+            "uuid": "740d903e-135b-442c-928f-9995d301812b",
+            "title": "AU.L2-3.3.8 \u2014 FAIL",
+            "description": "Protect audit information and tools from unauthorized access/modification/deletion.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AU.L2-3.3.8",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e3a3b2bc-d5a2-4cfa-9a29-e9dbbd062cf0"
+              }
+            ]
+          },
+          {
+            "uuid": "336ee203-d998-45d3-8347-f53f4fd7f1e3",
+            "title": "AU.L2-3.3.9 \u2014 NOT_ASSESSED",
+            "description": "Limit management of audit logging functionality to a subset of privileged users.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AU.L2-3.3.9",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "22a2743e-0718-4d05-a646-af7f362ca996"
+              }
+            ]
+          },
+          {
+            "uuid": "e02a8a62-499f-4ba5-9176-5648d29b6116",
+            "title": "CM.L2-3.4.2 \u2014 NOT_ASSESSED",
+            "description": "Establish and enforce security configuration settings for IT products.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CM.L2-3.4.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "14420c76-f2f6-4895-8749-ad59cb92df9e"
+              }
+            ]
+          },
+          {
+            "uuid": "a7489e06-ae8e-42a2-bee3-c0058228c1cb",
+            "title": "CM.L2-3.4.4 \u2014 NOT_ASSESSED",
+            "description": "Analyze the security impact of changes prior to implementation.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CM.L2-3.4.4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8a2fd1cb-9e3f-4c60-be09-64ed6fa6a1f0"
+              }
+            ]
+          },
+          {
+            "uuid": "1d059369-9ba3-4122-9675-2b6c489236c9",
+            "title": "CM.L2-3.4.5 \u2014 NOT_ASSESSED",
+            "description": "Define, document, and enforce access restrictions for changes.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CM.L2-3.4.5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ffd0d8e6-642d-46a7-a16b-73a114ada8f3"
+              }
+            ]
+          },
+          {
+            "uuid": "eb3eadb1-2ec3-4108-b378-8c17a20f70ca",
+            "title": "CM.L2-3.4.6 \u2014 NOT_ASSESSED",
+            "description": "Employ least functionality by providing only essential capabilities.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CM.L2-3.4.6",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "21c81961-ccf5-4157-be77-c05b53ae79d7"
+              }
+            ]
+          },
+          {
+            "uuid": "63a1c961-b1f1-430f-bc2f-3677d57f1739",
+            "title": "CM.L2-3.4.7 \u2014 FAIL",
+            "description": "Restrict or disable nonessential programs, ports, protocols, and services.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CM.L2-3.4.7",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "672929b5-891b-41dd-b292-77e6c39b8ad4"
+              }
+            ]
+          },
+          {
+            "uuid": "81f45d49-43bc-44eb-9c20-20b0b71ec811",
+            "title": "CM.L2-3.4.8 \u2014 NOT_ASSESSED",
+            "description": "Apply deny-by-exception or allow-by-exception software execution policy.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CM.L2-3.4.8",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "60a80cff-f01b-4174-bf0f-fc7f1595d09b"
+              }
+            ]
+          },
+          {
+            "uuid": "b87464b0-1d38-4e81-9f93-7769fb87830c",
+            "title": "CM.L2-3.4.9 \u2014 NOT_ASSESSED",
+            "description": "Control and monitor user-installed software.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CM.L2-3.4.9",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "80c4841e-6066-4980-b16e-1d8e20e0c406"
+              }
+            ]
+          },
+          {
+            "uuid": "7f035fbe-6d3b-47cb-98a4-2e27a18d9ec8",
+            "title": "IA.L2-3.5.1 \u2014 NOT_ASSESSED",
+            "description": "Identify system users, processes, and devices.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IA.L2-3.5.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "045a7427-5bef-43ca-8522-9fe269b38e41"
+              }
+            ]
+          },
+          {
+            "uuid": "eb1fa318-a00a-4467-967c-82edfe8f444f",
+            "title": "IA.L2-3.5.2 \u2014 NOT_ASSESSED",
+            "description": "Authenticate identities of users, processes, or devices before granting access.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IA.L2-3.5.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "cde7b207-8a9e-48f4-b10d-a901a759438b"
+              }
+            ]
+          },
+          {
+            "uuid": "85143e8f-1afe-4b1f-b067-a5c96296e4db",
+            "title": "IA.L2-3.5.4 \u2014 NOT_ASSESSED",
+            "description": "Employ replay-resistant authentication mechanisms for network access.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IA.L2-3.5.4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "cacfc0fb-b36c-4966-b79b-6b4a33a091c3"
+              }
+            ]
+          },
+          {
+            "uuid": "d1dbd7dd-64e8-4360-a02a-66e8c7b316b8",
+            "title": "IA.L2-3.5.5 \u2014 NOT_ASSESSED",
+            "description": "Prevent reuse of identifiers for a defined period.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IA.L2-3.5.5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "94ac9200-3455-4865-a3b5-ea44ced4b152"
+              }
+            ]
+          },
+          {
+            "uuid": "5258f85d-1542-4f74-adf9-0fb440bb3019",
+            "title": "IA.L2-3.5.6 \u2014 FAIL",
+            "description": "Disable identifiers after a defined period of inactivity.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IA.L2-3.5.6",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7838d345-84dd-4226-8d28-5850b10d09f6"
+              }
+            ]
+          },
+          {
+            "uuid": "5c18c96d-e779-49cc-a799-4859e8fcdffb",
+            "title": "IA.L2-3.5.7 \u2014 NOT_ASSESSED",
+            "description": "Enforce minimum password complexity and change of characters.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IA.L2-3.5.7",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "25015588-1976-4ff3-af12-d3099bf4edeb"
+              }
+            ]
+          },
+          {
+            "uuid": "2bcdf95a-f598-41cd-9ced-0457b1080eef",
+            "title": "IA.L2-3.5.8 \u2014 NOT_ASSESSED",
+            "description": "Prohibit password reuse for a specified number of generations.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IA.L2-3.5.8",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bc6b797d-c498-4148-94ee-0922723dbc35"
+              }
+            ]
+          },
+          {
+            "uuid": "4a92a65c-2875-47ad-bbd6-7b0890ea1e70",
+            "title": "IA.L2-3.5.9 \u2014 NOT_ASSESSED",
+            "description": "Allow temporary password use with immediate change to a permanent password.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IA.L2-3.5.9",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d9d9773c-d4cd-4af0-8229-56db7aa01e8f"
+              }
+            ]
+          },
+          {
+            "uuid": "242a9091-f410-4b7d-bbba-53ee72e96f79",
+            "title": "IA.L2-3.5.10 \u2014 NOT_ASSESSED",
+            "description": "Store and transmit only cryptographically-protected passwords.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IA.L2-3.5.10",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "35867db4-b646-45b8-b5fc-5e1ed93d8e2e"
+              }
+            ]
+          },
+          {
+            "uuid": "53e22d90-d065-4d4f-bc62-3b8a1b31ae76",
+            "title": "IA.L2-3.5.11 \u2014 NOT_ASSESSED",
+            "description": "Obscure feedback of authentication information.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IA.L2-3.5.11",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ac2dede0-e2c5-4833-9396-c2f8177ace07"
+              }
+            ]
+          },
+          {
+            "uuid": "679a6c39-30fb-42ab-a296-852a596679cb",
+            "title": "IR.L2-3.6.1 \u2014 NOT_ASSESSED",
+            "description": "Establish an operational incident-handling capability.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IR.L2-3.6.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bbae66db-a37f-42ff-aebe-9c491789b535"
+              }
+            ]
+          },
+          {
+            "uuid": "a2cf8480-be7b-4716-abed-8be60fa54d0e",
+            "title": "IR.L2-3.6.2 \u2014 NOT_ASSESSED",
+            "description": "Track, document, and report incidents to designated officials.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IR.L2-3.6.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "06804e15-6f4d-497c-9c45-3943b16cfa24"
+              }
+            ]
+          },
+          {
+            "uuid": "c06c80a9-50dd-4960-b6eb-33ec4a10e5c3",
+            "title": "IR.L2-3.6.3 \u2014 NOT_ASSESSED",
+            "description": "Test the organizational incident response capability.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "IR.L2-3.6.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8ec81b69-2ffb-4be6-8c51-d2373477a184"
+              }
+            ]
+          },
+          {
+            "uuid": "acd6b0a6-4ef1-49bb-acdf-fe45a6faaaef",
+            "title": "MA.L2-3.7.1 \u2014 NOT_ASSESSED",
+            "description": "Perform maintenance on organizational systems.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MA.L2-3.7.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0e5f63ad-5457-4263-ae5f-61d602112176"
+              }
+            ]
+          },
+          {
+            "uuid": "062720bf-ac02-4ec7-b9fc-c3ccd54e6a07",
+            "title": "MA.L2-3.7.2 \u2014 NOT_ASSESSED",
+            "description": "Provide controls on tools, techniques, and personnel used for maintenance.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MA.L2-3.7.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1e20081e-ec4b-4194-83ba-b6ff51aeaa1b"
+              }
+            ]
+          },
+          {
+            "uuid": "6e18d933-4e70-4fb6-b805-294efefcd22a",
+            "title": "MA.L2-3.7.3 \u2014 NOT_ASSESSED",
+            "description": "Sanitize equipment removed for off-site maintenance of any CUI.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MA.L2-3.7.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b8e51b1a-2630-4654-a468-a100b47c634e"
+              }
+            ]
+          },
+          {
+            "uuid": "14d83294-3692-4787-a45d-425807212c1f",
+            "title": "MA.L2-3.7.4 \u2014 NOT_ASSESSED",
+            "description": "Check media with diagnostic/test programs for malicious code before use.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MA.L2-3.7.4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2223df78-123b-40b3-b234-c8fcccccca6d"
+              }
+            ]
+          },
+          {
+            "uuid": "1e790519-f7d5-4010-9959-70cba3303fce",
+            "title": "MA.L2-3.7.5 \u2014 NOT_ASSESSED",
+            "description": "Require MFA to establish nonlocal maintenance sessions.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MA.L2-3.7.5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "eb167f1e-2150-49d2-8624-4bfbac22bb85"
+              }
+            ]
+          },
+          {
+            "uuid": "bc050c63-a607-4669-9f0e-096f6a50cff5",
+            "title": "MA.L2-3.7.6 \u2014 NOT_ASSESSED",
+            "description": "Supervise maintenance activities of personnel without access authorization.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MA.L2-3.7.6",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5edf892e-150c-45d0-b790-97ae7a808d59"
+              }
+            ]
+          },
+          {
+            "uuid": "6c642ea0-0970-4470-a9f3-5a64785e6f4d",
+            "title": "MP.L2-3.8.1 \u2014 NOT_ASSESSED",
+            "description": "Protect (physically control and securely store) system media with CUI.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MP.L2-3.8.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c28edbd7-44c1-4a15-972e-9c47bdb4f395"
+              }
+            ]
+          },
+          {
+            "uuid": "bdff8d1b-7688-41ba-b605-74253e6c88a5",
+            "title": "MP.L2-3.8.2 \u2014 NOT_ASSESSED",
+            "description": "Limit access to CUI on system media to authorized users.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MP.L2-3.8.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f847663b-9375-4382-b099-761263776c79"
+              }
+            ]
+          },
+          {
+            "uuid": "fe1ba3c2-3e2e-40b7-823b-93c9ffa3daa5",
+            "title": "MP.L2-3.8.3 \u2014 NOT_ASSESSED",
+            "description": "Sanitize or destroy system media before disposal or reuse.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MP.L2-3.8.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5f3c6b75-4602-4a81-ac10-103a8b42982c"
+              }
+            ]
+          },
+          {
+            "uuid": "ccf67898-f309-4dcc-b604-1e97e653b857",
+            "title": "MP.L2-3.8.4 \u2014 NOT_ASSESSED",
+            "description": "Mark media with necessary CUI markings and distribution limitations.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MP.L2-3.8.4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2f69b130-f4f5-4b06-bd86-49524eaa5266"
+              }
+            ]
+          },
+          {
+            "uuid": "416bd35b-a7f2-4b9d-9116-f74eaeda3eed",
+            "title": "MP.L2-3.8.5 \u2014 NOT_ASSESSED",
+            "description": "Control access to and maintain accountability for media during transport.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MP.L2-3.8.5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f979e21e-ae8d-4645-88e4-7a34a2de9672"
+              }
+            ]
+          },
+          {
+            "uuid": "3072b182-1576-43ed-8d4d-58861346e57f",
+            "title": "MP.L2-3.8.6 \u2014 NOT_ASSESSED",
+            "description": "Implement cryptographic mechanisms to protect CUI on digital media in transport.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MP.L2-3.8.6",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "6aadcba1-fc65-45db-97d3-c00c5e08db0e"
+              }
+            ]
+          },
+          {
+            "uuid": "e20879f3-d51c-4ee7-894c-da849e1dafa8",
+            "title": "MP.L2-3.8.7 \u2014 NOT_ASSESSED",
+            "description": "Control the use of removable media on system components.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MP.L2-3.8.7",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b6d1a8f5-2016-4bbe-b4c8-dfc098dba98d"
+              }
+            ]
+          },
+          {
+            "uuid": "88517fb2-6d78-4223-94fc-bd32c2295310",
+            "title": "MP.L2-3.8.8 \u2014 NOT_ASSESSED",
+            "description": "Prohibit use of portable storage devices with no identifiable owner.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MP.L2-3.8.8",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "15a52915-9c47-4f59-b834-b9c7c3250d48"
+              }
+            ]
+          },
+          {
+            "uuid": "501c2f53-3aee-4628-8d7b-a51be5526414",
+            "title": "MP.L2-3.8.9 \u2014 NOT_ASSESSED",
+            "description": "Protect the confidentiality of backup CUI at storage locations.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "MP.L2-3.8.9",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2f80688d-edc7-4dba-9044-d16e4079d830"
+              }
+            ]
+          },
+          {
+            "uuid": "310bf379-1846-42b9-b33b-9e4b7bf0d541",
+            "title": "PE.L2-3.10.1 \u2014 NOT_ASSESSED",
+            "description": "Limit physical access to systems, equipment, and operating environments.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "PE.L2-3.10.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a557d346-b0e4-4534-9630-026b15f88544"
+              }
+            ]
+          },
+          {
+            "uuid": "62e7c5b2-6422-4166-b1a1-e05575a626f2",
+            "title": "PE.L2-3.10.2 \u2014 NOT_ASSESSED",
+            "description": "Protect and monitor the physical facility and support infrastructure.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "PE.L2-3.10.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ce02eae8-1732-4f74-8314-de51068b8143"
+              }
+            ]
+          },
+          {
+            "uuid": "65be85fd-1f9d-4dda-bd92-ddab88a82d1a",
+            "title": "PE.L2-3.10.3 \u2014 NOT_ASSESSED",
+            "description": "Escort visitors and monitor visitor activity.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "PE.L2-3.10.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "012ffb2d-7393-4e8a-bb96-3d2d9895c40c"
+              }
+            ]
+          },
+          {
+            "uuid": "bbf2c010-1d89-4c62-b1f0-23697c663d85",
+            "title": "PE.L2-3.10.4 \u2014 NOT_ASSESSED",
+            "description": "Maintain audit logs of physical access.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "PE.L2-3.10.4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a906de9e-5856-4b31-bf39-361333790ef2"
+              }
+            ]
+          },
+          {
+            "uuid": "f5a9ee62-3300-470d-87f3-2823ee792b29",
+            "title": "PE.L2-3.10.5 \u2014 NOT_ASSESSED",
+            "description": "Control and manage physical access devices.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "PE.L2-3.10.5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "803eddac-86ff-47e6-a1c6-2ec079cd1d55"
+              }
+            ]
+          },
+          {
+            "uuid": "9080a338-5a14-4574-9b6d-37d1e2c00304",
+            "title": "PE.L2-3.10.6 \u2014 NOT_ASSESSED",
+            "description": "Enforce safeguarding measures for CUI at alternate work sites.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "PE.L2-3.10.6",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5cdf1af5-307e-4a2b-b44e-18ac2dd11197"
+              }
+            ]
+          },
+          {
+            "uuid": "f529ee88-510e-49d9-b7bc-f6c0e900363f",
+            "title": "PS.L2-3.9.1 \u2014 NOT_ASSESSED",
+            "description": "Screen individuals prior to authorizing access to systems with CUI.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "PS.L2-3.9.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d28e25f3-1ae5-4216-a04e-e29b54c520eb"
+              }
+            ]
+          },
+          {
+            "uuid": "e367875f-1129-4257-b9ac-56825602131d",
+            "title": "PS.L2-3.9.2 \u2014 NOT_ASSESSED",
+            "description": "Protect systems containing CUI during and after personnel actions.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "PS.L2-3.9.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4eece4dd-d7fb-41b6-bf43-a01b54147ff8"
+              }
+            ]
+          },
+          {
+            "uuid": "56fcc694-f34d-446f-b1e7-015ee9e10c57",
+            "title": "RA.L2-3.11.1 \u2014 NOT_ASSESSED",
+            "description": "Periodically assess risk to operations, assets, and individuals.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "RA.L2-3.11.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "97a37c4d-e6e0-4636-b863-78dbfe4e6771"
+              }
+            ]
+          },
+          {
+            "uuid": "0eab0663-e4b9-4a81-b194-2d73f038acc6",
+            "title": "RA.L2-3.11.3 \u2014 FAIL",
+            "description": "Remediate vulnerabilities in accordance with risk assessments.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "RA.L2-3.11.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "daead158-7afa-4552-bb23-7dd45b5f7dbf"
+              }
+            ]
+          },
+          {
+            "uuid": "0fd514c8-7ea8-41c0-a9f3-31158c42c7d5",
+            "title": "CA.L2-3.12.1 \u2014 NOT_ASSESSED",
+            "description": "Periodically assess security controls for effectiveness.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CA.L2-3.12.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bb25b3b5-20a1-456c-ae4c-47ce740c351e"
+              }
+            ]
+          },
+          {
+            "uuid": "e04fd345-6886-49a0-8f92-131024d75bd1",
+            "title": "CA.L2-3.12.2 \u2014 NOT_ASSESSED",
+            "description": "Develop and implement plans of action to correct deficiencies.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CA.L2-3.12.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9611c273-8f30-4591-b822-23befc119d4c"
+              }
+            ]
+          },
+          {
+            "uuid": "5ccb0f44-a651-4f8e-852a-85d26a71dd66",
+            "title": "CA.L2-3.12.3 \u2014 NOT_ASSESSED",
+            "description": "Monitor security controls on an ongoing basis.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CA.L2-3.12.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0587c9a1-64d5-4ae6-ae32-967a16aaf53e"
+              }
+            ]
+          },
+          {
+            "uuid": "158b6114-4bef-44a5-91ff-d3302057340e",
+            "title": "CA.L2-3.12.4 \u2014 NOT_ASSESSED",
+            "description": "Develop and periodically update system security plans.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "CA.L2-3.12.4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0709fa7d-7002-4926-92a6-cb415c11d87b"
+              }
+            ]
+          },
+          {
+            "uuid": "ff2c5ec1-adca-478a-a97a-dab0a781f4cb",
+            "title": "SC.L2-3.13.1 \u2014 FAIL",
+            "description": "Monitor, control, and protect communications at boundaries.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "cababae6-b3f2-4a1a-afcf-0c28b9c2d24c"
+              }
+            ]
+          },
+          {
+            "uuid": "70d4b9a3-7bbb-4d45-a356-75757a38c36f",
+            "title": "SC.L2-3.13.2 \u2014 NOT_ASSESSED",
+            "description": "Employ secure architectural designs and engineering principles.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "80d5f18a-98c8-447e-9666-017c9b715909"
+              }
+            ]
+          },
+          {
+            "uuid": "a4a943e6-dadd-4c72-8bc9-417135c60d9f",
+            "title": "SC.L2-3.13.3 \u2014 NOT_ASSESSED",
+            "description": "Separate user functionality from system management functionality.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9a0da8c1-b238-470c-bcc7-0cfc5df263be"
+              }
+            ]
+          },
+          {
+            "uuid": "0d6223bf-47ff-4cce-84ec-3c5a847373de",
+            "title": "SC.L2-3.13.4 \u2014 NOT_ASSESSED",
+            "description": "Prevent unauthorized information transfer via shared system resources.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ba836fbf-8f4e-4386-b4c1-0a1ad4b2dc91"
+              }
+            ]
+          },
+          {
+            "uuid": "aa8345df-2712-46f7-adb1-e466e2bfd775",
+            "title": "SC.L2-3.13.5 \u2014 NOT_ASSESSED",
+            "description": "Implement subnetworks for publicly accessible system components.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fbebe01d-08d3-45c6-9793-ed9d11752bd7"
+              }
+            ]
+          },
+          {
+            "uuid": "88ad7409-bf3d-4977-a7af-127091651ba0",
+            "title": "SC.L2-3.13.6 \u2014 NOT_ASSESSED",
+            "description": "Deny network traffic by default and allow by exception.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.6",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7ebca982-0879-443d-b72f-d5e9167bbc02"
+              }
+            ]
+          },
+          {
+            "uuid": "6b3f7bae-cc1d-4573-af98-fbe3ea47b845",
+            "title": "SC.L2-3.13.7 \u2014 NOT_ASSESSED",
+            "description": "Prevent split tunneling for remote devices.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.7",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "53735d77-6401-4857-ba9a-810681909975"
+              }
+            ]
+          },
+          {
+            "uuid": "9f2ae64e-d58e-45ca-a0f3-b60300176dcf",
+            "title": "SC.L2-3.13.8 \u2014 FAIL",
+            "description": "Implement cryptographic mechanisms to protect CUI in transmission.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.8",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3391a391-3777-4380-9457-6251438e61a6"
+              }
+            ]
+          },
+          {
+            "uuid": "4c77229e-d9bc-468a-8c5d-f12581e7bb05",
+            "title": "SC.L2-3.13.9 \u2014 NOT_ASSESSED",
+            "description": "Terminate network connections at end of session or after inactivity.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.9",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ae18c0ac-9a9b-4033-9d58-f62040d498cf"
+              }
+            ]
+          },
+          {
+            "uuid": "6e068324-4d6a-42d0-8fdf-1be9648544ff",
+            "title": "SC.L2-3.13.10 \u2014 NOT_ASSESSED",
+            "description": "Establish and manage cryptographic keys.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.10",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e27d0226-052b-45b4-ba7d-3d7c66e1a332"
+              }
+            ]
+          },
+          {
+            "uuid": "5a3df533-1e26-4281-b63e-b0f86fd2c676",
+            "title": "SC.L2-3.13.11 \u2014 FAIL",
+            "description": "Employ FIPS-validated cryptography to protect CUI confidentiality.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.11",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b06952b8-8260-4b6c-9c64-621e2feeee62"
+              }
+            ]
+          },
+          {
+            "uuid": "736361f2-a3de-44e4-8252-115934a4af8b",
+            "title": "SC.L2-3.13.12 \u2014 NOT_ASSESSED",
+            "description": "Prohibit remote activation of collaborative computing devices.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.12",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "80706a22-582f-4825-a0d0-dce3d8ed74b1"
+              }
+            ]
+          },
+          {
+            "uuid": "b91148af-42fd-4b20-b04d-b1392afb81a1",
+            "title": "SC.L2-3.13.13 \u2014 NOT_ASSESSED",
+            "description": "Control and monitor the use of mobile code.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.13",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3ef1e790-a18a-452e-92c6-cd0b313caf63"
+              }
+            ]
+          },
+          {
+            "uuid": "6e0a3e11-f3fb-4f24-bd83-7220b4404887",
+            "title": "SC.L2-3.13.14 \u2014 NOT_ASSESSED",
+            "description": "Control and monitor the use of VoIP technologies.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.14",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "35813105-8585-41ca-a43b-dc5c0b5fa422"
+              }
+            ]
+          },
+          {
+            "uuid": "b277287c-cd8b-4e65-ad19-7374b0475f1b",
+            "title": "SC.L2-3.13.15 \u2014 NOT_ASSESSED",
+            "description": "Protect the authenticity of communications sessions.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.15",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5e28de0c-445c-4041-a058-4c23eeb8abcb"
+              }
+            ]
+          },
+          {
+            "uuid": "55b4c48d-7ed2-48e8-a787-623021919381",
+            "title": "SC.L2-3.13.16 \u2014 FAIL",
+            "description": "Protect the confidentiality of CUI at rest.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SC.L2-3.13.16",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3b4bc966-fd43-45d4-b36f-753c4cf95716"
+              }
+            ]
+          },
+          {
+            "uuid": "319ad624-ca14-4e2b-8e67-e65d5d47d2d7",
+            "title": "SI.L2-3.14.1 \u2014 FAIL",
+            "description": "Identify, report, and correct system flaws in a timely manner.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SI.L2-3.14.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e4cf5fbd-ffb1-4e57-ade5-2ed13d35284d"
+              }
+            ]
+          },
+          {
+            "uuid": "dad47e99-7176-4406-b8cf-5b30dc38d01e",
+            "title": "SI.L2-3.14.2 \u2014 NOT_ASSESSED",
+            "description": "Provide protection from malicious code at designated locations.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SI.L2-3.14.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5c38b10b-7446-40dc-997e-cd4545f02d52"
+              }
+            ]
+          },
+          {
+            "uuid": "7ed5f78b-0e53-41f6-abe0-454e601e1367",
+            "title": "SI.L2-3.14.3 \u2014 NOT_ASSESSED",
+            "description": "Monitor system security alerts and advisories and act in response.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SI.L2-3.14.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "09065afd-72f1-44b4-96b9-368108a97fe5"
+              }
+            ]
+          },
+          {
+            "uuid": "b0937e3a-29f0-41ca-81a6-a5069344960c",
+            "title": "SI.L2-3.14.4 \u2014 NOT_ASSESSED",
+            "description": "Update malicious code protection mechanisms when new releases are available.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SI.L2-3.14.4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "75952ac6-1260-4ed2-bd01-39b4c70afd15"
+              }
+            ]
+          },
+          {
+            "uuid": "506a3021-9cb7-4986-86ac-08473b4732e9",
+            "title": "SI.L2-3.14.5 \u2014 NOT_ASSESSED",
+            "description": "Perform periodic and real-time scans of files from external sources.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SI.L2-3.14.5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0be5e7bf-9f02-4f36-8ee0-98cf0cd6d054"
+              }
+            ]
+          },
+          {
+            "uuid": "ddd87711-adf5-4e02-a11d-a3541a0fba07",
+            "title": "SI.L2-3.14.7 \u2014 NOT_ASSESSED",
+            "description": "Identify unauthorized use of organizational systems.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "SI.L2-3.14.7",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "86ebc773-fcb8-4fd7-9109-23d677212f00"
+              }
+            ]
+          },
+          {
+            "uuid": "ac12e584-10d8-4aed-abd5-4d4fe41ded2a",
+            "title": "AT.L2-3.2.1 \u2014 NOT_ASSESSED",
+            "description": "Ensure managers, administrators, and users are aware of security risks.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AT.L2-3.2.1",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "608cd9af-4e1c-4a73-ba97-2cfb03461ed9"
+              }
+            ]
+          },
+          {
+            "uuid": "f3e796a5-f054-4958-a189-dd39c07096fc",
+            "title": "AT.L2-3.2.2 \u2014 NOT_ASSESSED",
+            "description": "Ensure personnel are trained to carry out assigned security duties.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AT.L2-3.2.2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3b711aa0-69da-4044-bea9-3ff758d61f52"
+              }
+            ]
+          },
+          {
+            "uuid": "b545f7e4-7cec-4aed-b99c-901ac074968d",
+            "title": "AT.L2-3.2.3 \u2014 NOT_ASSESSED",
+            "description": "Provide security awareness training on insider threat indicators.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "AT.L2-3.2.3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "08f8adaa-5243-476d-b1ea-0bba5cf522a1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

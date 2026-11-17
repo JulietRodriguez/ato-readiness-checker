@@ -1,0 +1,716 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "e6f00f75-5cdf-4b6c-be88-780d82a5a3c4",
+    "metadata": {
+      "title": "POAM Export",
+      "last-modified": "2026-11-17T21:00:49Z",
+      "version": "0.2.0",
+      "oscal-version": "1.1.2"
+    },
+    "system-id": {
+      "identifier-type": "https://ietf.org/rfc/rfc4122",
+      "id": "3e418776-07a2-4e1b-8f6c-017eb7cabf03"
+    },
+    "risks": [
+      {
+        "uuid": "6805d9b1-b1ae-41b1-bb86-6a8060df132f",
+        "title": "Privileged Account Review Not Performed",
+        "description": "Quarterly reviews of privileged user accounts (admin, service accounts) have not been conducted for over 12 months. Multiple stale accounts belonging to separated employees retain elevated permissions, increasing the risk of unauthorized access to sensitive federal data.",
+        "statement": "1. Immediately disable accounts of separated employees. 2. Implement quarterly automated account review workflow in IAM system. 3. Document review process in SSP and train account managers.",
+        "status": "remediating",
+        "deadline": "2026-04-30T23:59:59Z",
+        "remediations": [
+          {
+            "uuid": "b672407d-7042-41e7-ae50-9f0f98cb336a",
+            "lifecycle": "planned",
+            "title": "Remediation Plan",
+            "description": "1. Immediately disable accounts of separated employees. 2. Implement quarterly automated account review workflow in IAM system. 3. Document review process in SSP and train account managers.",
+            "required-assets": [
+              {
+                "uuid": "cb8e0158-66a1-4fc6-a9be-6b14c33f07a1",
+                "description": "IAM team (40 hrs), ISSO review time (8 hrs)"
+              }
+            ],
+            "tasks": [
+              {
+                "uuid": "1ed20c2c-a734-4d4d-9581-157ac8842134",
+                "type": "milestone",
+                "title": "Disable all separated employee privileged accounts",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-02-01T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "db14edb2-d7c1-4b7e-8a0c-9ca61e4827b6",
+                "type": "milestone",
+                "title": "Deploy automated quarterly review workflow",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-03-01T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "9490e64f-5a06-4ba0-8ed2-df2d89558cec",
+                "type": "milestone",
+                "title": "Complete first formal quarterly review cycle",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-04-15T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "790d95d4-68dd-400c-892b-19c04a65bc38",
+                "type": "milestone",
+                "title": "Update SSP and close finding",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-04-30T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "fb57adcf-5614-40ce-9443-e8a51712ad41",
+        "title": "Anti-Malware Signatures Out of Date on 23% of Endpoints",
+        "description": "A vulnerability scan revealed that 47 of 204 Windows endpoints are running anti-malware definitions more than 30 days old. Outdated signatures leave systems exposed to known malware families including recent ransomware variants targeting federal agencies.",
+        "statement": "1. Force-push current signatures to all affected endpoints via SCCM. 2. Investigate root cause of update failures (network policy, agent issues). 3. Configure alerting for endpoints exceeding 7-day signature staleness threshold.",
+        "status": "remediating",
+        "deadline": "2026-05-15T23:59:59Z",
+        "remediations": [
+          {
+            "uuid": "85728870-2701-448d-85fc-bea9dc348ea7",
+            "lifecycle": "planned",
+            "title": "Remediation Plan",
+            "description": "1. Force-push current signatures to all affected endpoints via SCCM. 2. Investigate root cause of update failures (network policy, agent issues). 3. Configure alerting for endpoints exceeding 7-day signature staleness threshold.",
+            "required-assets": [
+              {
+                "uuid": "6fbeff53-346f-4633-83b6-52d94d9f5faf",
+                "description": "SOC team (20 hrs), endpoint management tooling (no additional cost)"
+              }
+            ],
+            "tasks": [
+              {
+                "uuid": "659c1fbd-c38b-4938-92c4-a143a80b428e",
+                "type": "milestone",
+                "title": "Emergency push of current signatures to all 47 affected endpoints",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-02-15T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "a42aae69-e2d7-46c2-9b56-6fc6c11e2e9e",
+                "type": "milestone",
+                "title": "Root cause analysis complete and documented",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-03-15T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "0209dc51-4b14-411b-95ac-d316242ca2f1",
+                "type": "milestone",
+                "title": "Alerting configured and tested for signature staleness",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-04-15T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "542aa3ac-70d4-4487-9620-821c6f6dcb3c",
+                "type": "milestone",
+                "title": "Verify 100% endpoint compliance and close finding",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-05-15T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "1baf527a-fa08-4804-ac54-a8fff0107630",
+        "title": "Unapproved Software Installed on Production Servers",
+        "description": "Configuration compliance scans identified 11 unauthorized software packages installed on production application servers, including peer-to-peer tools and unlicensed remote desktop utilities. These violate the approved software baseline and the organization's Configuration Management Policy.",
+        "statement": "1. Remove all unauthorized software from affected servers immediately. 2. Enforce application whitelisting via Group Policy on all production servers. 3. Update baseline configuration documentation and conduct training.",
+        "status": "open",
+        "deadline": "2026-06-01T23:59:59Z",
+        "remediations": [
+          {
+            "uuid": "f86c51e6-9efa-4e4d-8ee3-029821439456",
+            "lifecycle": "planned",
+            "title": "Remediation Plan",
+            "description": "1. Remove all unauthorized software from affected servers immediately. 2. Enforce application whitelisting via Group Policy on all production servers. 3. Update baseline configuration documentation and conduct training.",
+            "required-assets": [
+              {
+                "uuid": "f57b64b6-cc94-4b2e-8579-0469b14e09cf",
+                "description": "SysAdmin team (16 hrs), change management process time"
+              }
+            ],
+            "tasks": [
+              {
+                "uuid": "7f28dd0d-7a7a-416a-8a0c-b28ffc00bc30",
+                "type": "milestone",
+                "title": "Remove unauthorized software from all 11 production servers",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-02-15T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "34e68af6-911c-41dd-a9a0-93b85d0611cf",
+                "type": "milestone",
+                "title": "Deploy and test application whitelisting via Group Policy",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-03-30T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "e8d8735e-3f0c-458b-aabd-bc7cdaeec339",
+                "type": "milestone",
+                "title": "Update baseline documentation and retrain SysAdmin staff",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-05-01T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "571bcbd3-b0cd-4e28-8514-1558322b0b2c",
+                "type": "milestone",
+                "title": "Rescan to confirm remediation and close finding",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-06-01T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "b2e4380e-17f5-40c2-938b-409e63e29f5c",
+        "title": "Password Complexity Policy Not Enforced for Service Accounts",
+        "description": "A penetration test revealed that 8 service accounts use passwords that do not meet NIST SP 800-63B requirements: passwords are fewer than 15 characters, lack complexity, and have never been rotated. One service account password was found in a publicly accessible code repository.",
+        "statement": "1. Immediately rotate the compromised service account credential exposed in repository. 2. Rotate all 8 non-compliant service account passwords to 20+ character random strings. 3. Store all service account credentials in approved secrets management vault. 4. Implement 90-day automated rotation policy for all service accounts.",
+        "status": "remediating",
+        "deadline": "2026-03-31T23:59:59Z",
+        "remediations": [
+          {
+            "uuid": "27444829-63e9-417e-9e30-8b9add317dab",
+            "lifecycle": "planned",
+            "title": "Remediation Plan",
+            "description": "1. Immediately rotate the compromised service account credential exposed in repository. 2. Rotate all 8 non-compliant service account passwords to 20+ character random strings. 3. Store all service account credentials in approved secrets management vault. 4. Implement 90-day automated rotation policy for all service accounts.",
+            "required-assets": [
+              {
+                "uuid": "9e487bc6-c4de-4491-97c7-ec8b7b291871",
+                "description": "IAM team (24 hrs), application team coordination (16 hrs)"
+              }
+            ],
+            "tasks": [
+              {
+                "uuid": "c9c7bece-75b4-4a6f-a402-78dc112e7446",
+                "type": "milestone",
+                "title": "Rotate compromised credential and revoke old token from repository",
+                "timing": {
+                  "on-date": {
+                    "date": "2025-12-11T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "e19594fb-7e0c-4966-aaa8-57a94f7a4c73",
+                "type": "milestone",
+                "title": "Rotate all 8 non-compliant service account passwords",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-01-15T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "70646209-96b9-4770-8fe6-ab576120cda1",
+                "type": "milestone",
+                "title": "Onboard all service accounts to secrets management vault",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-02-28T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "f5490837-462b-4f2b-b612-e06920037f16",
+                "type": "milestone",
+                "title": "Automated 90-day rotation policy deployed and verified",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-03-31T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "66c46cd9-e93b-4703-b3e1-61dcecfcf484",
+        "title": "Unencrypted Sensitive Data on Backup Storage Media",
+        "description": "An audit finding identified that backup tapes containing PII and CUI are stored in an offsite facility without encryption at rest. If tapes are lost or stolen, sensitive federal data would be exposed without any cryptographic protection, violating FIPS 140-2 requirements for data at rest.",
+        "statement": "1. Procure FIPS 140-2 validated encryption solution for backup media. 2. Encrypt all existing backup tapes before next offsite transfer. 3. Update backup procedures to enforce encryption for all future backups. 4. Conduct training for storage and operations team.",
+        "status": "deviation-approved",
+        "deadline": "2026-07-31T23:59:59Z",
+        "remediations": [
+          {
+            "uuid": "4816ae49-0f8f-45bd-b77a-aed4e0a47c24",
+            "lifecycle": "planned",
+            "title": "Remediation Plan",
+            "description": "1. Procure FIPS 140-2 validated encryption solution for backup media. 2. Encrypt all existing backup tapes before next offsite transfer. 3. Update backup procedures to enforce encryption for all future backups. 4. Conduct training for storage and operations team.",
+            "required-assets": [
+              {
+                "uuid": "ab66e6e6-c494-44d9-84ae-81d9a8b5f176",
+                "description": "Encryption software licensing ($15,000), storage team (80 hrs), vendor coordination (40 hrs)"
+              }
+            ],
+            "tasks": [
+              {
+                "uuid": "3b0b2adf-2ffb-4c83-9fc3-270a90017a01",
+                "type": "milestone",
+                "title": "Complete procurement of FIPS 140-2 validated encryption solution",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-01-31T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "bb5a5a80-00ff-4128-a667-6f59fbb6e930",
+                "type": "milestone",
+                "title": "Encrypt all existing backup tapes in offsite facility",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-03-31T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "8b4bf0a8-d257-445f-bec6-2a397a75154d",
+                "type": "milestone",
+                "title": "Update backup runbooks and enforce encryption in backup scripts",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-05-31T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "3f058c2d-f9f1-40e4-b9fb-be26c3b90904",
+                "type": "milestone",
+                "title": "Training complete; audit evidence gathered; finding closed",
+                "timing": {
+                  "on-date": {
+                    "date": "2026-07-31T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "findings": [
+      {
+        "uuid": "6aaee0f8-c27d-4869-81ce-21f426844861",
+        "title": "AC-2 not satisfied: Privileged Account Review Not Performed",
+        "description": "Quarterly reviews of privileged user accounts (admin, service accounts) have not been conducted for over 12 months. Multiple stale accounts belonging to separated employees retain elevated permissions, increasing the risk of unauthorized access to sensitive federal data.",
+        "target": {
+          "type": "statement-id",
+          "target-id": "ac-2_smt",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-risks": [
+          {
+            "risk-uuid": "6805d9b1-b1ae-41b1-bb86-6a8060df132f"
+          }
+        ]
+      },
+      {
+        "uuid": "668b4345-e719-44d6-99fc-edc81034886c",
+        "title": "SI-3 not satisfied: Anti-Malware Signatures Out of Date on 23% of Endpoints",
+        "description": "A vulnerability scan revealed that 47 of 204 Windows endpoints are running anti-malware definitions more than 30 days old. Outdated signatures leave systems exposed to known malware families including recent ransomware variants targeting federal agencies.",
+        "target": {
+          "type": "statement-id",
+          "target-id": "si-3_smt",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-risks": [
+          {
+            "risk-uuid": "fb57adcf-5614-40ce-9443-e8a51712ad41"
+          }
+        ]
+      },
+      {
+        "uuid": "65d07f1a-21b8-4bc7-8aa1-e042911a5164",
+        "title": "CM-6 not satisfied: Unapproved Software Installed on Production Servers",
+        "description": "Configuration compliance scans identified 11 unauthorized software packages installed on production application servers, including peer-to-peer tools and unlicensed remote desktop utilities. These violate the approved software baseline and the organization's Configuration Management Policy.",
+        "target": {
+          "type": "statement-id",
+          "target-id": "cm-6_smt",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-risks": [
+          {
+            "risk-uuid": "1baf527a-fa08-4804-ac54-a8fff0107630"
+          }
+        ]
+      },
+      {
+        "uuid": "71cb43eb-629a-4650-908b-2dce5e4b6c47",
+        "title": "IA-5 not satisfied: Password Complexity Policy Not Enforced for Service Accounts",
+        "description": "A penetration test revealed that 8 service accounts use passwords that do not meet NIST SP 800-63B requirements: passwords are fewer than 15 characters, lack complexity, and have never been rotated. One service account password was found in a publicly accessible code repository.",
+        "target": {
+          "type": "statement-id",
+          "target-id": "ia-5_smt",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-risks": [
+          {
+            "risk-uuid": "b2e4380e-17f5-40c2-938b-409e63e29f5c"
+          }
+        ]
+      },
+      {
+        "uuid": "0ba9dfa0-671b-4e46-a157-4519197bf02b",
+        "title": "SC-28 not satisfied: Unencrypted Sensitive Data on Backup Storage Media",
+        "description": "An audit finding identified that backup tapes containing PII and CUI are stored in an offsite facility without encryption at rest. If tapes are lost or stolen, sensitive federal data would be exposed without any cryptographic protection, violating FIPS 140-2 requirements for data at rest.",
+        "target": {
+          "type": "statement-id",
+          "target-id": "sc-28_smt",
+          "status": {
+            "state": "not-satisfied"
+          }
+        },
+        "related-risks": [
+          {
+            "risk-uuid": "66c46cd9-e93b-4703-b3e1-61dcecfcf484"
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "29d4c1aa-41d5-4e5a-9620-59f0a90e437a",
+        "title": "Privileged Account Review Not Performed",
+        "description": "Quarterly reviews of privileged user accounts (admin, service accounts) have not been conducted for over 12 months. Multiple stale accounts belonging to separated employees retain elevated permissions, increasing the risk of unauthorized access to sensitive federal data.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Critical"
+          },
+          {
+            "name": "security-control",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "AC-2"
+          },
+          {
+            "name": "source",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Audit"
+          },
+          {
+            "name": "detection-date",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "2026-01-15"
+          },
+          {
+            "name": "scheduled-completion-date",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "2026-04-30"
+          },
+          {
+            "name": "office-org",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Office of Information Technology"
+          },
+          {
+            "name": "point-of-contact",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Jane Smith, ISSO"
+          },
+          {
+            "name": "poam-status",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "In Progress"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "6805d9b1-b1ae-41b1-bb86-6a8060df132f"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "6aaee0f8-c27d-4869-81ce-21f426844861"
+          }
+        ],
+        "remarks": "15 stale privileged accounts identified; 12 disabled as of 2026-02-10. Automated workflow procurement in progress."
+      },
+      {
+        "uuid": "e054aadd-2780-4345-b482-dab4dc5d7191",
+        "title": "Anti-Malware Signatures Out of Date on 23% of Endpoints",
+        "description": "A vulnerability scan revealed that 47 of 204 Windows endpoints are running anti-malware definitions more than 30 days old. Outdated signatures leave systems exposed to known malware families including recent ransomware variants targeting federal agencies.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "High"
+          },
+          {
+            "name": "security-control",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "SI-3"
+          },
+          {
+            "name": "source",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Vulnerability Scan"
+          },
+          {
+            "name": "detection-date",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "2026-02-03"
+          },
+          {
+            "name": "scheduled-completion-date",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "2026-05-15"
+          },
+          {
+            "name": "office-org",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Cybersecurity Operations Center"
+          },
+          {
+            "name": "point-of-contact",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Marcus Johnson, SOC Lead"
+          },
+          {
+            "name": "poam-status",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "In Progress"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "fb57adcf-5614-40ce-9443-e8a51712ad41"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "668b4345-e719-44d6-99fc-edc81034886c"
+          }
+        ],
+        "remarks": "38 of 47 endpoints remediated as of 2026-02-20. Remaining 9 endpoints offline; will be addressed upon return to network."
+      },
+      {
+        "uuid": "f191ec4b-b68f-4200-b9be-1e627fafc296",
+        "title": "Unapproved Software Installed on Production Servers",
+        "description": "Configuration compliance scans identified 11 unauthorized software packages installed on production application servers, including peer-to-peer tools and unlicensed remote desktop utilities. These violate the approved software baseline and the organization's Configuration Management Policy.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Medium"
+          },
+          {
+            "name": "security-control",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "CM-6"
+          },
+          {
+            "name": "source",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Vulnerability Scan"
+          },
+          {
+            "name": "detection-date",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "2026-01-28"
+          },
+          {
+            "name": "scheduled-completion-date",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "2026-06-01"
+          },
+          {
+            "name": "office-org",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Systems Administration"
+          },
+          {
+            "name": "point-of-contact",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "David Lee, Senior SysAdmin"
+          },
+          {
+            "name": "poam-status",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Open"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "1baf527a-fa08-4804-ac54-a8fff0107630"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "65d07f1a-21b8-4bc7-8aa1-e042911a5164"
+          }
+        ],
+        "remarks": "Change request CR-2026-0089 submitted for removal. Awaiting change advisory board approval scheduled for 2026-02-25."
+      },
+      {
+        "uuid": "ce7283cd-d9f6-4969-bea1-22d97a4cdccb",
+        "title": "Password Complexity Policy Not Enforced for Service Accounts",
+        "description": "A penetration test revealed that 8 service accounts use passwords that do not meet NIST SP 800-63B requirements: passwords are fewer than 15 characters, lack complexity, and have never been rotated. One service account password was found in a publicly accessible code repository.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Critical"
+          },
+          {
+            "name": "security-control",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "IA-5"
+          },
+          {
+            "name": "source",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Penetration Test"
+          },
+          {
+            "name": "detection-date",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "2025-12-10"
+          },
+          {
+            "name": "scheduled-completion-date",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "2026-03-31"
+          },
+          {
+            "name": "office-org",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Identity & Access Management"
+          },
+          {
+            "name": "point-of-contact",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Sarah Chen, IAM Manager"
+          },
+          {
+            "name": "poam-status",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "In Progress"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "b2e4380e-17f5-40c2-938b-409e63e29f5c"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "71cb43eb-629a-4650-908b-2dce5e4b6c47"
+          }
+        ],
+        "remarks": "Compromised credential rotated on 2025-12-11 within 24 hours of discovery. Repository secret scanning enabled. 5 of 8 accounts migrated to vault."
+      },
+      {
+        "uuid": "e0b85948-820d-4539-8273-32099f6d8ee8",
+        "title": "Unencrypted Sensitive Data on Backup Storage Media",
+        "description": "An audit finding identified that backup tapes containing PII and CUI are stored in an offsite facility without encryption at rest. If tapes are lost or stolen, sensitive federal data would be exposed without any cryptographic protection, violating FIPS 140-2 requirements for data at rest.",
+        "props": [
+          {
+            "name": "severity",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "High"
+          },
+          {
+            "name": "security-control",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "SC-28"
+          },
+          {
+            "name": "source",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Audit"
+          },
+          {
+            "name": "detection-date",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "2025-11-20"
+          },
+          {
+            "name": "scheduled-completion-date",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "2026-07-31"
+          },
+          {
+            "name": "office-org",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Data Management & Privacy Office"
+          },
+          {
+            "name": "point-of-contact",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Robert Torres, Data Management Officer"
+          },
+          {
+            "name": "poam-status",
+            "ns": "https://github.com/JulietRodriguez/poam-generator/ns/oscal",
+            "value": "Risk Accepted"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "66c46cd9-e93b-4703-b3e1-61dcecfcf484"
+          }
+        ],
+        "related-findings": [
+          {
+            "finding-uuid": "0ba9dfa0-671b-4e46-a157-4519197bf02b"
+          }
+        ],
+        "remarks": "Temporary risk acceptance granted through 2026-01-31 pending procurement. Physical security controls at offsite facility verified as compensating control. Encryption procurement approved by CISO on 2026-01-10."
+      }
+    ]
+  }
+}

@@ -1,0 +1,1953 @@
+{
+  "assessment-results": {
+    "uuid": "afbad546-6953-53b0-a94d-18d3a666a6b7",
+    "metadata": {
+      "title": "FedRAMP Moderate Automated Assessment",
+      "last-modified": "2026-11-17T21:00:46+00:00",
+      "version": "0.1.0",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "aws-account-id",
+          "value": "123456789012"
+        },
+        {
+          "name": "aws-region",
+          "value": "us-east-1"
+        }
+      ],
+      "roles": [
+        {
+          "id": "assessor",
+          "title": "Automated Assessor"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "c1cf1de9-e78c-544c-8f32-623b010389af",
+          "type": "organization",
+          "name": "fedramp-control-validator"
+        }
+      ]
+    },
+    "import-ap": {
+      "href": "https://raw.githubusercontent.com/GSA/fedramp-automation/master/dist/content/rev5/baselines/json/FedRAMP_rev5_MODERATE-baseline_profile.json"
+    },
+    "results": [
+      {
+        "uuid": "c48a7593-8532-5651-b9c8-b4f325eec931",
+        "title": "FedRAMP Moderate control validation",
+        "description": "Automated validation of AWS account 123456789012 (us-east-1) against the FedRAMP Moderate baseline. Overall score 62.1%.",
+        "start": "2026-11-17T21:00:46+00:00",
+        "end": "2026-11-17T21:00:46+00:00",
+        "props": [
+          {
+            "name": "overall-score",
+            "value": "62.1"
+          },
+          {
+            "name": "controls-passing",
+            "value": "12"
+          },
+          {
+            "name": "controls-failing",
+            "value": "5"
+          },
+          {
+            "name": "controls-not-assessed",
+            "value": "4"
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "description": "Controls evaluated from AWS Config compliance data.",
+              "include-controls": [
+                {
+                  "control-id": "ac-2"
+                },
+                {
+                  "control-id": "ac-3"
+                },
+                {
+                  "control-id": "ac-4"
+                },
+                {
+                  "control-id": "ac-6"
+                },
+                {
+                  "control-id": "au-2"
+                },
+                {
+                  "control-id": "au-3"
+                },
+                {
+                  "control-id": "au-6"
+                },
+                {
+                  "control-id": "au-9"
+                },
+                {
+                  "control-id": "au-11"
+                },
+                {
+                  "control-id": "au-12"
+                },
+                {
+                  "control-id": "ca-7"
+                },
+                {
+                  "control-id": "cm-2"
+                },
+                {
+                  "control-id": "cm-8"
+                },
+                {
+                  "control-id": "cp-9"
+                },
+                {
+                  "control-id": "cp-10"
+                },
+                {
+                  "control-id": "ia-2"
+                },
+                {
+                  "control-id": "ia-5"
+                },
+                {
+                  "control-id": "ir-6"
+                },
+                {
+                  "control-id": "ra-5"
+                },
+                {
+                  "control-id": "sc-5"
+                },
+                {
+                  "control-id": "sc-7"
+                },
+                {
+                  "control-id": "sc-8"
+                },
+                {
+                  "control-id": "sc-12"
+                },
+                {
+                  "control-id": "sc-13"
+                },
+                {
+                  "control-id": "sc-28"
+                },
+                {
+                  "control-id": "si-2"
+                },
+                {
+                  "control-id": "si-3"
+                },
+                {
+                  "control-id": "si-4"
+                },
+                {
+                  "control-id": "si-7"
+                }
+              ]
+            }
+          ]
+        },
+        "observations": [
+          {
+            "uuid": "e6a9c1ae-a505-5713-b735-eff33dbaef21",
+            "title": "AWS Config: access-keys-rotated",
+            "description": "Access key older than 90 days (last rotated 412 days ago).",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "437ef1d8-8786-51ec-b52d-b215f52da063",
+                "type": "component",
+                "title": "svc-deploy",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::IAM::User"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "access-keys-rotated"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "78d4f7b2-1554-54b7-910d-c0ccb51e2d59",
+            "title": "AWS Config: iam-password-policy",
+            "description": "Password policy does not require 14-character minimum or 24-password history.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "c906b72e-bf4c-5e1b-b9ab-4b7884eaf0dd",
+                "type": "component",
+                "title": "123456789012",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::::Account"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "iam-password-policy"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "6aeb66fa-5d91-5249-ba80-606331e7b5e5",
+            "title": "AWS Config: iam-user-mfa-enabled",
+            "description": "IAM user svc-deploy does not have MFA enabled.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "437ef1d8-8786-51ec-b52d-b215f52da063",
+                "type": "component",
+                "title": "svc-deploy",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::IAM::User"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "iam-user-mfa-enabled"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "a4149270-1579-5145-81cb-5daa6d6e0e06",
+            "title": "AWS Config: iam-policy-no-statements-with-admin-access",
+            "description": "Policy grants Action:* on Resource:*.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "34d02214-9609-5ecc-a202-3f73f2378c1f",
+                "type": "component",
+                "title": "deploy-broad-access",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::IAM::Policy"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "iam-policy-no-statements-with-admin-access"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "0a934c62-9284-5bc5-980e-9c2b337de64c",
+            "title": "AWS Config: s3-bucket-public-read-prohibited",
+            "description": "Bucket policy allows public s3:GetObject.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "490b6a86-e1f4-5fdd-91ae-4ff2cac26230",
+                "type": "component",
+                "title": "legacy-uploads",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::S3::Bucket"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "s3-bucket-public-read-prohibited"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "b0f792c8-d2f8-5f40-aa9d-29178cdcbbd6",
+            "title": "AWS Config: restricted-ssh",
+            "description": "Security group allows 0.0.0.0/0 on port 22.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "b4f429ed-af00-59c0-a3b4-26d7e86981ad",
+                "type": "component",
+                "title": "sg-0bastion",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::EC2::SecurityGroup"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "restricted-ssh"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "de3410a2-dc13-59e3-9573-0a59026c2e78",
+            "title": "AWS Config: iam-policy-no-statements-with-admin-access",
+            "description": "Policy grants Action:* on Resource:*.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "34d02214-9609-5ecc-a202-3f73f2378c1f",
+                "type": "component",
+                "title": "deploy-broad-access",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::IAM::Policy"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "iam-policy-no-statements-with-admin-access"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "65b6df7e-798e-5341-98d4-e6d1bb701e60",
+            "title": "AWS Config: s3-bucket-public-read-prohibited",
+            "description": "Bucket policy allows public s3:GetObject.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "490b6a86-e1f4-5fdd-91ae-4ff2cac26230",
+                "type": "component",
+                "title": "legacy-uploads",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::S3::Bucket"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "s3-bucket-public-read-prohibited"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "d9fbc493-0a2d-56c0-9275-4833e22bfc46",
+            "title": "AWS Config: cloudwatch-log-group-encrypted",
+            "description": "Log group is not encrypted with a KMS CMK.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "e8f110d8-da1c-5e42-938f-514a1f3e5eb4",
+                "type": "component",
+                "title": "/aws/lambda/orders-api",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::Logs::LogGroup"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "cloudwatch-log-group-encrypted"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "55880eef-4ece-51f7-96eb-f0fd78e9d7e4",
+            "title": "AWS Config: cw-loggroup-retention-period-check",
+            "description": "Retention is set to 7 days; FedRAMP requires at least 365 days.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "e8f110d8-da1c-5e42-938f-514a1f3e5eb4",
+                "type": "component",
+                "title": "/aws/lambda/orders-api",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::Logs::LogGroup"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "cw-loggroup-retention-period-check"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "38b8455b-7b82-5c4d-80f8-db102445b27b",
+            "title": "AWS Config: rds-multi-az-support",
+            "description": "orders-db is single-AZ; no automatic failover.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "b54bd686-d81d-5b81-a922-eb1dfa6804b3",
+                "type": "component",
+                "title": "orders-db",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::RDS::DBInstance"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "rds-multi-az-support"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "61e178b3-f4e6-5d60-adb2-a3700e73bd8b",
+            "title": "AWS Config: rds-multi-az-support",
+            "description": "orders-db is single-AZ; no automatic failover.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "b54bd686-d81d-5b81-a922-eb1dfa6804b3",
+                "type": "component",
+                "title": "orders-db",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::RDS::DBInstance"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "rds-multi-az-support"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "7dc76d63-22fd-509a-a29e-36f16cfb6637",
+            "title": "AWS Config: iam-user-mfa-enabled",
+            "description": "IAM user svc-deploy does not have MFA enabled.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "437ef1d8-8786-51ec-b52d-b215f52da063",
+                "type": "component",
+                "title": "svc-deploy",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::IAM::User"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "iam-user-mfa-enabled"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "edbc3888-e783-5fb1-b709-9c4276e0f731",
+            "title": "AWS Config: access-keys-rotated",
+            "description": "Access key older than 90 days (last rotated 412 days ago).",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "437ef1d8-8786-51ec-b52d-b215f52da063",
+                "type": "component",
+                "title": "svc-deploy",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::IAM::User"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "access-keys-rotated"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "a46a7b9b-01ff-56b1-9551-78d681e490a1",
+            "title": "AWS Config: iam-password-policy",
+            "description": "Password policy does not require 14-character minimum or 24-password history.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "c906b72e-bf4c-5e1b-b9ab-4b7884eaf0dd",
+                "type": "component",
+                "title": "123456789012",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::::Account"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "iam-password-policy"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "66dc2a0f-811f-5258-a2b0-dbcc673489da",
+            "title": "AWS Config: ec2-managedinstance-patch-compliance-status-check",
+            "description": "12 missing patches, 3 classified as Critical.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "65a7fae8-5a4c-5aaa-9af0-7bcfb9341fca",
+                "type": "component",
+                "title": "i-0abc123web",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::EC2::Instance"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "ec2-managedinstance-patch-compliance-status-check"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "c1e35042-8b7c-5c09-9933-c2746fa046c8",
+            "title": "AWS Config: alb-waf-enabled",
+            "description": "No WebACL associated with the application load balancer.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "961198f6-b520-56dd-98f3-87221dbfe385",
+                "type": "component",
+                "title": "app/orders-alb/50dc6c495c0c9188",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::ElasticLoadBalancingV2::LoadBalancer"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "alb-waf-enabled"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "4e3c1a8b-e6ac-5e74-ba91-849a044ad29b",
+            "title": "AWS Config: alb-waf-enabled",
+            "description": "No WebACL associated with the application load balancer.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "961198f6-b520-56dd-98f3-87221dbfe385",
+                "type": "component",
+                "title": "app/orders-alb/50dc6c495c0c9188",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::ElasticLoadBalancingV2::LoadBalancer"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "alb-waf-enabled"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "228e9059-9121-50e6-974c-0120cab49ba9",
+            "title": "AWS Config: restricted-ssh",
+            "description": "Security group allows 0.0.0.0/0 on port 22.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "b4f429ed-af00-59c0-a3b4-26d7e86981ad",
+                "type": "component",
+                "title": "sg-0bastion",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::EC2::SecurityGroup"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "restricted-ssh"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "8d9c0971-5226-5d15-837c-54c51855c947",
+            "title": "AWS Config: s3-bucket-public-read-prohibited",
+            "description": "Bucket policy allows public s3:GetObject.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "490b6a86-e1f4-5fdd-91ae-4ff2cac26230",
+                "type": "component",
+                "title": "legacy-uploads",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::S3::Bucket"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "s3-bucket-public-read-prohibited"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "2587efb0-e595-5eeb-a2a5-736180bfcde2",
+            "title": "AWS Config: encrypted-volumes",
+            "description": "EBS volume vol-0998877665544 is not encrypted.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "b419f4a4-75cc-5262-8c36-953198bc61dc",
+                "type": "component",
+                "title": "vol-0998877665544",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::EC2::Volume"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "encrypted-volumes"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "c4933cb1-86b8-54bb-910d-79de587eb9d5",
+            "title": "AWS Config: s3-bucket-server-side-encryption-enabled",
+            "description": "Default encryption is not configured on legacy-uploads.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "490b6a86-e1f4-5fdd-91ae-4ff2cac26230",
+                "type": "component",
+                "title": "legacy-uploads",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::S3::Bucket"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "s3-bucket-server-side-encryption-enabled"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "32a29451-7a86-5c05-b10f-a4870659e9a8",
+            "title": "AWS Config: cloudwatch-log-group-encrypted",
+            "description": "Log group is not encrypted with a KMS CMK.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "e8f110d8-da1c-5e42-938f-514a1f3e5eb4",
+                "type": "component",
+                "title": "/aws/lambda/orders-api",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::Logs::LogGroup"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "cloudwatch-log-group-encrypted"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "7eb86ab4-80fe-50fd-8352-b6fec1aa85da",
+            "title": "AWS Config: encrypted-volumes",
+            "description": "EBS volume vol-0998877665544 is not encrypted.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "b419f4a4-75cc-5262-8c36-953198bc61dc",
+                "type": "component",
+                "title": "vol-0998877665544",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::EC2::Volume"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "encrypted-volumes"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "d09a8fa8-0e8a-55ae-9af7-4ab58e490214",
+            "title": "AWS Config: s3-bucket-server-side-encryption-enabled",
+            "description": "Default encryption is not configured on legacy-uploads.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "490b6a86-e1f4-5fdd-91ae-4ff2cac26230",
+                "type": "component",
+                "title": "legacy-uploads",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::S3::Bucket"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "s3-bucket-server-side-encryption-enabled"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "7caca4cf-b536-534a-8ebd-fc812fed627b",
+            "title": "AWS Config: ec2-managedinstance-patch-compliance-status-check",
+            "description": "12 missing patches, 3 classified as Critical.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "65a7fae8-5a4c-5aaa-9af0-7bcfb9341fca",
+                "type": "component",
+                "title": "i-0abc123web",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::EC2::Instance"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "ec2-managedinstance-patch-compliance-status-check"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          },
+          {
+            "uuid": "e24f107f-c0d4-5979-9f81-f5968b428826",
+            "title": "AWS Config: alb-waf-enabled",
+            "description": "No WebACL associated with the application load balancer.",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "finding"
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "961198f6-b520-56dd-98f3-87221dbfe385",
+                "type": "component",
+                "title": "app/orders-alb/50dc6c495c0c9188",
+                "props": [
+                  {
+                    "name": "resource-type",
+                    "value": "AWS::ElasticLoadBalancingV2::LoadBalancer"
+                  },
+                  {
+                    "name": "config-rule",
+                    "value": "alb-waf-enabled"
+                  },
+                  {
+                    "name": "compliance",
+                    "value": "NON_COMPLIANT"
+                  }
+                ]
+              }
+            ],
+            "collected": "2026-11-17T21:00:46+00:00"
+          }
+        ],
+        "findings": [
+          {
+            "uuid": "92e51126-fa1a-5f7d-92a7-f038ce0eac90",
+            "title": "AC-2 Account Management",
+            "description": "AC-2 (Account Management): 2 of 5 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "2"
+              },
+              {
+                "name": "failing-resources",
+                "value": "3"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-2_obj",
+              "title": "Objective for AC-2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e6a9c1ae-a505-5713-b735-eff33dbaef21"
+              },
+              {
+                "observation-uuid": "78d4f7b2-1554-54b7-910d-c0ccb51e2d59"
+              },
+              {
+                "observation-uuid": "6aeb66fa-5d91-5249-ba80-606331e7b5e5"
+              }
+            ]
+          },
+          {
+            "uuid": "84820680-6391-526c-acf4-90723ff75e31",
+            "title": "AC-3 Access Enforcement",
+            "description": "AC-3 (Access Enforcement): 3 of 5 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "3"
+              },
+              {
+                "name": "failing-resources",
+                "value": "2"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "title": "Objective for AC-3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a4149270-1579-5145-81cb-5daa6d6e0e06"
+              },
+              {
+                "observation-uuid": "0a934c62-9284-5bc5-980e-9c2b337de64c"
+              }
+            ]
+          },
+          {
+            "uuid": "e37d3242-b5ce-5ad5-8a05-0b0ee9b2fb3f",
+            "title": "AC-4 Information Flow Enforcement",
+            "description": "AC-4 (Information Flow Enforcement): 2 of 3 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "2"
+              },
+              {
+                "name": "failing-resources",
+                "value": "1"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "title": "Objective for AC-4",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b0f792c8-d2f8-5f40-aa9d-29178cdcbbd6"
+              }
+            ]
+          },
+          {
+            "uuid": "db7469df-77f9-57d5-b5c3-f4417c4c274b",
+            "title": "AC-6 Least Privilege",
+            "description": "AC-6 (Least Privilege): 3 of 5 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "3"
+              },
+              {
+                "name": "failing-resources",
+                "value": "2"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "title": "Objective for AC-6",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "de3410a2-dc13-59e3-9573-0a59026c2e78"
+              },
+              {
+                "observation-uuid": "65b6df7e-798e-5341-98d4-e6d1bb701e60"
+              }
+            ]
+          },
+          {
+            "uuid": "751bd7ff-926b-56f7-b5c1-4fff3ef77a59",
+            "title": "AU-2 Event Logging",
+            "description": "AU-2 (Event Logging): 4 of 4 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "4"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-2_obj",
+              "title": "Objective for AU-2",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "beae1d27-dc6b-5a72-abb9-30190e7ce781",
+            "title": "AU-3 Content of Audit Records",
+            "description": "AU-3 (Content of Audit Records): 1 of 1 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "1"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-3_obj",
+              "title": "Objective for AU-3",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "8585250a-a580-5d24-b11a-1ae89a57f555",
+            "title": "AU-6 Audit Record Review, Analysis, and Reporting",
+            "description": "AU-6 (Audit Record Review, Analysis, and Reporting): 1 of 1 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "1"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-6_obj",
+              "title": "Objective for AU-6",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "c3e64e2e-375f-5c4b-aa13-90d54f274d54",
+            "title": "AU-9 Protection of Audit Information",
+            "description": "AU-9 (Protection of Audit Information): 2 of 3 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "2"
+              },
+              {
+                "name": "failing-resources",
+                "value": "1"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-9_obj",
+              "title": "Objective for AU-9",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d9fbc493-0a2d-56c0-9275-4833e22bfc46"
+              }
+            ]
+          },
+          {
+            "uuid": "1396aa76-bf04-56b0-a308-90ae11577803",
+            "title": "AU-11 Audit Record Retention",
+            "description": "AU-11 (Audit Record Retention): 0 of 1 evaluated resources are compliant [fail].",
+            "props": [
+              {
+                "name": "status",
+                "value": "fail"
+              },
+              {
+                "name": "passing-resources",
+                "value": "0"
+              },
+              {
+                "name": "failing-resources",
+                "value": "1"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-11_obj",
+              "title": "Objective for AU-11",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "55880eef-4ece-51f7-96eb-f0fd78e9d7e4"
+              }
+            ]
+          },
+          {
+            "uuid": "ac0f280a-29f0-5112-828f-335dd6b9752f",
+            "title": "AU-12 Audit Record Generation",
+            "description": "AU-12 (Audit Record Generation): 4 of 4 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "4"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-12_obj",
+              "title": "Objective for AU-12",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "8c992231-f928-5d15-9876-09a682967846",
+            "title": "CA-7 Continuous Monitoring",
+            "description": "CA-7 (Continuous Monitoring): 1 of 1 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "1"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "ca-7_obj",
+              "title": "Objective for CA-7",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "f7e157cd-4128-55c6-ac98-baf27ee10f61",
+            "title": "CM-2 Baseline Configuration",
+            "description": "CM-2 (Baseline Configuration): 1 of 1 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "1"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-2_obj",
+              "title": "Objective for CM-2",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "7665f7f9-560a-52cc-8bc9-5577b9085238",
+            "title": "CM-8 System Component Inventory",
+            "description": "CM-8 (System Component Inventory): 1 of 1 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "1"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-8_obj",
+              "title": "Objective for CM-8",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "93879209-1a1f-5c2b-b42e-5a45d86a2fec",
+            "title": "CP-9 System Backup",
+            "description": "CP-9 (System Backup): 2 of 3 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "2"
+              },
+              {
+                "name": "failing-resources",
+                "value": "1"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "cp-9_obj",
+              "title": "Objective for CP-9",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "38b8455b-7b82-5c4d-80f8-db102445b27b"
+              }
+            ]
+          },
+          {
+            "uuid": "b6b51ef4-97f7-50a7-82a5-4d95dc937632",
+            "title": "CP-10 System Recovery and Reconstitution",
+            "description": "CP-10 (System Recovery and Reconstitution): 0 of 1 evaluated resources are compliant [fail].",
+            "props": [
+              {
+                "name": "status",
+                "value": "fail"
+              },
+              {
+                "name": "passing-resources",
+                "value": "0"
+              },
+              {
+                "name": "failing-resources",
+                "value": "1"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "cp-10_obj",
+              "title": "Objective for CP-10",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "61e178b3-f4e6-5d60-adb2-a3700e73bd8b"
+              }
+            ]
+          },
+          {
+            "uuid": "85554080-331c-5c67-bbd5-1267b9b8970e",
+            "title": "IA-2 Identification and Authentication (Organizational Users)",
+            "description": "IA-2 (Identification and Authentication (Organizational Users)): 3 of 4 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "3"
+              },
+              {
+                "name": "failing-resources",
+                "value": "1"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-2_obj",
+              "title": "Objective for IA-2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7dc76d63-22fd-509a-a29e-36f16cfb6637"
+              }
+            ]
+          },
+          {
+            "uuid": "457e2967-57c3-5f10-be80-700871e233ff",
+            "title": "IA-5 Authenticator Management",
+            "description": "IA-5 (Authenticator Management): 0 of 2 evaluated resources are compliant [fail].",
+            "props": [
+              {
+                "name": "status",
+                "value": "fail"
+              },
+              {
+                "name": "passing-resources",
+                "value": "0"
+              },
+              {
+                "name": "failing-resources",
+                "value": "2"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "title": "Objective for IA-5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "edbc3888-e783-5fb1-b709-9c4276e0f731"
+              },
+              {
+                "observation-uuid": "a46a7b9b-01ff-56b1-9551-78d681e490a1"
+              }
+            ]
+          },
+          {
+            "uuid": "f0e9d9bf-19a3-5eb3-a0f3-4b9bf3e0f352",
+            "title": "IR-6 Incident Reporting",
+            "description": "IR-6 (Incident Reporting): 1 of 1 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "1"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "ir-6_obj",
+              "title": "Objective for IR-6",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "96dc5bac-0955-5ca7-87da-64e87e78ec5b",
+            "title": "RA-5 Vulnerability Monitoring and Scanning",
+            "description": "RA-5 (Vulnerability Monitoring and Scanning): 3 of 4 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "3"
+              },
+              {
+                "name": "failing-resources",
+                "value": "1"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "ra-5_obj",
+              "title": "Objective for RA-5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "66dc2a0f-811f-5258-a2b0-dbcc673489da"
+              }
+            ]
+          },
+          {
+            "uuid": "2e91b681-3308-554b-ac1e-505c4e9ebc98",
+            "title": "SC-5 Denial-of-Service Protection",
+            "description": "SC-5 (Denial-of-Service Protection): 0 of 1 evaluated resources are compliant [fail].",
+            "props": [
+              {
+                "name": "status",
+                "value": "fail"
+              },
+              {
+                "name": "passing-resources",
+                "value": "0"
+              },
+              {
+                "name": "failing-resources",
+                "value": "1"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-5_obj",
+              "title": "Objective for SC-5",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c1e35042-8b7c-5c09-9933-c2746fa046c8"
+              }
+            ]
+          },
+          {
+            "uuid": "6b6fef7a-1886-5b7d-8612-a338d0b515dc",
+            "title": "SC-7 Boundary Protection",
+            "description": "SC-7 (Boundary Protection): 5 of 8 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "5"
+              },
+              {
+                "name": "failing-resources",
+                "value": "3"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "title": "Objective for SC-7",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4e3c1a8b-e6ac-5e74-ba91-849a044ad29b"
+              },
+              {
+                "observation-uuid": "228e9059-9121-50e6-974c-0120cab49ba9"
+              },
+              {
+                "observation-uuid": "8d9c0971-5226-5d15-837c-54c51855c947"
+              }
+            ]
+          },
+          {
+            "uuid": "43f652d8-2062-53b0-9842-e8a25a1e6a7b",
+            "title": "SC-8 Transmission Confidentiality and Integrity",
+            "description": "SC-8 (Transmission Confidentiality and Integrity): 3 of 3 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "3"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-8_obj",
+              "title": "Objective for SC-8",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "482f7df0-1d3d-556f-88a4-f2de1ac29142",
+            "title": "SC-12 Cryptographic Key Establishment and Management",
+            "description": "SC-12 (Cryptographic Key Establishment and Management): 1 of 1 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "1"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-12_obj",
+              "title": "Objective for SC-12",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "c4598d3a-517e-5cfc-b5e3-198f258f520f",
+            "title": "SC-13 Cryptographic Protection",
+            "description": "SC-13 (Cryptographic Protection): 5 of 7 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "5"
+              },
+              {
+                "name": "failing-resources",
+                "value": "2"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-13_obj",
+              "title": "Objective for SC-13",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2587efb0-e595-5eeb-a2a5-736180bfcde2"
+              },
+              {
+                "observation-uuid": "c4933cb1-86b8-54bb-910d-79de587eb9d5"
+              }
+            ]
+          },
+          {
+            "uuid": "4a670fc9-a9cd-54a5-96b2-8dc69f96331c",
+            "title": "SC-28 Protection of Information at Rest",
+            "description": "SC-28 (Protection of Information at Rest): 4 of 7 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "4"
+              },
+              {
+                "name": "failing-resources",
+                "value": "3"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "title": "Objective for SC-28",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "32a29451-7a86-5c05-b10f-a4870659e9a8"
+              },
+              {
+                "observation-uuid": "7eb86ab4-80fe-50fd-8352-b6fec1aa85da"
+              },
+              {
+                "observation-uuid": "d09a8fa8-0e8a-55ae-9af7-4ab58e490214"
+              }
+            ]
+          },
+          {
+            "uuid": "94e006eb-9e1d-54af-a163-b6b498770494",
+            "title": "SI-2 Flaw Remediation",
+            "description": "SI-2 (Flaw Remediation): 1 of 2 evaluated resources are compliant [partial].",
+            "props": [
+              {
+                "name": "status",
+                "value": "partial"
+              },
+              {
+                "name": "passing-resources",
+                "value": "1"
+              },
+              {
+                "name": "failing-resources",
+                "value": "1"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-2_obj",
+              "title": "Objective for SI-2",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7caca4cf-b536-534a-8ebd-fc812fed627b"
+              }
+            ]
+          },
+          {
+            "uuid": "d6f3bbc8-457d-554e-a2cd-36516fe10886",
+            "title": "SI-3 Malicious Code Protection",
+            "description": "SI-3 (Malicious Code Protection): 0 of 1 evaluated resources are compliant [fail].",
+            "props": [
+              {
+                "name": "status",
+                "value": "fail"
+              },
+              {
+                "name": "passing-resources",
+                "value": "0"
+              },
+              {
+                "name": "failing-resources",
+                "value": "1"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-3_obj",
+              "title": "Objective for SI-3",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e24f107f-c0d4-5979-9f81-f5968b428826"
+              }
+            ]
+          },
+          {
+            "uuid": "d923a058-e3ce-5935-8f01-6c1049f84b01",
+            "title": "SI-4 System Monitoring",
+            "description": "SI-4 (System Monitoring): 4 of 4 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "4"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "title": "Objective for SI-4",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          },
+          {
+            "uuid": "8bb02e5f-2cdd-5603-b7d6-c5cc3858adad",
+            "title": "SI-7 Software, Firmware, and Information Integrity",
+            "description": "SI-7 (Software, Firmware, and Information Integrity): 2 of 2 evaluated resources are compliant [pass].",
+            "props": [
+              {
+                "name": "status",
+                "value": "pass"
+              },
+              {
+                "name": "passing-resources",
+                "value": "2"
+              },
+              {
+                "name": "failing-resources",
+                "value": "0"
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-7_obj",
+              "title": "Objective for SI-7",
+              "status": {
+                "state": "satisfied"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
