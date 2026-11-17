@@ -1,0 +1,106 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+env:
+  OSCAL_RELEASE: https://github.com/usnistgov/OSCAL/releases/download/v1.1.2
+
+jobs:
+  lint:
+    name: Lint (Ruff)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruff==0.16.9
+      - run: ruff check .
+      - run: ruff format --check .
+
+  test:
+    name: Test (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install package and dev dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run tests with coverage
+        run: pytest --cov=ato_readiness_checker --cov-report=term-missing
+
+  samples:
+    name: Samples and docs match the code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Sample packages and outputs are regenerated identically
+        run: python tools/make_samples.py --check
+      - name: docs/checks.md matches the check registry
+        run: |
+          ato-readiness-checker list-checks --markdown > /tmp/checks.md
+          diff -u docs/checks.md /tmp/checks.md
+
+  oscal-schema:
+    name: OSCAL 1.1.2 schema validation and CI gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[schema]"
+      - name: Download NIST schemas and verify checksums
+        run: |
+          mkdir -p /tmp/nist
+          for f in ssp assessment-results poam profile; do
+            curl -sSfL "$OSCAL_RELEASE/oscal_${f}_schema.json" -o "/tmp/nist/oscal_${f}_schema.json"
+          done
+          (cd /tmp/nist && sha256sum -c "$GITHUB_WORKSPACE/schemas/SHA256SUMS")
+      - name: Committed schema copies are identical to NIST's
+        run: for f in /tmp/nist/*.json; do cmp "$f" "schemas/$(basename "$f")"; done
+      - name: Validate sample inputs (clean and flawed are both schema-valid)
+        run: python tools/validate_oscal.py --schema-dir /tmp/nist samples/clean/*.json samples/flawed/*.json
+      - name: Review both packages and validate the OSCAL output
+        run: |
+          ato-readiness-checker check --ssp samples/clean/ssp.json --ar samples/clean/assessment-results.json \
+            --poam samples/clean/poam.json --schema-dir /tmp/nist -o out/clean --brief --oscal
+          set +e
+          ato-readiness-checker check --ssp samples/flawed/ssp.json --ar samples/flawed/assessment-results.json \
+            --poam samples/flawed/poam.json --schema-dir /tmp/nist -o out/flawed --brief --oscal
+          set -e
+          python tools/validate_oscal.py --schema-dir /tmp/nist out/clean/readiness-review.oscal.json \
+            out/flawed/readiness-review.oscal.json
+      - name: Gate passes for the clean package and blocks the flawed one
+        run: |
+          ato-readiness-checker check --ssp samples/clean/ssp.json --ar samples/clean/assessment-results.json \
+            --poam samples/clean/poam.json --as-of 2026-11-17 --fail-on critical -q
+          if ato-readiness-checker check --ssp samples/flawed/ssp.json --ar samples/flawed/assessment-results.json \
+               --poam samples/flawed/poam.json --as-of 2026-11-17 --fail-on critical -q; then
+            echo "expected the flawed package to fail the gate"; exit 1
+          fi
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: readiness-reports
+          path: out/
