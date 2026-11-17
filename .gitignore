@@ -11,5 +11,5 @@ venv/
 coverage.xml
 htmlcov/
 # reports from local runs (samples/outputs is committed on purpose)
-out/
-reports/
+/out/
+/reports/
